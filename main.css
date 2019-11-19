@@ -19,7 +19,7 @@ body {
 }
 
 section {
-    padding: 6rem;
+    padding: 6rem 0;
 }
 
 a {
@@ -403,21 +403,187 @@ li {
 
 .timeline .date::before {
     content: attr(data-date);
-    left: -21rem;
+    left: -24rem;
     text-align: right;
     min-width: 12rem;
     font-size: 1.5rem;
 }
+
+.timeline .date::after {
+    content: '';
+    box-shadow: 0 0 0 4px #fd57bf;
+    border-radius: 100%;
+    left: -8rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    background-color: #313534;
+}
 /*End timeline*/
 
-/*Start contact*/
-/*End contact*/
-
 /*Start footer*/
+.copyright {
+    width: 100%;
+    text-align: center;
+    background-color: #16162d;
+    padding: 2rem 0;
+    position: relative;
+}
+
+.up {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    background-color: #eee;
+    top: -2.5rem;
+    right: 5rem;
+    border-radius: 100%;
+    display: flex;
+    animation: pulse 2s infinite;
+    cursor: pointer;
+}
+
+.up i {
+    color: #16162d;
+    font-size: 2rem;
+    margin: auto;
+}
+
+.copyright p {
+    font-size: 1.4rem;
+}
 /*End footer*/
 
 /*Start animations*/
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(253, 87, 191, 0.99);
+    }
+    70% {
+        box-shadow: 0 0 0 2rem rgba(253, 87, 191, 0);
+    }
+    100%{
+        box-shadow: 0 0 0 0 rgba(253, 87, 191, 0);
+    }
+}
+
 /*End animations*/
 
 /*Start media queries*/
+@media screen and (max-width: 768px) {
+    body {
+        background: url("images/sitebg.jpg") no-repeat center fixed;
+        background-size: cover;
+    }
+
+    .landing-text h1 {
+        font-size: 15rem;
+    }
+
+    .landing-text h6 {
+        font-size: 1.7rem;
+    }
+
+    .li {
+        margin: 2rem 0;
+    }
+
+    .nav-link {
+        font-size: 4.5rem;
+    }
+
+    .about-heading h1 {
+        font-size: 8rem;
+    }
+
+    .section-heading h1 {
+        font-size: 3rem;
+    }
+
+    .about-details {
+        flex-direction: initial;
+    }
+
+    .nav-list {
+        flex-direction: initial;
+    }
+
+    .about-details li {
+        margin: 0 2rem;
+    }
+
+    .icon-container {
+        width: 7rem;
+        height: 7rem;
+    }
+
+    .icon-container i {
+        font-size: 4rem;
+    }
+
+    .timeline ul {
+        margin: 0 0 0 auto;
+    }
+
+    .timeline .date::before {
+        left: -23rem;
+    }
+
+    .timeline .date::after {
+        left: -7.9rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .menu-toggler {
+        top: 2rem;
+        right: 2rem;
+    }
+
+    .landing-text h1 {
+        font-size: 8rem;
+    }
+
+    .landing-text h6 {
+        font-size: 1.4rem;
+    }
+
+    .nav-link {
+        font-size: 3.5rem;
+    }
+
+    .about .container {
+        flex-direction: column;
+    }
+
+    .profile-img {
+        margin: 0 0 7rem 0;
+    }
+
+    .portfolio-item {
+        flex-direction: column;
+    }
+
+    .portfolio-img {
+        margin: 0 0 2rem 0;
+        order: 1;
+    }
+
+    .portfolio-description {
+        margin: 0;
+        order: 2;
+    }
+
+    .timeline p {
+        font-size: 1.6rem;
+    }
+
+    .timeline .date::before {
+        font-size: 1.4rem;
+    }
+
+    .up {
+        right: 2rem;
+    }
+}
+
 /*End media queries*/
