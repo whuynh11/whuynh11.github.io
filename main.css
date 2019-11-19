@@ -9,13 +9,16 @@ html {
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
     color: #eee;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
-    width: 100%;
+    width: 100vw;
     height: 100%;
     background: url("images/sitebg.jpg") no-repeat center fixed;
     background-size: cover;
+    overflow-x: hidden;
 }
 
 section {
@@ -104,6 +107,7 @@ header {
     height: 100vh;
     position: fixed;
     top: -100vh;
+    z-index: 50;
     background-color: #16162d;
     border-bottom-right-radius: 100%;
     border-bottom-left-radius: 100%;
@@ -139,10 +143,11 @@ li {
 .top-nav.open {
     top: 0;
     border-radius: initial;
+    z-index: 999;
 }
 
 .menu-toggler {
-    position: absolute;
+    position: fixed;
     top: 5rem;
     right: 5rem;
     width: 5rem;
@@ -197,6 +202,7 @@ li {
     width: 100%;
     text-align: center;
     z-index: 1;
+    transition-delay: 2s;
 }
 
 .landing-text h1 {
@@ -257,12 +263,12 @@ li {
     transition: color 650ms;
 }
 
-.fa-facebook-square:hover {
-    color: #4267b2;
+.fa-linkedin:hover {
+    color: #2970ae;
 }
 
-.fa-twitter-square:hover {
-    color: #38a1f3;
+.fa-behance-square:hover {
+    color: #3b66f9;
 }
 
 .fa-dribbble-square:hover {
@@ -325,10 +331,6 @@ li {
 
 .profile-img {
     width: 50rem;
-    flex: 1;
-}
-
-.portfolio-description {
     flex: 1;
 }
 
@@ -483,6 +485,10 @@ li {
         font-size: 1.7rem;
     }
 
+    .nav-list {
+        flex-direction: column;
+    }
+
     .li {
         margin: 2rem 0;
     }
@@ -499,11 +505,7 @@ li {
         font-size: 3rem;
     }
 
-    .about-details {
-        flex-direction: initial;
-    }
-
-    .nav-list {
+    .about-details .nav-list {
         flex-direction: initial;
     }
 
@@ -574,11 +576,11 @@ li {
     }
 
     .timeline p {
-        font-size: 1.6rem;
+        font-size: 1.4rem;
     }
 
     .timeline .date::before {
-        font-size: 1.4rem;
+        font-size: 1rem;
     }
 
     .up {
