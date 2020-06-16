@@ -370,11 +370,19 @@ li {
     font-weight: 700;
     display: inline-block;
     margin: 48px auto 0;
+    transition: all .5s ease-in-out;
 }
 
 .button .round {
     border-radius: 100px;
     padding: .66667rem 1.66667rem;
+}
+
+.button:hover {
+    -webkit-transform: scale(1.07);
+    -ms-transform: scale(1.07);
+    transform: scale(1.07);
+    color: #fff!important;
 }
 
 .timeline ul {
