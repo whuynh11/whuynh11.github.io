@@ -1124,7 +1124,7 @@ textarea:focus {
 
 @media only screen and (max-width: 670px) {
     .box-headline {
-        font-size: 100px;
+        font-size: 90px;
     }
     .box-intro h5 {
         font-size: 12px;
@@ -1150,7 +1150,7 @@ textarea:focus {
 
 @media only screen and (max-width: 520px) {
     .box-headline {
-        font-size: 80px;
+        font-size: 70px;
     }
     .box-intro h5 {
         font-size: 12px;
@@ -1162,7 +1162,7 @@ textarea:focus {
 
 @media only screen and (max-width: 420px) {
     .box-headline {
-        font-size: 50px;
+        font-size: 40px;
     }
     .box-intro h5 {
         font-size: 12px;
