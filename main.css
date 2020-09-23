@@ -51,7 +51,7 @@ img {
 
 .section-heading {
     text-align: center;
-    margin-bottom: 10rem;
+    margin-bottom: 10rem;Melissa Benoist
 }
 
 .section-heading h1 {
@@ -137,6 +137,7 @@ li {
 .nav-link:focus {
     background: linear-gradient(to top, #fffdb5, #ff8100);
     -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
 }
 
 .top-nav.open {
