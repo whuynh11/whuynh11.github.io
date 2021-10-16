@@ -52,7 +52,7 @@ section {
   
 .progress-top-bar {
     height: 8px;
-    background: #ffc800;
+    background: linear-gradient(to right, #d39200, #ffc800);
     width: 0%;
 }
 
@@ -181,7 +181,7 @@ section {
 /* Responsive media queries
 ==================================================*/
 
-@media (max-width: 991px) {
+@media only screen and (max-width: 1450px) {
 }
 
 @media only screen and (max-width: 670px) {
