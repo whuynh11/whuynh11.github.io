@@ -38,6 +38,15 @@ p {
 img {
     width: 100%;
 }
+
+.text-link {
+    color: #ffc800;
+}
+
+a.text-link:hover {
+    border-bottom: 1px solid #ffc800;
+}
+
 /*End global*/
 
 /*Start reusable*/
