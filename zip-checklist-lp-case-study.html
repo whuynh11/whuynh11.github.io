@@ -43,8 +43,8 @@
     </div>
     <!-- end Introduction -->
                 
-    <section>
-    <!-- Overview -->
+    <section data-aos="fade-down" data-aos-delay="300">
+        <!-- Summary -->
         <div class="container">
             <div class="col-md-3">
                 <h1>Summary</h1>
@@ -60,9 +60,9 @@
                 <p>UI | UX Developer transitiong from a Product Manager</p>
             </div>
         </div>
-    <!-- End Overview -->
-    <!-- Synopsis -->
-        <div class="container" data-aos="fade-down" data-aos-delay="300">
+        <!-- End Summary -->
+        <!-- Synopsis -->
+        <div class="container">
             <div class="col-md-3">
                 <h1>Synopsis</h1>
             </div>
@@ -71,9 +71,8 @@
                 </p>
             </div>
         </div>
-    <!-- End Synopsis -->
-    
-        <div class="container img-padding center" data-aos="fade-down" data-aos-delay="300">
+        <!-- End Synopsis -->
+        <div class="container img-padding center">
             <img src="images/zip-checklist-website-case-study.png" alt="product landing page case study" class="img-responsive image-asset" />
         </div>
     </section>
@@ -89,15 +88,15 @@
         window.onscroll = function() {myFunction()};
         
         function myFunction() {
-          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-          var scrolled = (winScroll / height) * 100;
-          document.getElementById("myBar").style.width = scrolled + "%";
+            var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            var scrolled = (winScroll / height) * 100;
+            document.getElementById("myBar").style.width = scrolled + "%";
         }
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="main.js"></script>
-</body>
+    </body>
 
-</html>
+    </html>
