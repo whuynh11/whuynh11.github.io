@@ -994,7 +994,7 @@ b i:nth-child(2) {
 
 @media only screen and (max-width: 420px) {
     .box-headline {
-        font-size: 40px !important;
+        font-size: 50px;
     }
     .box-intro h5 {
         font-size: 12px;
