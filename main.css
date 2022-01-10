@@ -801,7 +801,7 @@ b i:nth-child(2) {
 /* text rotate */
 
 .box-headline {
-    font-size: 9rem;
+    font-size: 10rem;
     line-height: 1.0;
 }
 
@@ -994,7 +994,7 @@ b i:nth-child(2) {
 
 @media only screen and (max-width: 420px) {
     .box-headline {
-        font-size: 50px;
+        font-size: 45px;
     }
     .box-intro h5 {
         font-size: 12px;
