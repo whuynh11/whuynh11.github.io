@@ -107,7 +107,7 @@
             <p><b>Inefficiency</b></p>
             <p>Inefficiency is ultimately about designing the same things again and again. Maybe a button, a dropdown, a snackbar and Designer A designs it once and Designer B redesigns it a different way. Eventually, the stack of different design styles becomes inefficient. You can think about this from an engineering perspective as well where you have to build the same thing again and again and you're not reusing any codes.<br><br>So an example from one of the Jira tasks that I've found, an engineer has spent a fairly long time building a table cell. Then they spend another week to match up with another table cell CSS properties that were already built. Within the platform tool, there are a ton of table cells whether it is a list of employee profiles with task status or client's forecasting budgets or even project overview. They're all in the form of a table cell and so, there are many instances of a Jira task just like this. And because we didn't have any reusable code and without a design system of reusable components, it'll take an unnecessary amount of time to get it done. 
             </p>
-            <img src="images/image-placeholder-3.jpeg" class="img-responsive image-asset" data-aos="fade-left" data-aos-delay="300">
+            <img src="images/jira-table-cell-ticket-example.png" class="img-responsive image-asset" data-aos="fade-left" data-aos-delay="300">
             <p><b>Insecurity</b></p>
             <p>When we actually interviewed our designers who used to work on this platform about what was problematic in their workflow and they told us they lacked confidence when they were designing. They didn't know what were the best practices were and if what they were doing was already proven to not work and so instead of growing in confidence as they spent time working on a variety of projects being a designer. There was always this nagging sense of insecurity as to what is the thing that I should or should not be doing.<br><br>An example of this is a modal. Sometimes a modal has a closed x. Sometimes it has a cancel button. What are designers supposed to do? It becomes very unobvious. Similarly, sometimes the primary action on a modal is to the left and sometimes it is to the right. There's no way to determine what is the right approach to this matter.</p>
             <img src="images/modal-issue-example.png" class="img-responsive image-asset" data-aos="fade-left" data-aos-delay="300">
@@ -163,13 +163,22 @@
         <div class="col-md-9">
             <p><b>Color Palette</b></p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            <img src="images/image-placeholder-3.jpeg" class="img-responsive image-asset" data-aos="fade-left" data-aos-delay="300">
+            <img src="images/color-palette-design-system.png" class="img-responsive image-asset" data-aos="fade-left" data-aos-delay="300">
             <p><b>Typography</b></p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            <img src="images/image-placeholder-3.jpeg" class="img-responsive image-asset" data-aos="fade-left" data-aos-delay="300">
+            <p>Out of the font families based on the CSS Stats, we went with Proxima Nova. It works well for screens and it has great flexibility. The font is for almost everything; whether it's for branding or marketing<br><br>In this design system, Proxima Nova is used in 3 different weights: Regular, Medium, and Bold. There are two versions of the fonts, one in light (#ffffff) and the one in dark (#1A051D). In order to meet the minimum AA-level WCAG web accessibility standards, all text is a minimum font-size of 16px and the line-height of 1.5x</p>
+            <img src="images/typgraphy-design-system.png" class="img-responsive image-asset" data-aos="fade-left" data-aos-delay="300">
             <p><b>Iconography</b></p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-            <img src="images/image-placeholder-3.jpeg" class="img-responsive image-asset" data-aos="fade-left" data-aos-delay="300">
+            <p>There were a long list of unused and inconsistent icons during our UI inventory check. After grouping all of the icons into a designated collections, we've made a decision as a whole to remove icons that weren't aligned with the new design system.<br><br>There were a few existing icon library within the platform and I've chosen the Feather Icon library because it is simple, informative, and it compliments well with the overall visual language of the design system. In addition, I went with the simple icons because the other icon libraries were more details & mulitple color icons. This would increase cognitive load. Simplicity is key and it help users understand the concept of the icon represents.
+            </p>
+            <p><b>When To Use</b></p>
+            <p>Icons are powerful visual helpers and should be used with care. Overuse quickly results in user interfaces that are visually overwhelming or distracting. Icons are commonly used:
+            <ul>
+                <li>In the primary navigation, page headers, or section titles</li>
+                <li>To direct attention to something the users can take action on</li>
+                <li>In the banners or snackbar to bring specific theme attention like an announcement or error message</li>
+            </ul>
+            </p>
+            <img src="images/iconography-design-system.png" class="img-responsive image-asset" data-aos="fade-left" data-aos-delay="300">
             <p><b>Components</b></p>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
             <img src="images/image-placeholder-3.jpeg" class="img-responsive image-asset" data-aos="fade-left" data-aos-delay="300">
