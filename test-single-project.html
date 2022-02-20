@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/projects.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/css/twentytwenty.min.css">
 
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -118,7 +119,7 @@
                 </ul>
                 <p><b>Secondary Research - Provisional Personas</b></p>
                 <p>I created provisional personas that reflected the data I had collected through user research. Getting a sense of the general target audience helped me think about how the business would appeal to different demographics with varying needs.</p>
-                <img src="images/image-placeholder2.jpeg" class="img-responsive">
+                <img src="images/image-placeholder2.jpeg" class="img-responsive image-asset">
             </div>
         </div>
     <!-- End Research -->
@@ -130,13 +131,13 @@
             <div class="col-md-9">
                 <p><b>Persona Creation</b></p>
                 <p>During the research phase, I sought to understand the trends that set the standard for the music streaming industry. I also needed to uncover the needs and frustrations of the target user to better understand how to appeal to them.</p>
-                <img src="images/image-placeholder-3.jpeg" class="img-responsive">
+                <img src="images/image-placeholder-3.jpeg" class="img-responsive image-asset">
                 <p><b>Point of View Statements & How Might We Questions</b></p>
                 <p>After wrapping up primary research, I dug deeper into the insights and needs I had generated. First, I restructured insights into POV statements, an actionable problem statement that defines the design challenge. Next, I restructured those POV statements into How Might We questions that would generate solution-oriented brainstorming.</p>
-                <img src="images/image-placeholder-3.jpeg" class="img-responsive">
+                <img src="images/image-placeholder-3.jpeg" class="img-responsive image-asset">
                 <p><b>Business and User Goals</b></p>
                 <p> I reflected on the business goals, user goals, and technical considerations to find a happy medium for all stakeholders. Once I had identified common areas, I could decide what product features were necessary for the prototype.</p>
-                <img src="images/image-placeholder-3.jpeg" class="img-responsive">
+                <img src="images/image-placeholder-3.jpeg" class="img-responsive image-asset">
             </div>
         </div>
     <!-- End Define & Ideate -->  
@@ -160,10 +161,13 @@
             <div class="col-md-9">
                 <p><b>Wireframes: Low-Fidelity</b></p>
                 <p>I began the process of wireframing with sketches of several of the main screens for the Artist Moments social feature. During this process, I thought about how the layout and content could be structured to satisfy user and business goals in a technically feasible way. The sketch I chose served as a guide for my digital wireframes.</p>
-                <img src="images/image-placeholder2.jpeg" class="img-responsive">
-                <p><b>Wireframes: High-Fidelity</b></p>
+                <div id="home">
+                    <img src="images/image-placeholder2.jpeg" class="img-responsive image-asset">
+                    <img src="images/image-placeholder-3.jpeg" class="img-responsive image-asset">
+                </div>
+                <p style="padding-top: 40px;"><b>Wireframes: High-Fidelity</b></p>
                 <p>I created a low-fidelity prototype of the social features in Sketch. I created a UI requirements document to outline all of the features and elements I wanted to incorporate into the design.</p>
-                <img src="images/image-placeholder-3.jpeg" class="img-responsive">
+                <img src="images/image-placeholder-3.jpeg" class="img-responsive image-asset">
                 <p>During the research phase, I sought to understand the trends that set the standard for the music streaming industry. I also needed to uncover the needs and frustrations of the target user to better understand how to appeal to them.</p>
                 <p><b>Usability Testing</b></p>
                 <ol>
@@ -242,6 +246,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="main.js"></script>
+    
+    <script> src="https://code.jquery.com/jquery-2.1.1.min.js"</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.event.move.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.twentytwenty.js"></script>
+
+    
+    <script>
+        $(function(){
+            $("#home").twentytwenty();
+        });
+    </script>
 
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXHLV7P"
