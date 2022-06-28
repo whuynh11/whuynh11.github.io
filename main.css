@@ -508,7 +508,7 @@ li {
 /*End animations*/
 
 /*Start media queries*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
     body {
         background: url("images/background-image.png") no-repeat center fixed;
         background-size: cover;
