@@ -33,6 +33,7 @@ section {
 .image-asset {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     margin-bottom: 50px;
+    border-radius: 16px;
 }
 
 /* Top Bar
@@ -128,6 +129,14 @@ section {
 .img-padding {
     padding: 20px
 }
+
+/*Start other work*/
+.work-container {
+    margin-top: 75px;
+    border-top: 1px solid #000;
+    padding-top: 75px;
+}
+/*End other work*/
 
 /*Start footer*/
 .copyright {

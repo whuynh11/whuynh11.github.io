@@ -37,6 +37,7 @@ p {
 
 img {
     width: 100%;
+    border-radius: 16px;
 }
 
 .text-link {
@@ -341,22 +342,26 @@ li {
     margin-bottom: 0;
 }
 
-.profile-img {
-    width: 50rem;
+.portfolio-img {
+    min-width: 610px;
+    min-height: 300px;
+    max-width: 610px;
+    max-height: 300px;
     flex: 1;
 }
 
 .portfolio-description h1 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 300;
     margin: 1rem 0;
+    margin-bottom: 2.5rem;
 }
 
 .portfolio-description h6 {
-    font-size: 1.5rem;
-    text-transform: uppercase;
+    font-size: 1.6rem;
+    text-transform: capitalize;
     font-weight: 300;
-    opacity: 0.3;
+    opacity: 0.4;
 }
 
 .portfolio-description .cta {
@@ -364,7 +369,7 @@ li {
     margin-top: 2.5rem;
     font-size: 1.5rem;
     text-transform: uppercase;
-    color: #3883FF;
+    color: #7CA4E4;
     transition: color 650ms;
 }
 
@@ -462,6 +467,13 @@ li {
     background-color: #313534;
 }
 /*End timeline*/
+
+/*Start other work*/
+.work-container {
+    border-top: 1px solid #000;
+    max-width: 1140px;
+    padding-top: 75px;
+}
 
 /*Start footer*/
 .copyright {
@@ -609,6 +621,8 @@ li {
     .portfolio-img {
         margin: 0 0 2rem 0;
         order: 1;
+        min-width: 0px;
+        min-height: 0px;
     }
 
     .portfolio-description {
