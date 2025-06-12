@@ -160,6 +160,14 @@ section {
     border: 2px solid #273352;
 }
 
+.metric-box {
+    background-color: #e3ae4512;
+    border-left: 4px solid #e3ae45;
+    padding: 8px 24px;
+    margin: 16px;
+    border-radius: 16px;
+}
+
 /*Start other work*/
 .work-container {
     margin-top: 75px;
