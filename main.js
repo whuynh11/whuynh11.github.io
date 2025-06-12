@@ -15,6 +15,12 @@ $(document).ready(function () {
         }, 450);
     });
 
+    $('.col-md-9 a[href*="#"]').on('click', function () {
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top - 100
+        }, 450);
+    });
+
     $('#up').on('click', function () {
         $("html, body").animate({
             scrollTop: 0
