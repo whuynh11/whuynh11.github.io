@@ -155,15 +155,15 @@
             <p>When I joined the team, there was no single source of truth for our design language. The absence of a centralized design system led to a disjointed product experience and operational inefficiencies. Through an audit and cross-functional conversations, I identified 3 key issues:</p>
             <img src="images/thrive-component-fragmentation-across-teams.png" class="img-responsive image-asset-small">
             <p><b>1. Component Fragmentation Across Teams</b><br>
-            Each product team created and maintained their own UI components, resulting in visual and behavioral inconsistencies across the platform.</p><br>
+            Each product team built their own set of UI components over time; components like buttons, modals, inputs—all slightly different in spacing, behavior, or interaction. This led to a fragmented user experience and extra overhead for both design and engineering. Fixing a bug in one place of a component didn’t guarantee it was fixed elsewhere. Often times, it was not always under the hood change. It also made onboarding harder, since new team members had to navigate inconsistent patterns across the platform.</p><br>
             <!-- <div class="metric-box"><p><b>1. Component Fragmentation Across Teams</b><br>
             Each product team created and maintained their own UI components, resulting in visual and behavioral inconsistencies across the platform.</p></div> -->
             <img src="images/thrive-inconsistent-common-components.png" class="img-responsive image-asset-small">
             <p><b>2. Inefficient Design-to-Development Workflow</b><br>
-            The lack of standardized components caused repeated design work, inconsistent handoffs, and avoidable rework during implementation.</p><br>
+            Without a shared set of common components, designers were constantly recreating the same UI patterns from scratch (ex. buttons, cards, inputs—often with slight variations). Handoffs became messy since engineers had to interpret and rebuild designs manually, which led to inconsistencies and back-and-forth revisions. It slowed everyone down and made even simple features feel heavier to ship. A lot of time was wasted fixing things that could’ve been solved upfront with standardization.</p><br>
             <img src="images/thrive-missing-accessibility-standards.png" class="img-responsive image-asset-small">
             <p><b>3. Missing Accessibility Standards</b><br>
-            UI components lacked accessible defaults—such as contrast, keyboard support, and semantic HTML—making it difficult to scale inclusive design.</p>
+            A lot of the existing components didn’t follow basic accessibility standards. A few examples like proper color contrast, keyboard navigation, or semantic HTML were either missing or inconsistent. That meant every team had to solve for accessibility on their own, often overlooking key details or duplicating efforts. It also made it hard to scale inclusive design across the platform, since there was no reliable baseline to build from. We needed a more thoughtful, centralized approach to bake accessibility in from the start.</p>
         </div>
     </div>
     <!-- End Problem -->
@@ -177,16 +177,16 @@
             </p>
             <br>
             <img src="images/thrive-calendar-DS-working-modal.png" class="img-responsive image-asset-small">
-            <p>We set up a collaborative working model with design and engineering leads to make sure the system wasn’t just built in isolation. For example, we’d co-create components like tables or filters together, aligning early on technical constraints and design needs. We also ran pilots with a few product teams to gather feedback before rolling things out more broadly. This helped us catch edge cases early, make quick adjustments, and build trust. Over time, that collaboration turned into shared ownership, which made adoption smoother and more sustainable.</p>
+            <p>We set up a <b>collaborative working model</b> with design and engineering leads to make sure the system wasn’t just built in isolation. For example, we’d co-create components like tables or filters together, aligning early on technical constraints and design needs. We also ran pilots with a few product teams to gather feedback before rolling things out more broadly. This helped us catch edge cases early, make quick adjustments, and build trust. Over time, that collaboration turned into shared ownership, which made adoption smoother and more sustainable.</p>
             <br>
             <img src="images/thrive-accessibility-passing.png" class="img-responsive image-asset-small">
-            <p>Most components are designed to meet AA-level accessibility standards outlined in WCAG 2.1 and 2.2. We regularly use Accessibility Insights to audit components for issues like insufficient color contrast, missing ARIA labels, or poor keyboard navigation. For example, we caught low contrast in secondary buttons and missing focus states in modals, which we quickly resolved. We also ensured icon-only buttons had proper aria-labels for screen readers. This ongoing accessibility review process helps us catch issues early and ship components that are usable for everyone.</p>
+            <p>Most components are designed to meet <b>AA-level accessibility standards</b> outlined in WCAG 2.1 and 2.2. We regularly use Accessibility Insights to audit components for issues like insufficient color contrast, missing ARIA labels, or poor keyboard navigation. For example, we caught low contrast in secondary buttons and missing focus states in modals, which we quickly resolved. We also ensured icon-only buttons had proper aria-labels for screen readers. This ongoing accessibility review process helps us catch issues early and ship components that are usable for everyone.</p>
             <br>
             <img src="images/thrive-token-examples.png" class="img-responsive image-asset-small">
-            <p>We built a shared design token architecture that kept Figma and the codebase in sync—things like color, spacing, and typography were defined in one source of truth. For example, we mapped semantic tokens like button-primary-bg and text-muted directly from our design library to the front-end, which reduced handoff confusion and visual mismatches. When we updated a global spacing token, it reflected consistently across both platforms without manual overrides. This alignment made implementation faster and helped designers and engineers speak the same language. It also reduced drift over time and simplified onboarding for new team members.</p>
+            <p>We built a <b>shared design token architecture that kept Figma and the codebase in sync.</b>UI elements like color, spacing, and typography were defined in one source of truth. For example, we mapped semantic tokens like button-primary-bg and text-muted directly from our design library to the front-end, which reduced handoff confusion and visual mismatches. When we updated a global spacing token, it reflected consistently across both platforms without manual overrides. This alignment made implementation faster and helped designers and engineers speak the same language. It also reduced drift over time and simplified onboarding for new team members.</p>
             <br>
             <img src="images/thrive-design-systems-list.png" class="img-responsive image-asset-small">
-            <p>We built a centralized component library shared across teams, with clear specs, usage guidelines, and interaction patterns baked in. Since we support three design systems, we separated them into distinct libraries—each tailored to a specific product surface—so teams knew exactly where to go without second-guessing. This structure cut down confusion, reduced duplicate work, and made adoption much smoother. It also gave us more control when rolling out updates specific to each system.</p>
+            <p>We built a <b>centralized component library shared across teams</b>, with clear specs, usage guidelines, and interaction patterns baked in. Since we support three design systems, we separated them into distinct libraries—each tailored to a specific product surface—so teams knew exactly where to go without second-guessing. This structure cut down confusion, reduced duplicate work, and made adoption much smoother. It also gave us more control when rolling out updates specific to each system.</p>
         </div>
     </div>
     <!-- End Solution -->
@@ -258,6 +258,7 @@
         </div>
         <div class="col-md-9">
             <img src="images/coming-soon.gif" class="img-responsive image-asset">
+            
         </div>
     </div>
     <!-- End Overview -->
