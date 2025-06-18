@@ -94,9 +94,9 @@
             </p>
              <p>Some of the results I’ve delivered:</p>
                 <ul>
-                    <li><b style="color: #2d2d2d;">↘️ 25% reduction</b> –<br>Faster time-to-market: Reduced front-end implementation time by ~25% by giving engineers reusable, production-ready components.</li>
-                    <li><b style="color: #2d2d2d;">↗️ 35% increase</b> –<br>35% increase in design efficiency: Designers now work from a shared system instead of rebuilding patterns.</li>
-                    <li><b style="color: #2d2d2d;">⬆️ Over 90% coverage</b> –<br>Over 90% component coverage with accessible defaults, supporting more inclusive experiences out of the box.</li>
+                    <li><b style="color: #2d2d2d;">↘️ 25% faster implementation time</b> –<br>Faster time-to-market: Reduced front-end implementation time by ~25% by giving engineers reusable, production-ready components.</li>
+                    <li><b style="color: #2d2d2d;">↗️ 35% faster design workflow</b> –<br>35% increase in design efficiency: Designers now work from a shared system instead of rebuilding common components and patterns.</li>
+                    <li><b style="color: #2d2d2d;">⬆️ Over 90% of components are AA compliant</b> –<br>Over 90% component coverage with accessibility standards, supporting more inclusive experiences out of the box.</li>
                 </ul>
             <a class="button round" href="#part1"><h4>Skip to section</h4></a>
             <hr>
@@ -173,15 +173,20 @@
             <h2>Solution</h2>
         </div>
         <div class="col-md-9">
-            <img src="images/image-placeholder2.jpeg" class="img-responsive image-asset">
             <p>To address these issues, I led the creation of a foundational design system focused on scalability, usability, and accessibility. This included:
-            </b></p>
-            <ul>
-                <li>A <b>centralized component library</b> shared across teams with clearly defined specs and interaction guidelines.</li>
-                <li>A <b>design token architecture</b> aligned across Figma and front-end codebases, reducing implementation discrepancies.</li>
-                <li><b>Accessible-by-default components</b> with WCAG 2.1 - 2.2 AA compliance as the standard baseline.</li>
-                <li>A <b>collaborative working model</b> with design and engineering leads to encourage adoption and iterate on feedback.</li>
-            </ul>
+            </p>
+            <br>
+            <img src="images/thrive-calendar-DS-working-modal.png" class="img-responsive image-asset-small">
+            <p>We set up a collaborative working model with design and engineering leads to make sure the system wasn’t just built in isolation. For example, we’d co-create components like tables or filters together, aligning early on technical constraints and design needs. We also ran pilots with a few product teams to gather feedback before rolling things out more broadly. This helped us catch edge cases early, make quick adjustments, and build trust. Over time, that collaboration turned into shared ownership, which made adoption smoother and more sustainable.</p>
+            <br>
+            <img src="images/thrive-accessibility-passing.png" class="img-responsive image-asset-small">
+            <p>Most components are designed to meet AA-level accessibility standards outlined in WCAG 2.1 and 2.2. We regularly use Accessibility Insights to audit components for issues like insufficient color contrast, missing ARIA labels, or poor keyboard navigation. For example, we caught low contrast in secondary buttons and missing focus states in modals, which we quickly resolved. We also ensured icon-only buttons had proper aria-labels for screen readers. This ongoing accessibility review process helps us catch issues early and ship components that are usable for everyone.</p>
+            <br>
+            <img src="images/thrive-token-examples.png" class="img-responsive image-asset-small">
+            <p>We built a shared design token architecture that kept Figma and the codebase in sync—things like color, spacing, and typography were defined in one source of truth. For example, we mapped semantic tokens like button-primary-bg and text-muted directly from our design library to the front-end, which reduced handoff confusion and visual mismatches. When we updated a global spacing token, it reflected consistently across both platforms without manual overrides. This alignment made implementation faster and helped designers and engineers speak the same language. It also reduced drift over time and simplified onboarding for new team members.</p>
+            <br>
+            <img src="images/thrive-design-systems-list.png" class="img-responsive image-asset-small">
+            <p>We built a centralized component library shared across teams, with clear specs, usage guidelines, and interaction patterns baked in. Since we support three design systems, we separated them into distinct libraries—each tailored to a specific product surface—so teams knew exactly where to go without second-guessing. This structure cut down confusion, reduced duplicate work, and made adoption much smoother. It also gave us more control when rolling out updates specific to each system.</p>
         </div>
     </div>
     <!-- End Solution -->
