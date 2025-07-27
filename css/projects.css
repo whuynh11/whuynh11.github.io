@@ -242,6 +242,10 @@ section {
     .top-bar {
         padding: 65px 0 65px;
     }
+    .top-bar h1 {
+    font-size: 3.75rem;
+}
+    
 }
 
 @media only screen and (max-width: 520px) {
