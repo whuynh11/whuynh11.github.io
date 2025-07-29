@@ -31,7 +31,7 @@ a {
 }
 
 p {
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     font-weight: 300;
 }
 
@@ -66,7 +66,7 @@ a.text-link:hover {
 
 .section-heading h1 {
     font-size: 3.5rem;
-    color: rgba(255,255,255, .3);
+    color: rgba(255, 255, 255, 0.418);
     text-transform: uppercase;
     font-weight: 300;
     position: relative;
@@ -335,7 +335,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 8rem;
+    margin-bottom: 10rem;
 }
 
 .portfolio-item:last-child {
@@ -361,7 +361,15 @@ li {
     font-size: 1.6rem;
     text-transform: capitalize;
     font-weight: 300;
-    opacity: 0.4;
+    opacity: 1;
+    padding: .875rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    background-color:#4b5563;
+    color: #ffffff;
+    border-radius: 16px;
+    width: fit-content;
+;
 }
 
 .portfolio-description .cta {
@@ -732,7 +740,7 @@ li {
 .box-intro h6 {
     font-size: 2rem;
     font-weight: 300;
-    opacity: 0.4;
+    opacity: 0.5;
     font-family: 'Lora', serif;
 }
 
