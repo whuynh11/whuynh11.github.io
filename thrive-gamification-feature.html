@@ -1,234 +1,379 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Thrive Gamification Feature | Case Study</title>
-    <meta property="og:image" content="http://williamnhuynh.com/images/hero-thumbnail.png">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora&display=swap">
-    <link rel="stylesheet" href="css/projects.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <meta charset="utf-8" />
+  <script>document.documentElement.classList.add('js');</script>
+  <script>(function () { try { var t = localStorage.getItem('theme'); var m = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; var eff = (t === 'dark' || t === 'light') ? t : m; var html = document.documentElement; html.setAttribute('data-theme', eff); html.style.backgroundColor = (eff === 'dark') ? '#0b0f19' : '#ffffff'; } catch (e) { } })();</script>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="light dark" name="color-scheme" />
+  <title>Thrive Gamification Feature • Case Study</title>
+  <link href="./assets/favicon.svg" rel="icon" type="image/svg+xml" />
+  <link href="./css/reset.css" rel="stylesheet" />
+  <link href="./css/tokens.css" rel="stylesheet" />
+  <link href="./css/main.css" rel="stylesheet" />
+  <link href="./css/case-study.css" rel="stylesheet" />
 
-     <script type="module"> 
-    import { Agents } from "https://rispose.com/cdn/v1/sdk.es.js" 
-    const agent = Agents.create('ag_q1hedw9ut6ze') 
-    </script> 
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WXHLV7P');</script>
-    <!-- End Google Tag Manager -->
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WXHLV7P');</script>
+  <!-- End Google Tag Manager -->
 </head>
 
 <body>
-    <!-- box-header -->
-    <div class="header">
-        <div class="progress-container">
-          <div class="progress-top-bar" id="myBar"></div>
-        </div>  
-    </div>
-    <div class="container-fluid">
-        <header class="box-header">
-            <div class="box-logo">
-                <a href="index.html"><img src="images/arrow-left.svg"></a>
-            </div>
-        </header>
-    </div>
-    <!-- end box-header -->
-
-    <!-- Introduction -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="col-md-12" data-aos="fade-right" data-aos-delay="300">
-                <h1>Designing Daily Return: Points, Levels & Quests → +18% DAU/MAU</h1>
-                <p><a href="index.html">Home</a> / Thrive Gamification Feature</p>
-            </div>
-        </div>
-    </div>
-    <!-- end Introduction -->
-
-    <section>
-    <!-- Context -->
-        <div class="container" data-aos="fade-down" data-aos-delay="300">
-            <div class="col-md-3">
-                <h1>Context</h1>
-            </div>
-            <div class="col-md-9">
-                <p><b>🧭 Why are we here?</b></p>
-                <p>Thrive is a mental-health/productivity platform used by enterprise workforces to build sustainable Microsteps that lower stress and improve focus. Post-onboarding engagement flattened in weeks 2–4, and users lacked a clear sense of “progress” or what to do next. We needed a durable way to raise day-to-day motivation, increase retention, and lay a foundation for a future rewards program that enterprise customers could optionally enable.
-                </p>
-            <p><b>🤝 Who I collaborated with?</b></p>
-            <p>Product, Behavioral Science, Data, Front-end/Back-end, Lifecycle/CRM, Enterprise Success, Legal/Compliance.</p>
-            </div>
-        </div>
-    <!-- End Context -->
-        <div class="container">
-            <div class="center" data-aos="fade-down" data-aos-delay="300">
-                <img src="images/tf-design-team.png" alt="" class="img-responsive image-asset" />
-            </div>
-        </div>
-    <!-- Problem -->
-        <div class="container">
-            <div class="col-md-3">
-                <h1>Problem</h1>
-            </div>
-            <div class="col-md-9">
-                <p><b>🚩 What are we trying to solve?</b></p>
-                <p>Users complete actions (Microsteps, reflections, lessons), but don’t see how those actions add up or why they matter. Badges exist, yet there’s no single, transparent system that connects action → progress → reward. This ambiguity suppresses daily return behavior and weakens long-term adherence to healthy habits.</p>
-                <p>Design challenge: Create an ethical, accessible, and scalable gamification layer that:</p>
-                <ul>
-                    <li>Makes progress legible and motivating</li>
-                    <li>Guides “what to do next” without pressure</li>
-                    <li>Scales into an enterprise-ready rewards program.</li>
-                </ul>
-            </div>
-        </div>
-    <!-- End Problem -->
-    <!-- Evidence -->    
-        <div class="container">
-            <div class="col-md-3">
-                <h1>Evidence</h1>
-            </div>
-            <div class="col-md-9">
-                <p><b>🔍 How do we know it’s a problem?</b></p>
-                <p>Early return was solid but tapered by week four (from low-40s% to mid-20s%). Daily usage sat in the mid-teens, and about a third of active users completed Microsteps on 3+ days/week. Roughly one in five users could explain how actions translated to progress. Around one in ten support tickets asked “what’s next?”, and session replays showed users stalling without clear guidance.</p>
-                 <ul>
-                    <li>Retention: week-1 in the low-40s% → week-4 in the mid-20s%</li>
-                    <li>Usage: DAU/MAU in the mid-teens; ~⅓ of actives do Microsteps 3+ days/week</li>
-                    <li>Understanding: ~1 in 5 could explain action → progress</li>
-                    <li>Friction: ~1 in 10 tickets ask “what’s next?”; replays show stalls without guidance</li>
-                </ul>
-                <p><i>NDA note: Metrics shown as ranges/approximations; client identifiers and exact values are intentionally withheld.</i></p>
-            </div>
-        </div>
-    <!-- End Evidence -->  
-    <!-- Role -->
-        <div class="container">
-            <div class="col-md-3">
-                <h1>My Role</h1>
-            </div>
-            <div class="col-md-9">
-            <p><b>🔨 What are my key responsibilities?</b></p>
-            <p>I led the end-to-end design and rollout of a unified Points & Levels system; owning product strategy, experience design, and experimentation. My focus was creating an ethical, scalable progression model that made progress obvious, guided next steps, and set us up for a future rewards program. I partnered cross-functionally (PM, Eng, Data, Behavioral Science, Compliance, CS) to ship fast and safely.</b>
-            </p>
-            <p>Key responsibilities included:
-            </p>
-            <ul>
-                <li>🧭 Strategy & system architecture: Defined the Points & Levels model (earn rules, caps, level thresholds), Daily Quests, streak guardrails, and progression UX.</li>
-                <li>🎨 Experience design: Led end-to-end UX/UI for Achievements Hub, Level Tracker, Daily Quests, progress toasts, and weekly recap (web & mobile).</li>
-                <li>📊 Experimentation: Authored success metrics, event schema, and the A/B plan; partnered with Data on instrumentation and read-outs.</li>
-                <li>🛡️ Ethical guardrails: Calm defaults, opt-out, no punitive loss, WCAG AA compliance, and inclusive copy.</li>
-                <li>🧩 Design-system integration: Built reusable components (ProgressBar, QuestCard, LevelBadge, RewardTeaser) mapped to tokens for scale.</li>
-                <li>🤝 Cross-functional leadership: Orchestrated phased rollout and enterprise controls with Legal/Compliance, CRM/Lifecycle, and Customer Success.</li>
-            </ul>
-        </div>
-    <!-- End Role -->
-    <!-- Solution -->
-        <div class="container">
-            <div class="col-md-3">
-                <h1>Solution</h1>
-            </div>
-            <div class="col-md-9">
-                <p><b>💡What’s the suggested solution?</b></p>
-                <p>Thrive Points & Levels: a unified, transparent progress layer embedded across core moments.</p>
-                <p>Core loop</p>
-                <ol>
-                    <li>Do a Microstep / reflection / session → earn points (clear “+X pts” toast).</li>
-                    <li>See progress on a persistent Level Tracker (Lv1→Lv5) with tooltips explaining how to advance.</li>
-                    <li>Get guided next steps via Daily Quests (e.g., “Complete 3 Microsteps today”) and Next-Best-Action chips.</li>
-                    <li>Celebrate with lightweight level-up moments and a weekly recap that visualizes momentum.</li>
-                    <li>Preview rewards (future store teaser) to make long-term value tangible.</li>
-                </ol>
-                <p>Enterprise-ready controls</p>
-                <ul>
-                    <li>Tenant-level earn-rate ranges and toggles (e.g., disable streaks, adjust quest difficulty).</li>
-                    <li>Privacy-respecting analytics and export for HR partners.</li>
-                    <li>Localization and accessibility baked in from day one.</li>
-                </ul>
-            </div>
-        </div>
-    <!-- End Solution -->
-    <!-- Impact -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="topbar">
     <div class="container">
-        <div class="col-md-3">
-            <h1>Impact</h1>
-        </div>
-        <div class="col-md-9">
-            <p><b>🚀What are the impacts we measured?</b></p>
-            <p><b>Quantitative</b></p>
-            <p>We instrumented a pilot A/B across enterprise tenants, tracking activation, retention, habit depth, and support signals over a four-week window. Success was defined upfront (retention, DAU/MAU, Microsteps per user/week, session duration, and “what’s next?” tickets), with guardrails for well-being and accessibility. Results are shown as ranges/approximations to respect NDA.</p>
-            <p>Early retention and daily use went up, habits got deeper, sessions got longer, and “what’s next?” tickets dropped.</p>
-            <ul>
-                <li>7-day retention (low-40s% → low-50s%)<br>More people came back in the first week after trying the feature.</li>
-                <li>Week-4 retention (mid-20s% → high-20s%)<br>More users were still active about a month later.</li>
-                <li>Microsteps per user/week (~+⅓)<br>People did about one-third more healthy actions each week.</li>
-                <li>Session duration (low-teens % increase)<br>Users spent a bit longer per visit exploring and completing actions.</li>
-                <li>“What’s next?” tickets (~−⅓)<br>Fewer users asked for guidance—the product now points the way.</li>
-            </ul>
-            <p><b>Qualitative</b></p>
-            <p>We ran mixed-methods research alongside the pilot: in-product micro-surveys, 1:1 interviews across roles and geographies, and heuristic reviews of key flows. We focused on clarity (“do I know what to do next?”), motivation without pressure, and perceived fairness/ethics. Quotes are paraphrased and de-identified to preserve confidentiality.</p>
-            <ul>
-                <li>Users: consistent themes of “I know what moves me forward” and “motivating without pressure.”</li>
-                <li>Enterprise: weekly recaps make team momentum coachable.</li>
-                <li>Risk check: no adverse trends in well-being pulses or “streak loss” help-center searches.</li>
-            </ul>
-            <p><i>NDA note: Metrics shown as ranges/approximations; tenant identifiers and exact values intentionally withheld.</i></p>
-        </div>
+      <header class="header" role="banner">
+        <a aria-label="Home" class="brand" href="./index.html">
+          <img alt="" aria-hidden="true" class="avatar" decoding="async" loading="eager"
+            src="./assets/william-avatar.jpg" />
+          <span class="brand-name">William Huynh</span>
+        </a>
+        <nav aria-label="Primary" class="nav">
+          <button aria-controls="primary-nav" aria-expanded="false" class="iconbtn mobile-toggle" data-mobile-toggle=""
+            type="button">
+            <span aria-hidden="true" class="hamburger"><span></span><span></span><span></span></span>
+            <span class="sr-only">Menu</span>
+          </button>
+          <div class="pillnav" data-pillnav="" id="primary-nav">
+            <span aria-hidden="true" class="pillnav-indicator"></span>
+            <a href="./index.html">Case Studies</a>
+            <a href="./design-process.html">Design Process</a>
+            <a href="./design-ai.html">Design &amp; AI</a>
+            <a href="./design-pillars.html">Design Pillars</a>
+            <a href="./about.html">About Me</a>
+          </div>
+          <button aria-pressed="false" class="iconbtn theme-toggle" data-theme-toggle="" type="button">
+            <span aria-hidden="true" class="theme-icon" data-theme-icon=""></span>
+            <span class="theme-label" data-theme-label="">Theme</span>
+          </button>
+        </nav>
+      </header>
     </div>
-    <!-- End Impact -->
-    <!-- Belief -->
-        <div class="container">
-            <div class="col-md-3">
-                <h1>Belief</h1>
-            </div>
-            <div class="col-md-9">
-                <p><b>🧠 Why do we believe it will work?</b></p>
-                <p>The system aligns with behavioral science and ethical design:</p>
-                <ul>
-                    <li>Goal-gradient → visible distance to the next level increases effort.</li>
-                    <li>Self-Determination Theory → autonomy (opt-in, choose quests), competence (levels), relatedness (team recaps).</li>
-                    <li>Fresh-start effect & salience → weekly recap and timely nudges.</li>
-                    <li>Positive reinforcement, not punishment → gentle streak protection and no harsh loss mechanics.</li>
-                </ul>
-                <p>Because the experience is transparent, encouraging, and configurable, it improves daily motivation now and cleanly scales into a rewards marketplace later—without re-architecting the UX or data model.</p>
-            </div>
+  </div>
+  <div aria-hidden="true" class="nav-overlay" data-nav-overlay=""></div>
+  <main id="main" role="main">
+    <!-- HERO (William template-inspired) -->
+    <header class="cs-hero">
+      <div class="container cs-hero-inner">
+        <a class="backlink" href="./index.html">
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <path
+              d="M15.7 5.3a1 1 0 0 1 0 1.4L10.4 12l5.3 5.3a1 1 0 1 1-1.4 1.4l-6-6a1 1 0 0 1 0-1.4l6-6a1 1 0 0 1 1.4 0Z"
+              fill="currentColor"></path>
+          </svg>
+          Back to Projects
+        </a>
+        <h1 class="cs-title">Designing Daily Return: Points, Levels &amp; Quests</h1>
+        <p class="cs-subtitle">Built an ethical, scalable progression layer that makes progress legible, guides “what to
+          do next,” and strengthens early retention for enterprise members.</p>
+        <div class="cs-meta">
+          <span class="chip">Gamification</span><span class="chip">Web/Mobile</span><span class="chip">Health
+            Tech</span><span class="chip">B2B SaaS</span>
         </div>
-    <!-- End Belief -->
-    </section>
+        <div aria-label="Key results" class="kpis">
+          <div class="kpi"><strong>+26%</strong><span>4-week retention</span></div>
+          <div class="kpi"><strong>+35%</strong><span>Avg completions / user / week</span></div>
+          <div class="kpi"><strong>+15%</strong><span>Daily Quest exploration</span></div>
+          <div class="kpi"><strong>+18%</strong><span>DAU/MAU lift (approx.)</span></div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="cs-layout">
+        <!-- Sticky TOC (Nat Calderon-inspired) -->
+        <aside aria-label="Content" class="toc" data-toc="">
+          <h2>Content</h2>
+          <nav aria-label="Case study sections">
+            <a data-toc-link="" href="#context"><span>Context</span><span class="pill">01</span></a>
+            <a data-toc-link="" href="#problem"><span>Problem</span><span class="pill">02</span></a>
+            <a data-toc-link="" href="#evidence"><span>Evidence</span><span class="pill">03</span></a>
+            <a data-toc-link="" href="#role"><span>My Role</span><span class="pill">04</span></a>
+            <a data-toc-link="" href="#solution"><span>Solution</span><span class="pill">05</span></a>
+            <a data-toc-link="" href="#impact"><span>Impact</span><span class="pill">06</span></a>
+            <a data-toc-link="" href="#belief"><span>Belief</span><span class="pill">07</span></a>
+          </nav>
+        </aside>
+        <article aria-label="Case study" class="cs-article">
+          <!-- Context -->
+          <section class="cs-section" id="context">
+            <h2>Context</h2>
+            <div class="cs-q"><span aria-hidden="true" class="dot"></span><span>Why are we here?</span>
+            </div>
+            <p>Thrive is a mental-health/productivity platform used by enterprise workforces to build sustainable
+              Microsteps that lower stress and improve focus. Post-onboarding engagement flattened in weeks 2–4, and
+              users lacked a clear sense of “progress” or what to do next. We needed a durable way to raise day-to-day
+              motivation, increase retention, and lay a foundation for a future rewards program that enterprise
+              customers could optionally enable.</p>
+            <div class="cs-q"><span aria-hidden="true" class="dot"></span><span>Who I collaborated with</span>
+            </div>
+            <p>Product, Behavioral Science, Data, Front-end/Back-end, Lifecycle/CRM, Enterprise Success,
+              Legal/Compliance.</p>
+          </section>
+          <!-- Problem -->
+          <section class="cs-section" id="problem">
+            <h2>Problem</h2>
+            <div class="cs-q"><span aria-hidden="true" class="dot"></span><span>What are we trying to solve?</span>
+            </div>
+            <p>Users complete actions (Microsteps, reflections, lessons), but don’t see how those actions add up or why
+              they matter. Badges exist, yet there’s no single, transparent system that connects action → progress →
+              reward. This ambiguity suppresses daily return behavior and weakens long-term adherence to healthy habits.
+            </p>
+            <p><strong>Design challenge:</strong> Create an ethical, accessible, and scalable gamification layer that:
+            </p>
+            <ul>
+              <li>Makes progress legible and motivating</li>
+              <li>Guides “what to do next” without pressure</li>
+              <li>Scales into an enterprise-ready rewards program</li>
+            </ul>
+          </section>
+          <!-- Evidence -->
+          <section class="cs-section" id="evidence">
+            <h2>Evidence</h2>
+            <div class="cs-q"><span aria-hidden="true" class="dot"></span><span>How do we know it’s a problem?</span>
+            </div>
+            <p>Early return was solid but tapered by week four (from low-40s% to mid-20s%). Daily usage sat in the
+              mid-teens, and about a third of active users completed Microsteps on 3+ days/week. Roughly one in five
+              users could explain how actions translated to progress. Around one in ten support tickets asked “what’s
+              next?”, and session replays showed users stalling without clear guidance.</p>
+            <ul>
+              <li><strong>Retention:</strong> week-1 in the low-40s% → week-4 in the mid-20s%</li>
+              <li><strong>Usage:</strong> DAU/MAU in the mid-teens; ~⅓ of actives do Microsteps 3+ days/week</li>
+              <li><strong>Understanding:</strong> ~1 in 5 could explain action → progress</li>
+              <li><strong>Friction:</strong> ~1 in 10 tickets ask “what’s next?”; replays show stalls without guidance
+              </li>
+            </ul>
+            <p class="note"><em>NDA note:</em> Metrics shown as ranges/approximations; client identifiers and exact
+              values are intentionally withheld.</p>
+          </section>
+          <!-- My Role -->
+          <section class="cs-section" id="role">
+            <h2>My Role</h2>
+            <p>I led the end-to-end design and rollout of a unified Points &amp; Levels system - owning product
+              strategy,
+              experience design, and experimentation. My focus was creating an ethical, scalable progression model that
+              made progress obvious, guided next steps, and set us up for a future rewards program. I partnered
+              cross-functionally (PM, Eng, Data, Behavioral Science, Compliance, CS) to ship fast and safely.</p>
+            <p style="margin-top:12px;color:var(--muted);font-size:12px;">Key responsibilities included:</p>
+            <ul>
+              <li><strong>🧠 Strategy &amp; system architecture:</strong> Defined earn rules, caps, level thresholds,
+                Daily
+                Quests, streak guardrails, and progression UX.</li>
+              <li><strong>🧩 Experience design:</strong> Led end-to-end UX/UI for the Achievements Hub, Level Tracker,
+                Daily Quests, progress toasts, and weekly recap (web &amp; mobile).</li>
+              <li><strong>🧪 Experimentation:</strong> Authored success metrics, event schema, and the A/B plan;
+                partnered
+                with Data on instrumentation and read-outs.</li>
+              <li><strong>🛡️ Ethical guardrails:</strong> Calm defaults, opt-out, no punitive loss, WCAG AA compliance,
+                and
+                inclusive copy.</li>
+              <li><strong>🧱 Design-system integration:</strong> Built reusable components (ProgressBar, QuestCard,
+                LevelBadge, RewardTeaser) mapped to tokens for scale.</li>
+              <li><strong>🤝 Cross-functional leadership:</strong> Orchestrated phased rollout and enterprise controls
+                with
+                Legal/Compliance, CRM/Lifecycle, and Customer Success.</li>
+            </ul>
+          </section>
+          <!-- Solution -->
+          <section class="cs-section" id="solution">
+            <h2>Solution</h2>
+            <div class="cs-q"><span aria-hidden="true" class="dot"></span><span>What’s the suggested solution?</span>
+            </div>
+            <p><strong>Thrive Points &amp; Levels</strong>: a unified, transparent progress layer embedded across core
+              moments.</p>
+            <p style="margin-top:12px;color:var(--muted);font-size:12px;">Core loop</p>
+            <ul>
+              <li>Do a Microstep / reflection / session → earn points (clear “+X pts” toast).</li>
+              <li>See progress on a persistent Level Tracker (Lv1→Lv5) with tooltips explaining how to advance.</li>
+              <li>Get guided next steps via Daily Quests (e.g., “Complete 3 Microsteps today”) and Next‑Best‑Action
+                chips.</li>
+              <li>Celebrate with lightweight level‑up moments and a weekly recap that visualizes momentum.</li>
+              <li>Preview rewards (future store teaser) to make long‑term value tangible.</li>
+            </ul>
+            <p style="margin-top:12px;color:var(--muted);font-size:12px;">Enterprise-ready controls</p>
+            <ul>
+              <li>Tenant-level earn-rate ranges and toggles (e.g., disable streaks, adjust quest difficulty).</li>
+              <li>Privacy-respecting analytics and export for HR partners.</li>
+              <li>Localization and accessibility baked in from day one.</li>
+            </ul>
+            <figure>
+              <div class="figure">
+                <img alt="Points reward on Actions"
+                  src="./assets/thriveglobal/thrive-gamification-level-progression.png" />
+                <figcaption>Points reward on Actions: Complete a Microstep/reflection/session → earn points with a quick
+                  “+X pts” toast.
+                </figcaption>
+              </div>
+            </figure>
+            <figure>
+              <div class="figure">
+                <img alt="Clear Level Progress" src="./assets/thriveglobal/thrive-gamification-points-reward.png" />
+                <figcaption>Clear Level Progress: Persistent Level Tracker (Lv1→Lv10) + tooltips that spell out exactly
+                  how to advance.
+                </figcaption>
+              </div>
+            </figure>
+            <figure>
+              <div class="figure">
+                <img alt="Rewards Preview" src="./assets/thriveglobal/thrive-gamification-garden-rewards.png" />
+                <figcaption>Rewards Preview: Light rewards teaser; plug-and-play rewards store later.
+                </figcaption>
+              </div>
+            </figure>
+          </section>
+          <!-- Impact -->
+          <section class="cs-section" id="impact">
+            <h2>Impact</h2>
+            <div class="cs-q"><span aria-hidden="true" class="dot"></span><span>What are the impacts we measured?</span>
+            </div>
+            <p style="margin-top:24px;"><strong>Quantitative</strong></p>
+            <p>I instrumented a pilot A/B across enterprise tenants, tracking activation, retention, habit depth, and
+              support signals over a four-week window. Success was defined upfront (retention, DAU/MAU, Microsteps per
+              user/week, session duration, and “what’s next?” tickets), with guardrails for well-being and
+              accessibility. Results are shown as ranges/approximations to respect NDA.</p>
+            <p>Early retention and daily use went up, habits got deeper, sessions got longer, and “what’s next?” tickets
+              dropped.</p>
+            <ul>
+              <li><strong>7-day retention:</strong> low-40s% → low-50s% <span class="muted">(more people came back in
+                  the first week)</span></li>
+              <li><strong>Week-4 retention:</strong> mid-20s% → high-20s% <span class="muted">(more users were still
+                  active about a month later)</span></li>
+              <li><strong>Microsteps per user/week:</strong> ~+⅓ <span class="muted">(deeper habit depth)</span></li>
+              <li><strong>Session duration:</strong> low-teens % increase <span class="muted">(slightly longer, more
+                  complete sessions)</span></li>
+              <li><strong>“What’s next?” tickets:</strong> ~−⅓ <span class="muted">(the product now points the
+                  way)</span></li>
+            </ul>
+            <p style="margin-top:24px;"><strong>Qualitative</strong></p>
+            <p>I ran mixed-methods research alongside the pilot: in-product micro-surveys, 1:1 interviews across roles
+              and geographies, and heuristic reviews of key flows. We focused on clarity (“do I know what to do next?”),
+              motivation without pressure, and perceived fairness/ethics. Quotes are paraphrased and de-identified to
+              preserve confidentiality.</p>
+            <ul>
+              <li><strong>Users:</strong> consistent themes of “I know what moves me forward” and “motivating without
+                pressure.”</li>
+              <li><strong>Enterprise:</strong> weekly recaps make team momentum coachable.</li>
+              <li><strong>Risk check:</strong> no adverse trends in well-being pulses or “streak loss” help-center
+                searches.</li>
+            </ul>
+            <p class="note"><em>NDA note:</em> Metrics shown as ranges/approximations; tenant identifiers and exact
+              values intentionally withheld.</p>
+          </section>
+          <!-- Belief -->
+          <section class="cs-section" id="belief">
+            <h2>Belief</h2>
+            <div class="cs-q"><span aria-hidden="true" class="dot"></span><span>Why do we believe it will work?</span>
+            </div>
+            <p>The system aligns with behavioral science and ethical design:</p>
+            <ul>
+              <li><strong>Goal-gradient:</strong> visible distance to the next level increases effort.</li>
+              <li><strong>Self‑Determination Theory:</strong> autonomy (opt-in, choose quests), competence (levels),
+                relatedness (team recaps).</li>
+              <li><strong>Fresh-start effect &amp; salience:</strong> weekly recap and timely nudges.</li>
+              <li><strong>Positive reinforcement, not punishment:</strong> gentle streak protection and no harsh loss
+                mechanics.</li>
+            </ul>
+            <p>Because the experience is transparent, encouraging, and configurable, it improves daily motivation now
+              and cleanly scales into a rewards marketplace later without re-architecting the UX or data model.</p>
+          </section>
+          <div class="cs-end"><a class="btn" href="./index.html">Back to projects</a><a class="btn btn-secondary"
+              href="./thrive-onboarding-experience.html">Next: Thrive Onboarding Experience</a>
+          </div>
+        </article>
 
-    <footer class="copyright">
-        <div class="up" id="up">
-            <i class="fas fa-chevron-up"></i>
+      </div>
+    </div>
+    <section aria-labelledby="cta-title" class="cta" id="contact">
+      <div class="container">
+        <h2 id="cta-title">Let’s build something great.</h2>
+        <p>Always open to connecting about roles, systems work, and solving messy problems.</p>
+        <div class="btnrow">
+          <a aria-label="Email me" class="btn primary" href="mailto:williamnhuynh@gmail.com">
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+              <path
+                d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"
+                fill="currentColor"></path>
+            </svg>
+            Contact me
+          </a>
+          <a aria-label="Connect on LinkedIn" class="btn" href="https://www.linkedin.com/in/williamnhuynh/"
+            rel="noreferrer noopener" target="_blank">
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+              <path
+                d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.8-1.8 3.7-1.8 4 0 4.7 2.6 4.7 6v5.6ZM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2ZM7.1 20.4H3.6V9h3.5v11.4Z"
+                fill="currentColor"></path>
+            </svg>
+            Connect on LinkedIn
+          </a>
         </div>
-        <p>&copy; 2025 William Huynh</p>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>William Huynh</h3>
+            <p>Product growth, Design systems, and AI-assisted UX. 8+ years shipping B2B/B2C products.</p>
+            <div style="margin-top:12px;display:inline-flex;gap:10px;align-items:center;">
+              <span class="chip">Senior Product Designer</span>
+            </div>
+            <div style="margin-top:12px;display:inline-flex;gap:10px;align-items:center;">
+              <span class="chip">PM-minded, code-literate</span>
+            </div>
+            <small>© <span id="year"></span> William Huynh • All rights reserved</small>
+          </div>
+          <div>
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="./index.html">Case Studies</a></li>
+              <li><a href="./design-process.html">Design Process</a></li>
+              <li><a href="./design-ai.html">Design &amp; AI</a></li>
+              <li><a href="./design-pillars.html">Design Pillars</a></li>
+              <li><a href="./about.html">About Me</a></li>
+              <li><a href="assets/William_Huynh_SeniorProductDesigner_Resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Connect</h3>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/williamnhuynh/" target="_blank">LinkedIn</a></li>
+              <li><a href="mailto: williamnhuynh@gmail.com">Email</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </footer>
 
+    <script defer="" src="./js/main.js"></script>
     <script>
-        // When the user scrolls the page, execute myFunction 
-        window.onscroll = function() {myFunction()};
-        
-        function myFunction() {
-          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-          var scrolled = (winScroll / height) * 100;
-          document.getElementById("myBar").style.width = scrolled + "%";
-        }
+      // tiny footer year helper
+      document.getElementById('year').textContent = new Date().getFullYear();
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="main.js"></script>
+    <style>
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
 
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXHLV7P"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXHLV7P" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 </body>
 

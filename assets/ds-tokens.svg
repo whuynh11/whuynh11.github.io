@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#e2e8f0"/>
+      <stop offset="1" stop-color="#f8fafc"/>
+    </linearGradient>
+    <pattern id="p" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M0 40L40 0" stroke="#cbd5e1" stroke-width="1" opacity=".35"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="700" rx="28" fill="url(#g)"/>
+  <rect x="24" y="24" width="1152" height="652" rx="22" fill="url(#p)" opacity=".65"/>
+  <g fill="#0f172a" font-family="ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial" text-anchor="middle">
+    <text x="600.0" y="340.0" font-size="44" font-weight="700">Token architecture</text>
+    <text x="600.0" y="392.0" font-size="22" opacity=".7">Semantic + component-level tokens</text>
+  </g>
+</svg>

@@ -1,0 +1,785 @@
+body {
+  font-size: 17px;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.55;
+}
+
+.container {
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 10px;
+  padding: 10px 14px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  z-index: 9999;
+}
+.skip-link:focus { left: 12px; }
+
+.topbar {
+  position: sticky;
+  top: 0;
+  background: color-mix(in oklab, var(--bg) 86%, transparent);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+  z-index: 50;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 14px 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 200px;
+}
+.avatar {
+  width: 28px; height: 28px;
+  border-radius: 999px;
+  display: block;
+  object-fit: cover;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 18px color-mix(in oklab, var(--brand) 22%, transparent);
+}
+.brand-name { font-weight: 650; letter-spacing: -0.01em; }
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pillnav {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 0;
+  border: 0;
+  border-radius: 999px;
+  background: transparent;
+  backdrop-filter: none;
+  box-shadow: none;
+  overflow: visible;
+  isolation: isolate;
+}
+
+.pillnav::after { display: none; }
+
+/* Active pill (purple) — moves on click and on page load to current page */
+.pillnav-indicator {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: 0;
+  width: var(--pill-w, 0px);
+  transform: translateX(var(--pill-x, 0px));
+  border-radius: 999px;
+  background: var(--brand);
+  box-shadow:
+    0 14px 30px color-mix(in oklab, var(--brand) 28%, transparent),
+    0 10px 22px rgba(2, 6, 23, 0.10);
+  transition: transform .28s cubic-bezier(.2, .8, .2, 1), width .28s cubic-bezier(.2, .8, .2, 1), opacity .12s ease;
+  opacity: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Hover pill (gray) — appears only while hovering/focusing */
+.pillnav-hover {
+  position: absolute;
+  top: 2px;
+  bottom: 2px;
+  left: 0;
+  width: var(--hover-w, 0px);
+  transform: translateX(var(--hover-x, 0px));
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--text) 8%, transparent);
+  border: 1px solid color-mix(in oklab, var(--text) 8%, var(--border));
+  transition: transform .22s cubic-bezier(.2, .8, .2, 1), width .22s cubic-bezier(.2, .8, .2, 1), opacity .12s ease;
+  opacity: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.pillnav[data-indicator-ready="true"] .pillnav-indicator { opacity: 1; }
+.pillnav[data-hovering="true"] .pillnav-hover { opacity: 1; }
+
+/* Freeze indicator transitions on first paint to avoid a "sliding" flash on page load */
+.pillnav[data-pill-freeze="true"] .pillnav-indicator,
+.pillnav[data-pill-freeze="true"] .pillnav-hover {
+  transition: none !important;
+}
+
+/* Remove selection highlight within the nav (prevents click-drag flashes) */
+.pillnav ::selection { background: transparent; }
+.pillnav ::-moz-selection { background: transparent; }
+
+.pillnav a {
+  position: relative;
+  z-index: 2;
+  font-size: 14px;
+  padding: 9px 12px;
+  border-radius: 999px;
+  color: var(--text);
+  opacity: 0.82;
+  transition: opacity .16s ease, color .16s ease;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pillnav a:hover,
+.pillnav a:focus-visible {
+  opacity: 1;
+  outline: none;
+}
+
+.pillnav a:active { transform: translateY(1px); }
+
+.pillnav a[aria-current="page"] {
+  opacity: 1;
+  color: #fff;
+}
+
+
+.iconbtn {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 999px;
+  padding: 8px 10px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: var(--text);
+  transition: background .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease, color .18s ease;
+}
+.iconbtn svg { width: 18px; height: 18px; }
+.iconbtn:hover,
+.iconbtn:focus-visible {
+  /* More visible tint for light mode + dark mode */
+  background: color-mix(in oklab, var(--brand) 12%, var(--surface));
+  border-color: color-mix(in oklab, var(--brand) 34%, var(--border));
+  box-shadow: 0 12px 32px rgba(2, 6, 23, 0.10);
+  transform: translateY(-1px);
+}
+.iconbtn:active {
+  /* Prevent the browser's default "pressed" styling flash */
+  background: color-mix(in oklab, var(--brand) 18%, var(--surface));
+  border-color: color-mix(in oklab, var(--brand) 46%, var(--border));
+  box-shadow: 0 10px 24px rgba(2, 6, 23, 0.08);
+  transform: translateY(1px);
+}
+
+/* Remove native button appearance to avoid transient UA styles on click */
+button.iconbtn,
+button.btn {
+  appearance: none;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* --- theme toggle visibility (light + dark) --- */
+.theme-toggle{
+  color: var(--text);
+}
+.theme-toggle .theme-label{
+  color: var(--text);
+}
+
+/* Ensure hamburger icon visible in both themes */
+.mobile-toggle{ color: var(--text); }
+.theme-icon{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width: 18px;
+  height: 18px;
+}
+/* Avoid double-ring on current page when JS indicator is active
+   (desktop only — on mobile the indicator is hidden so we keep the normal active styling) */
+@media (min-width: 761px) {
+  html.js .pillnav[data-indicator-ready="true"] a[aria-current="page"]{
+    background: transparent;
+    border-color: transparent;
+  }
+}
+
+/* --- robh-style nav interactions --- */
+.hamburger {
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2px 0;
+}
+.hamburger span {
+  display: block;
+  height: 2px;
+  border-radius: 999px;
+  background: currentColor;
+  transform-origin: center;
+  transition: transform .22s cubic-bezier(.2, .8, .2, 1), opacity .18s ease;
+}
+body.nav-open .hamburger span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+body.nav-open .hamburger span:nth-child(2) { opacity: 0; }
+body.nav-open .hamburger span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+.nav-overlay {
+  position: fixed;
+  inset: 0;
+  background: color-mix(in oklab, var(--bg) 40%, transparent);
+  backdrop-filter: blur(10px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .20s ease;
+  z-index: 40;
+}
+body.nav-open .nav-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-toggle { display: none; }
+
+.hero {
+  padding: 46px 0 14px;
+  text-align: center;
+}
+.h1 {
+  margin: 0;
+  font-size: clamp(34px, 4vw, 52px);
+  letter-spacing: -0.03em;
+}
+.subhead {
+  max-width: 640px;
+  margin: 10px auto 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0,1fr));
+  gap: 22px;
+  padding: 30px 0 50px;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 18px 40px rgba(2, 6, 23, 0.06);
+  overflow: hidden;
+  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  position: relative;
+}
+.card:hover,
+.card:focus-within {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow);
+  border-color: color-mix(in oklab, var(--brand) 22%, var(--border));
+}
+.card-media {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: var(--surface-2);
+}
+.card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.02);
+  transition: transform .22s ease;
+}
+.card:hover .card-media img,
+.card:focus-within .card-media img { transform: scale(1.05); }
+
+.badge {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 11px;
+  border-radius: 999px;
+  font-size: 13px;
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--surface) 92%, transparent);
+}
+.badge .dot { width: 8px; height: 8px; border-radius: 99px; background: var(--brand); }
+.badge.featured { border-color: color-mix(in oklab, var(--brand) 34%, var(--border)); }
+.badge.progress .dot { background: #f59e0b; }
+
+.card-body {
+  padding: 16px 18px 18px;
+  display: grid;
+  gap: 8px;
+}
+.card-title {
+  margin: 0;
+  font-size: 16px;
+  letter-spacing: -0.015em;
+}
+.card-desc {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+  min-height: 40px;
+}
+
+/* Use on cards where we want consistent 2-line summaries */
+.card-desc.clamp-2 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
+.card-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.metric {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 10px 10px;
+  background: linear-gradient(
+    180deg,
+    color-mix(in oklab, var(--brand) 8%, var(--surface)),
+    var(--surface)
+  );
+}
+
+.metric-value {
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.metric-label {
+  margin-top: 4px;
+  font-size: 11px;
+  line-height: 1.25;
+  color: var(--muted);
+}
+
+@media (max-width: 720px) {
+  .card-metrics { grid-template-columns: 1fr 1fr; }
+  .card-metrics .metric:nth-child(3) { grid-column: 1 / -1; }
+}
+
+@media (max-width: 420px) {
+  .card-metrics { grid-template-columns: 1fr; }
+  .card-metrics .metric:nth-child(3) { grid-column: auto; }
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 4px;
+}
+.chip {
+  font-size: 12px;
+  padding: 5px 9px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--chip) 70%, var(--surface));
+  color: color-mix(in oklab, var(--text) 82%, var(--muted));
+  cursor: pointer;
+  transition: background .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease, color .18s ease;
+}
+
+.chip:hover,
+.chip:focus-visible {
+  /* Clear hover state (brand-tinted) */
+  background: color-mix(in oklab, var(--brand) 10%, var(--surface-2));
+  border-color: color-mix(in oklab, var(--brand) 34%, var(--border));
+  box-shadow: 0 10px 24px rgba(2, 6, 23, 0.08);
+  color: var(--text);
+  transform: translateY(-1px);
+}
+.chip:active { transform: translateY(1px); }
+
+/* Case study card tags are informational (not interactive buttons). */
+.card .chip {
+  cursor: default;
+}
+.card .chip:hover,
+.card .chip:focus-visible,
+.card .chip:active {
+  background: color-mix(in oklab, var(--chip) 70%, var(--surface));
+  border-color: var(--border);
+  box-shadow: none;
+  transform: none;
+  color: color-mix(in oklab, var(--text) 82%, var(--muted));
+}
+
+.cta {
+  padding: 56px 0;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  background: linear-gradient(180deg, color-mix(in oklab, var(--surface) 0%, transparent), color-mix(in oklab, var(--surface-2) 68%, transparent));
+}
+.cta h2 {
+  margin: 0;
+  font-size: clamp(28px, 3vw, 40px);
+  letter-spacing: -0.03em;
+}
+.cta p {
+  margin: 10px auto 18px;
+  max-width: 560px;
+  color: var(--muted);
+  font-size: 14px;
+}
+.btnrow {
+  display: inline-flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  cursor: pointer;
+  font-size: 14px;
+  color: var(--text);
+  transition: background .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease, color .18s ease;
+}
+.btn:hover,
+.btn:focus-visible {
+  /* More visible color shift on hover */
+  background: color-mix(in oklab, var(--brand) 14%, var(--surface));
+  border-color: color-mix(in oklab, var(--brand) 38%, var(--border));
+  box-shadow: 0 14px 34px rgba(2, 6, 23, 0.10);
+  color: var(--text);
+  transform: translateY(-1px);
+}
+.btn:active {
+  /* Prevent the browser's default "pressed" styling flash */
+  background: color-mix(in oklab, var(--brand) 18%, var(--surface));
+  border-color: color-mix(in oklab, var(--brand) 46%, var(--border));
+  box-shadow: 0 10px 24px rgba(2, 6, 23, 0.08);
+  transform: translateY(1px);
+}
+.btn.primary {
+  border-color: color-mix(in oklab, var(--brand) 30%, var(--border));
+  background: linear-gradient(135deg, color-mix(in oklab, var(--brand) 80%, #ffffff), color-mix(in oklab, var(--brand-2) 80%, #ffffff));
+  color: white;
+}
+.btn.primary:hover,
+.btn.primary:focus-visible {
+  /* Richer, more saturated hover state */
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklab, var(--brand) 92%, #ffffff),
+    color-mix(in oklab, var(--brand-2) 92%, #ffffff)
+  );
+  border-color: color-mix(in oklab, var(--brand) 52%, var(--border));
+  box-shadow: 0 18px 44px color-mix(in oklab, var(--brand) 36%, transparent);
+}
+.btn.primary:active {
+  /* Keep primary pressed state consistent (no dark flash) */
+  background: linear-gradient(
+    135deg,
+    color-mix(in oklab, var(--brand) 88%, #ffffff),
+    color-mix(in oklab, var(--brand-2) 88%, #ffffff)
+  );
+  border-color: color-mix(in oklab, var(--brand) 60%, var(--border));
+  box-shadow: 0 14px 34px color-mix(in oklab, var(--brand) 28%, transparent);
+}
+.btn svg { width: 16px; height: 16px; }
+
+.footer {
+  background: color-mix(in oklab, var(--surface) 55%, transparent);
+  border-top: 1px solid var(--border);
+  padding: 40px 0;
+}
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+}
+.footer h3 {
+  margin: 0 0 10px;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+}
+
+/* Footer role chip should be purely informational (no hover/click affordance) */
+.footer .chip {
+  cursor: default;
+  pointer-events: none;
+  background: color-mix(in oklab, var(--chip) 70%, var(--surface));
+  border-color: var(--border);
+  box-shadow: none;
+  transform: none;
+  color: color-mix(in oklab, var(--text) 82%, var(--muted));
+}
+.footer p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+.footer a {
+  color: var(--muted);
+  font-size: 13px;
+  transition: color .18s ease, background .18s ease, box-shadow .18s ease, transform .18s ease;
+}
+.footer ul a {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  /* Keep link text flush with the column header while still allowing
+     a nice hover pill that extends slightly beyond the text. */
+  position: relative;
+  padding: 4px 0;
+  border-radius: 10px;
+  text-decoration: none;
+}
+.footer ul a::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  left: -8px;
+  right: -8px;
+  top: 0;
+  bottom: 0;
+  border-radius: 10px;
+  background: color-mix(in oklab, var(--brand) 16%, var(--surface));
+  box-shadow: 0 10px 22px rgba(2, 6, 23, 0.06);
+  opacity: 0;
+  transition: opacity .18s ease, transform .18s ease;
+}
+.footer a:hover,
+.footer a:focus-visible {
+  color: var(--text);
+}
+.footer ul a:hover,
+.footer ul a:focus-visible {
+  transform: translateY(-1px);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
+  text-decoration-color: color-mix(in oklab, var(--brand) 55%, transparent);
+}
+.footer ul a:hover::before,
+.footer ul a:focus-visible::before {
+  opacity: 1;
+}
+.footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 10px; }
+.footer small { display: block; margin-top: 28px; color: var(--muted); font-size: 13px; }
+
+@media (max-width: 920px) {
+  .grid { grid-template-columns: 1fr; }
+  .brand { min-width: auto; }
+  .footer-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 760px) {
+  .mobile-toggle { display: inline-flex; }
+  /* Keep the scrollbar visible when the mobile menu is open */
+  body.nav-open { overflow-y: auto; }
+
+  /* keep theme icon visible, hide label */
+  .theme-label { display: none; }
+
+  .pillnav {
+    position: fixed;
+    left: 16px;
+    right: 16px;
+    top: 72px;
+    display: grid;
+    gap: 6px;
+    padding: 12px;
+    border-radius: 20px;
+    background: color-mix(in oklab, var(--surface) 82%, transparent);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 26px 70px rgba(2, 6, 23, 0.14);
+    z-index: 60;
+
+    opacity: 0;
+    transform: translateY(-10px) scale(.98);
+    pointer-events: none;
+    transition: opacity .22s ease, transform .22s ease;
+  }
+
+  body.nav-open .pillnav {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+  }
+
+  .pillnav-indicator { display: none; }
+  .pillnav-hover { display: none; }
+
+  .pillnav a {
+    padding: 12px 12px;
+    border: 1px solid var(--border);
+    background: color-mix(in oklab, var(--surface) 92%, transparent);
+  }
+
+  .pillnav a[aria-current="page"] {
+    background: color-mix(in oklab, var(--brand) 16%, var(--surface));
+    border-color: color-mix(in oklab, var(--brand) 40%, var(--border));
+    color: var(--text);
+    opacity: 1;
+  }
+
+  .pillnav a:active { transform: translateY(1px); }
+}
+
+
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* ----- Page transitions (works.studio-inspired) ----- */
+/* Keep the top navigation static; only transition main content + footer. */
+html.js:not(.is-loaded) main,
+html.js:not(.is-loaded) footer {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+html.js.is-loaded main,
+html.js.is-loaded footer {
+  opacity: 1;
+  transform: none;
+  transition: opacity .45s ease, transform .45s ease;
+}
+
+html.js.is-leaving main,
+html.js.is-leaving footer {
+  opacity: 0;
+  transform: translateY(-8px);
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+.page-fade{
+  position: fixed;
+  top: var(--fx-top, 0px);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  background: color-mix(in oklab, var(--bg) 70%, transparent);
+  opacity: 0;
+  transition: opacity .25s ease;
+  /* Keep nav/header above the fade overlay so navigation feels persistent */
+  z-index: 45;
+}
+
+html.is-leaving .page-fade{ opacity: 1; }
+
+/* One-time intro overlay (home) */
+.intro-overlay{
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .35s ease;
+}
+
+.intro-overlay.is-in{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.intro-overlay.is-out{
+  opacity: 0;
+  transition: opacity .55s ease;
+}
+
+.intro-inner{
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 18px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--surface) 70%, transparent);
+  backdrop-filter: blur(14px);
+  box-shadow: 0 18px 60px rgba(2, 6, 23, 0.10);
+  transform: translateY(10px) scale(.98);
+  opacity: 0;
+  transition: transform .55s cubic-bezier(.2,.8,.2,1), opacity .55s ease;
+}
+
+.intro-overlay.is-in .intro-inner{
+  transform: none;
+  opacity: 1;
+}
+
+.intro-avatar{
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  background: radial-gradient(circle at 30% 30%, var(--brand), var(--brand-2));
+  box-shadow: 0 10px 26px color-mix(in oklab, var(--brand) 30%, transparent);
+}
+
+.intro-name{
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+
+.intro-sub{
+  font-size: 13px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+
+@media (prefers-reduced-motion: reduce){
+  html.js:not(.is-loaded) main,
+  html.js:not(.is-loaded) footer{
+    opacity: 1;
+    transform: none;
+  }
+  html.js.is-loaded main,
+  html.js.is-loaded footer,
+  html.js.is-leaving main,
+  html.js.is-leaving footer{
+    transition: none;
+  }
+  .page-fade,
+  .intro-overlay,
+  .intro-inner{
+    transition: none;
+  }
+}

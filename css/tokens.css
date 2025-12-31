@@ -1,0 +1,55 @@
+:root {
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-2: #f5f6f8;
+  --text: #0f172a;
+  --muted: #5b6474;
+  --border: rgba(15, 23, 42, 0.12);
+  --shadow: 0 18px 40px rgba(2, 6, 23, 0.10);
+
+  --brand: #16a34a;
+  --brand-2: #14b8a6;
+  --chip: rgba(22, 163, 74, 0.12);
+
+  --focus: rgba(20, 184, 166, 0.85);
+
+  --radius-lg: 22px;
+  --radius-md: 16px;
+
+  --container: 1120px;
+}
+
+html[data-theme="dark"] {
+  --bg: #0b0f19;
+  --surface: #0f1626;
+  --surface-2: #0b1220;
+  --text: #e7edf8;
+  --muted: #b1bdd3;
+  --border: rgba(231, 237, 248, 0.14);
+  --shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+
+  --brand: #22c55e;
+  --brand-2: #2dd4bf;
+
+  --chip: rgba(52, 211, 153, 0.16);
+  --focus: rgba(45, 212, 191, 0.85);
+}
+
+/* If user hasn't chosen a theme, follow the OS */
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme]) {
+    --bg: #0b0f19;
+    --surface: #0f1626;
+    --surface-2: #0b1220;
+    --text: #e7edf8;
+    --muted: #b1bdd3;
+    --border: rgba(231, 237, 248, 0.14);
+    --shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+
+    --brand: #22c55e;
+    --brand-2: #2dd4bf;
+
+    --chip: rgba(52, 211, 153, 0.16);
+    --focus: rgba(45, 212, 191, 0.85);
+  }
+}

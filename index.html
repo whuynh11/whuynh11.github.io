@@ -1,344 +1,354 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>William Huynh | Product Designer</title>
-    <meta property="og:image" content="http://williamnhuynh.com/images/hero-thumbnail.png">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora&display=swap">
-    <link rel="stylesheet" href="main.css">
-    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <meta charset="utf-8" />
+  <script>document.documentElement.classList.add('js');</script>
+  <script>(function () { try { var t = localStorage.getItem('theme'); var m = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; var eff = (t === 'dark' || t === 'light') ? t : m; var html = document.documentElement; html.setAttribute('data-theme', eff); html.style.backgroundColor = (eff === 'dark') ? '#0b0f19' : '#ffffff'; } catch (e) { } })();</script>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="light dark" name="color-scheme" />
+  <title>Case Studies • Portfolio</title>
+  <meta content="Case studies with clear breakdowns of past projects, challenges, and outcomes." name="description" />
+  <link href="./assets/favicon.svg" rel="icon" type="image/svg+xml" />
+  <link href="./css/reset.css" rel="stylesheet" />
+  <link href="./css/tokens.css" rel="stylesheet" />
+  <link href="./css/main.css" rel="stylesheet" />
 
-    <script src="https://kit.fontawesome.com/81f4807ff7.js" crossorigin="anonymous"></script>
-
-     <script type="module"> 
-    import { Agents } from "https://rispose.com/cdn/v1/sdk.es.js" 
-    const agent = Agents.create('ag_q1hedw9ut6ze') 
-    </script> 
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WXHLV7P');</script>
-    <!-- End Google Tag Manager -->
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WXHLV7P');</script>
+  <!-- End Google Tag Manager -->
 </head>
 
 <body>
-    <header>
-        <div class="menu-toggler">
-            <div class="bar half start"></div>
-            <div class="bar"></div>
-            <div class="bar half end"></div>
-        </div>
-        <nav class="top-nav">
-            <ul class="nav-list">
-                <li>
-                    <a href="index.html" class="nav-link">Home</a>
-                </li>
-                <!-- <li>
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li> -->
-                <li>
-                    <a href="#portfolio" class="nav-link">Case Studies</a>
-                </li>
-                <li>
-                    <a href="#experience" class="nav-link">Experience</a>
-                </li>
-                <li>
-                    <a target="_blank" href="files/William_Huynh_SeniorProductDesigner_Resume.pdf" class="nav-link">Resume</a>
-                </li>
-                                <li>
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-            </ul>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="topbar">
+    <div class="container">
+      <header class="header" role="banner">
+        <a aria-label="Home" class="brand" href="./index.html">
+          <img class="avatar" src="./assets/william-avatar.jpg" alt="" aria-hidden="true" loading="eager"
+            decoding="async" />
+          <span class="brand-name">William Huynh</span>
+        </a>
+        <nav aria-label="Primary" class="nav">
+          <button aria-controls="primary-nav" aria-expanded="false" class="iconbtn mobile-toggle" data-mobile-toggle=""
+            type="button">
+            <span aria-hidden="true" class="hamburger"><span></span><span></span><span></span></span>
+            <span class="sr-only">Menu</span>
+          </button>
+          <div class="pillnav" data-pillnav="" id="primary-nav">
+            <span aria-hidden="true" class="pillnav-indicator"></span>
+            <a href="./index.html">Case Studies</a>
+            <a href="./design-process.html">Design Process</a>
+            <a href="./design-ai.html">Design &amp; AI</a>
+            <a href="./design-pillars.html">Design Pillars</a>
+            <a href="./about.html">About Me</a>
+          </div>
+          <button aria-pressed="false" class="iconbtn theme-toggle" data-theme-toggle="" type="button">
+            <span aria-hidden="true" class="theme-icon" data-theme-icon=""></span>
+            <span class="theme-label" data-theme-label="">Theme</span>
+          </button>
         </nav>
-
-
-        <section class="container box-intro">
-            <div class="table-cell center">
-                <h6>Hello, I'm William Huynh and I'm a passionate</h6>
-                <h1 class="box-headline letters rotate-2">
-                    <span class="box-words-wrapper">
-                        <b class="is-visible">UI.Designer</b>
-                        <b>UX.Designer</b>
-                    </span>
-		        </h1>
-            </div>
-        </section>
-    </header>
-
-
-    <!-- <section class="services" id="skills">
-        <div class="container">
-            <div class="section-heading">
-                <h1>Skills</h1>
-                <h6>What I'm passionate about</h6>
-            </div>
-            <div class="my-skills">
-                <div class="skill" data-aos="fade-in" data-aos-delay="300">
-                    <div class="icon-container">
-                        <i class="fas fa-layer-group"></i>
-                    </div>
-                    <h1>UI | UX Design</h1>
-                </div>
-                <div class="skill" data-aos="fade-in" data-aos-delay="600">
-                    <div class="icon-container">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <h1>Web Development</h1>
-                </div>
-                <div class="skill" data-aos="fade-in" data-aos-delay="900">
-                    <div class="icon-container">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h1>Product Strategy</h1>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <div class="section-heading">
-                <h1>Case Studies</h1>
-                <h6>View my selected work</h6>
-            </div>
-            <div class="portfolio-item">
-                <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="300">
-                    <img src="images/coming-soon.gif" alt="">
-                </div>
-                <div class="portfolio-description" data-aos="fade-left" data-aos-delay="600">
-                    <h6>Web/Mobile Health Tech B2B SaaS</h6>
-                    <h1>Launched Points & Levels to lift the first month retention by 26%</h1>
-                    <center>
-                    <div class="column">
-                        <p>26% <i class="fa-solid fa-caret-up"></i></p>
-                        <p>4-week retention</p>
-                    </div>
-                    <div class="column">
-                        <p>35% <i class="fa-solid fa-caret-up"></i></p>
-                        <p>Average completions per user/week.</p>
-                    </div>
-                    <div class="column">
-                        <p>15% <i class="fa-solid fa-caret-up"></i></p>
-                        <p>Increased exploration of Daily Quests.</p>
-                    </div>
-                    </center>
-                    <a class="cta">Coming Soon</a>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <div class="portfolio-description has-margin-right" data-aos="fade-right" data-aos-delay="300">
-                    <h6>Web/Mobile Health Tech B2B SaaS</h6>
-                    <h1>Personalized Thrive’s onboarding to drive 23% more first-week engagement</h1>
-                    <center>
-                    <div class="column">
-                        <p>10% <i class="fa-solid fa-caret-down"></i></p>
-                        <p>Onboarding drop-off rates</p>
-                    </div>
-                    <div class="column">
-                        <p>23% <i class="fa-solid fa-caret-up"></i></p>
-                        <p>Stronger early engagement</p>
-                    </div>
-                    <div class="column">
-                        <p>11% <i class="fa-solid fa-caret-down"></i></p>
-                        <p>Reduced in support tickets</p>
-                    </div>
-                    </center>
-                    <a href="thrive-onboarding-experience.html" class="cta">Read Case Study <i class="fa-solid fa-arrow-right"></i></a>
-                    <!-- <a class="cta">Coming Soon</a> -->
-                </div>
-                <div class="portfolio-img" data-aos="fade-left" data-aos-delay="600">
-                    <img src="images/thrive-onboarding-experience-cover-image.gif" alt="">
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="300">
-                    <img src="images/thrive-cover-image.gif" alt="">
-                </div>
-                <div class="portfolio-description" data-aos="fade-left" data-aos-delay="600">
-                    <h6>Design system journey</h6>
-                    <h1>Scaled a design system to support 14+ teams and 70+ engineers across a global mental health platform</h1>
-                    <p>Led the evolution of Thrive’s design system—from fragmented components to a scalable foundation powering faster delivery and consistent UX. Drove adoption across 14+ teams, supported 70+ engineers, and embedded accessibility and i18n standards into every layer of the system.
-                    </p>
-                    <a href="thrive-design-system.html" class="cta">Read Case Study <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <div class="portfolio-description has-margin-right" data-aos="fade-right" data-aos-delay="300">
-                    <h6>Design System Implementation</h6>
-                    <h1>Boosted dev/design velocity by 30% through updated design system rollout</h1>
-                    <center>
-                    <div class="column">
-                        <p>15% <i class="fa-solid fa-caret-up"></i></p>
-                        <p>Average time on Page</p>
-                    </div>
-                    <div class="column">
-                        <p>45% <i class="fa-solid fa-caret-up"></i></p>
-                        <p>Positive user feedback</p>
-                    </div>
-                    <div class="column">
-                        <p>35% <i class="fa-solid fa-caret-down"></i></p>
-                        <p>Time it takes for developers to build</p>
-                    </div>
-                    </center>
-                    <a href="wpromote-design-system.html" class="cta">Read Case Study <i class="fa-solid fa-arrow-right"></i></a>
-                    <!-- <a class="cta">Coming Soon</a> -->
-                </div>
-                <div class="portfolio-img" data-aos="fade-left" data-aos-delay="600">
-                    <img src="images/wpromote-thumbnail-image.gif" alt="">
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="300">
-                    <img src="images/tf-hero.png" alt="">
-                </div>
-                <div class="portfolio-description" data-aos="fade-left" data-aos-delay="600">
-                    <h6>Web/Mobile Real Estate SaaS</h6>
-                    <h1>Redesigned a B2C SaaS app, driving 28% increase in engagement for real estate educators</h1>
-                    <p>Transformed the mobile app experience for Tom Ferry International by simplifying content delivery and improving feature discoverability. Resulted in a 28% lift in engagement and stronger user retention across the ecosystem.</p>
-                    <a href="tf-intl-case-study.html" class="cta">Read Case Study <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <!-- Passion Projects
-            <div class="portfolio-item">
-                <div class="portfolio-img has-margin-right" data-aos="fade-right" data-aos-delay="600">
-                    <img src="images/findy-hero.gif" alt="">
-                </div>
-                <div class="portfolio-description" data-aos="fade-left" data-aos-delay="900">
-                    <h6>Web/Mobile Financial budgeting app idea</h6>
-                    <h1>Designed a minimalist budgeting app focused on goal-based financial habits</h1>
-                    <p>Concepted and designed a clean, focused fintech app to help users track and manage goal-oriented budgets. Prioritized simplicity, behavioral nudges, and mobile-first UX to support healthy spending habits.</p>
-                    <a href="findy-case-study.html" class="cta">Read Case Study <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-            </div>
-            <div class="portfolio-item">
-                <div class="portfolio-description has-margin-right" data-aos="fade-right" data-aos-delay="600">
-                    <h6>Mobile travel app idea</h6>
-                    <h1>Streamlined trip planning by 35% through an intuitive travel app experience</h1>
-                    <p>Designed “Travel Spot,” a mobile app concept that simplifies trip planning through smart recommendations, collaborative itineraries, and travel document organization. Improved planning efficiency by 35% in user testing.</p>
-                    <a href="travel-spot-case-study.html" class="cta">Read Case Study <i class="fa-solid fa-arrow-right"></i></a>
-                </div>
-                <div class="portfolio-img" data-aos="fade-left" data-aos-delay="900">
-                    <img src="images/travel-spot-hero.png" alt="">
-                </div>
-            </div>
-            End Passion Projects -->
-        </div>
-    </section>   
-
-    <section class="experience" id="experience">
-        <div class="container">
-            <div class="section-heading">
-                <h1>Work Experience</h1>
-                <h6>Past & Current</h6>
-            </div>
-            <div class="timeline" data-aos="fade-down" data-aos-delay="300">
-                <ul>
-                    <li class="date" data-date="Feb. 2023 - Jun. 2025">
-                        <h1>Senior Product Designer, Design Systems | Thrive</h1>
-                        <p>I led the evolution of Thrive’s core design system to support faster product development, stronger brand consistency, and more inclusive user experiences. By introducing automated linters and streamlined documentation, I reduced design–dev handoff friction and increased component reliability across 14+ teams. I launched a formal contribution model that empowered cross-functional teams to scale the system sustainably; accelerating adoption and cutting backlog requests by over 25%.<br><br>To expand our global reach, I evolved the system’s localization capabilities to support RTL layouts and region-specific content needs, enabling launches in new markets without sacrificing design quality. I also created a living design system roadmap that aligned priorities across product, engineering, and brand, helping leadership make informed investment decisions while ensuring the system remained a strategic asset not just a toolkit.
-                        </p>
-                    </li>
-                    <li class="date" data-date="Mar. 2022 - Feb. 2023">
-                        <h1>Product Designer, Design Systems | Thrive</h1>
-                        <p>I was responsible for maintaining and evolving our core design system to support consistent, accessible, and scalable product experiences. I partnered closely with engineering, product, and brand teams to build reusable components, document interaction patterns, and ensure alignment across platforms. My work helped reduce design and development time for new features by over 30%, while significantly improving UI consistency across the application.<br><br>
-                        I also led accessibility improvements across the system, implementing WCAG-compliant components and conducting accessibility audits to close critical gaps, making the platform more inclusive for users with cognitive, visual, and motor impairments. Additionally, I collaborated with localization and content teams to scale our design system for multilingual support, helping us launch experiences in multiple languages and regions without sacrificing design integrity.
-                        </p>
-                    </li>
-                    <li class="date" data-date="Sept. 2020 - Feb. 2022">
-                        <h1>Senor UI | UX Designer | Wpromote</h1>
-                        <p>I led the design of digital experiences for major global brands across industries like tech, consumer goods, and finance. My work consistently balanced strong visual execution with user-centered strategy. I collaborated closely with developers to ensure pixel-perfect implementation, reducing front-end QA revisions by over 40%.<br><br>
-                        I helped shape UX strategy by conducting user interviews, stakeholder workshops, and competitive audits, which informed the direction of over 20 campaigns and microsites. These efforts directly contributed to improved engagement metrics such as a 30% increase in conversion rates on a product landing page for a Fortune 500 client.<br><br>
-                        I also created modular design systems that improved design efficiency across teams and cut production time by 25%. Whether building from scratch or elevating an existing brand, I delivered intuitive, conversion-optimized experiences grounded in both research and creative excellence.
-                        </p>
-                    </li>
-                    <li class="date" data-date="Jan. 2020 - Jun. 2020">
-                        <h1>UI | UX Product Designer | Tom Ferry</h1>
-                        <p>I created intuitive, inclusive experiences that help users achieve real results. At a B2C real estate coaching SaaS company, I designed features that made agent training more effective and engaging. contributing to a 28% increase in course completion rates.<br><br>
-                        I worked closely with Product, Engineering, and Client Success to turn user insights into thoughtful design solutions, while also leading accessibility improvements like enhanced contrast, keyboard navigation, and screen reader support.
-                        </p>
-                    </li>
-                    <li class="date" data-date="Before Jan. 2020">
-                        <h1>From Web Designer to Product Manager to Developer</h1>
-                        <p>In my previous roles, I wore many hats; designer, developer, strategist, and product thinker, which strengthened my ability to approach product design holistically. I designed and developed customer-centered websites and applications, created reusable templates and UI systems, and led usability testing and research initiatives to support user flows, site architecture, and product direction. My work directly improved performance, engagement, and scalability across multiple platforms, while also supporting the development team with optimized assets, design specs, and front-end structure.<br><br>If you're curious to see my list of measurable impacts, feel free to view my resume link below.
-                        </p>
-                    </li>
-                </ul>
-            </div>
-            <div data-aos="fade-down">
-                <center><a class="button round" target="_blank" href="files/William_Huynh_SeniorProductDesigner_Resume.pdf"><h3>View My Resume</h3></a></center>
-            </div>
-        </div>
+      </header>
+    </div>
+  </div>
+  <div aria-hidden="true" class="nav-overlay" data-nav-overlay=""></div>
+  <main class="container" id="main" role="main">
+    <section aria-labelledby="page-title" class="hero">
+      <h1 class="h1" id="page-title">Case Studies</h1>
+      <p class="subhead">
+        Case studies that unpack the challenge, the decisions behind the design, and the outcomes delivered, moving from
+        ambiguity to clarity, insight to execution, and work to impact.
+      </p>
     </section>
+    <section aria-label="Case study cards">
+      <div class="grid">
+        <article class="card">
+          <div class="badge">
+            <span aria-hidden="true" class="dot"></span>
+            Case Study
+          </div>
+          <a aria-label="Open case study: Thrive Global: Onboarding Personalization"
+            href="./thrive-onboarding-experience.html">
+            <div class="card-media">
+              <img alt="Laptop mock showing an onboarding experience"
+                src="./assets/thrive-onboarding-experience-cover-image.gif" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Thrive Global: Onboarding Personalization</h3>
+              <p class="card-desc">
+                Personalized Thrive’s onboarding so new members hit value faster, boosting early engagement while
+                reducing drop‑off and support burden.
+              </p>
+              <div aria-label="Key outcomes" class="card-metrics">
+                <div class="metric">
+                  <div class="metric-value">+23%</div>
+                  <div class="metric-label">More first‑week engagement</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">−12%</div>
+                  <div class="metric-label">Lower onboarding drop‑off</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">−11%</div>
+                  <div class="metric-label">Fewer support tickets</div>
+                </div>
+              </div>
+              <div aria-label="Tags" class="chips">
+                <span class="chip">Web/Mobile</span>
+                <span class="chip">Health Tech</span>
+                <span class="chip">B2B SaaS</span>
+                <span class="chip">Onboarding</span>
+              </div>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <div class="badge">
+            <span aria-hidden="true" class="dot"></span>
+            Case Study
+          </div>
+          <a aria-label="Open case study: Thrive Global: Leafkit Design System" href="./thrive-design-system.html">
+            <div class="card-media">
+              <img alt="Laptop mock showing Thrive’s Leafkit design system" src="./assets/thrive-cover-image.gif" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Thrive Global: Leafkit Design System</h3>
+              <p class="card-desc clamp-2">
+                Scaled Thrive’s design system with tokens, accessible components, and governance so 15+ teams can ship
+                faster with consistent UI.
+              </p>
+              <div aria-label="Key outcomes" class="card-metrics">
+                <div class="metric">
+                  <div class="metric-value">−25%</div>
+                  <div class="metric-label">Implementation time</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">+35%</div>
+                  <div class="metric-label">Design workflow speed</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">90%+</div>
+                  <div class="metric-label">AA‑compliant components</div>
+                </div>
+              </div>
+              <div aria-label="Tags" class="chips">
+                <span class="chip">Design Systems</span>
+                <span class="chip">Tokens</span>
+                <span class="chip">Accessibility</span>
+                <span class="chip">Localization</span>
+              </div>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <div class="badge featured">
+            <span aria-hidden="true" class="dot"></span>
+            Featured
+          </div>
+          <a aria-label="Open case study: Thrive Global: Points &amp; Levels" href="">
+            <div class="card-media">
+              <img alt="Laptop mock showing a gamification feature interface" src="./assets/coming-soon.gif" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Thrive Global: Points &amp; Levels</h3>
+              <p class="card-desc clamp-2">
+                Launched Points &amp; Levels to reinforce daily habits, boosting 4‑week retention, weekly completions,
+                and Daily Quest exploration.
+              </p>
+              <div aria-label="Key outcomes" class="card-metrics">
+                <div class="metric">
+                  <div class="metric-value">+26%</div>
+                  <div class="metric-label">4‑week retention</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">+35%</div>
+                  <div class="metric-label">Avg completions per user/week</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">+15%</div>
+                  <div class="metric-label">More Daily Quest exploration</div>
+                </div>
+              </div>
+              <div aria-label="Tags" class="chips">
+                <span class="chip">Web/Mobile</span>
+                <span class="chip">Health Tech</span>
+                <span class="chip">B2B SaaS</span>
+                <span class="chip">Gamification</span>
+              </div>
+            </div>
+          </a>
+        </article>
+        <article class="card">
+          <div class="badge">
+            <span aria-hidden="true" class="dot"></span>
+            Case Study
+          </div>
+          <a aria-label="Open case study: Wpromote: Design System Implementation" href="./wpromote-design-system.html">
+            <div class="card-media">
+              <img alt="Design system foundations and components preview" src="./assets/wpromote-thumbnail-image.gif" />
+            </div>
+            <div class="card-body">
+              <h3 class="card-title">Wpromote: Design System Implementation</h3>
+              <p class="card-desc clamp-2">
+                Boosted dev/design velocity by rolling out an internal design system, reducing build time and improving
+                platform consistency.
+              </p>
+              <div aria-label="Key outcomes" class="card-metrics">
+                <div class="metric">
+                  <div class="metric-value">+15%</div>
+                  <div class="metric-label">Avg time on page</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">+45%</div>
+                  <div class="metric-label">Positive user feedback</div>
+                </div>
+                <div class="metric">
+                  <div class="metric-value">−35%</div>
+                  <div class="metric-label">Developer build time</div>
+                </div>
+              </div>
+              <div aria-label="Tags" class="chips">
+                <span class="chip">Design Systems</span>
+                <span class="chip">Implementation</span>
+                <span class="chip">Components</span>
+                <span class="chip">Documentation</span>
+              </div>
+            </div>
+          </a>
+        </article>
 
-     <section class="about" id="about">
-        <div class="container">
-            <div class="profile-img" data-aos="fade-right" data-aos-delay="300">
-                <img src="images/about-me-section.jpg" alt="">
+        <article class="card">
+          <div class="badge">
+            <span aria-hidden="true" class="dot"></span>
+            Case Study
+          </div>
+          <a aria-label="Open case study: Tom Ferry Intl: Coaching &amp; E‑Learning Platform"
+            href="./tf-intl-case-study.html">
+            <div class="card-media">
+              <img alt="Laptop mock showing the Tom Ferry Intl platform" src="./assets/tf-hero.png" />
             </div>
-            <div class="about-details" data-aos="fade-left" data-aos-delay="300">
-                <div class="about-heading">
-                    <h1>About</h1>
-                    <h6>Myself</h6>
+            <div class="card-body">
+              <h3 class="card-title">Tom Ferry Intl: Coaching &amp; E‑Learning Platform</h3>
+              <p class="card-desc">
+                Rebuilding feedback, progress tracking, and learning experiences so coaches and agents can stay aligned,
+                motivated, and moving forward.
+              </p>
+              <div aria-label="Key outcomes" class="card-metrics">
+                <div class="metric">
+                  <div class="metric-value">−30%</div>
+                  <div class="metric-label">Time writing feedback</div>
                 </div>
-                <p>I’m a senior product designer who specializes in design systems, scalable UX, and cross-functional collaboration. Over the last few years, I’ve led design system initiatives across startups and enterprise teams, helping product and engineering move faster with fewer trade-offs.<br><br>
-                I’ve designed experiences that support mental health, improve financial literacy, and increase user engagement across mobile and web platforms. My work has driven measurable impact like reducing tech/design debt by 30%, boosting adoption rates, and increasing retention through thoughtful UX.<br><br>
-                What drives me most is building systems and tools that empower others from reusable component libraries to accessibility standards that help teams scale inclusively. I also enjoy mentoring designers and fostering strong design-engineering rituals like office hours, QA workflows, and async critiques.
-                <br><br>Currently, I’m looking for opportunities where I can own impactful product experiences, contribute to inclusive systems, and collaborate with teams who care deeply about both craft and outcomes.
-                </p>
-                <div class="social-media">
-                    <ul class="nav-list">
-                        <li>
-                            <a href="https://www.linkedin.com/in/williamnhuynh/" target="blank" class="icon-link">
-                                <i class="fab fa-linkedin"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/william.uxdesign" target="blank" class="icon-link">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </li>
-                    </ul>
+                <div class="metric">
+                  <div class="metric-value">+42%</div>
+                  <div class="metric-label">Feedback submissions</div>
                 </div>
-                    <center><a class="button round" href="mailto:williamnhuynh@gmail.com"><h3>Let's Connect</h3></a></center>
+                <div class="metric">
+                  <div class="metric-value">+28</div>
+                  <div class="metric-label">Goal screen clicks</div>
+                </div>
+              </div>
+              <div aria-label="Tags" class="chips">
+                <span class="chip">B2C SaaS</span>
+                <span class="chip">E‑Learning</span>
+                <span class="chip">Feedback</span>
+              </div>
             </div>
-        </div>
+          </a>
+        </article>
+      </div>
     </section>
-
-    <footer class="copyright">
-        <div class="up" id="up">
-            <i class="fas fa-chevron-up"></i>
+  </main>
+  <section aria-labelledby="cta-title" class="cta" id="contact">
+    <div class="container">
+      <h2 id="cta-title">Let’s build something great.</h2>
+      <p>Always open to connecting about roles, systems work, and solving messy problems.</p>
+      <div class="btnrow">
+        <a aria-label="Email me" class="btn primary" href="mailto:williamnhuynh@gmail.com">
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"
+              fill="currentColor"></path>
+          </svg>
+          Contact me
+        </a>
+        <a aria-label="Connect on LinkedIn" class="btn" href="https://www.linkedin.com/in/williamnhuynh/"
+          rel="noreferrer noopener" target="_blank">
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <path
+              d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.8-1.8 3.7-1.8 4 0 4.7 2.6 4.7 6v5.6ZM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2ZM7.1 20.4H3.6V9h3.5v11.4Z"
+              fill="currentColor"></path>
+          </svg>
+          Connect on LinkedIn
+        </a>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>William Huynh</h3>
+          <p>Product growth, Design systems, and AI-assisted UX. 8+ years shipping B2B/B2C products.</p>
+          <div style="margin-top:12px;display:inline-flex;gap:10px;align-items:center;">
+            <span class="chip">Senior Product Designer</span>
+          </div>
+          <div style="margin-top:12px;display:inline-flex;gap:10px;align-items:center;">
+            <span class="chip">PM-minded, code-literate</span>
+          </div>
+          <small>© <span id="year"></span> William Huynh • All rights reserved</small>
         </div>
-        <p>&copy; 2025 William Huynh</p>
-    </footer>
+        <div>
+          <h3>Explore</h3>
+          <ul>
+            <li><a href="./index.html">Case Studies</a></li>
+            <li><a href="./design-process.html">Design Process</a></li>
+            <li><a href="./design-ai.html">Design &amp; AI</a></li>
+            <li><a href="./design-pillars.html">Design Pillars</a></li>
+            <li><a href="./about.html">About Me</a></li>
+            <li><a href="assets/William_Huynh_SeniorProductDesigner_Resume.pdf" target="_blank">Resume</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Connect</h3>
+          <ul>
+            <li><a href="https://www.linkedin.com/in/williamnhuynh/" target="_blank">LinkedIn</a></li>
+            <li><a href="mailto: williamnhuynh@gmail.com">Email</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
 
-    <script>
-        // When the user scrolls the page, execute myFunction 
-        window.onscroll = function() {myFunction()};
-        
-        function myFunction() {
-          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-          var scrolled = (winScroll / height) * 100;
-          document.getElementById("myBar").style.width = scrolled + "%";
-        }
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="main.js"></script>
-    <script src="js/animated-headline.js"></script>
+  <script defer="" src="./js/main.js"></script>
+  <script>
+    // tiny footer year helper
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <style>
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+  </style>
 
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXHLV7P"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXHLV7P" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
 </body>
 
 </html>

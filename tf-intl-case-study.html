@@ -2,214 +2,378 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tom Ferry Intl App | Case Study</title>
-    <meta property="og:image" content="http://williamnhuynh.com/images/hero-thumbnail.png">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora&display=swap">
-    <link rel="stylesheet" href="css/projects.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+  <meta charset="utf-8" />
+  <script>document.documentElement.classList.add('js');</script>
+  <script>(function () { try { var t = localStorage.getItem('theme'); var m = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; var eff = (t === 'dark' || t === 'light') ? t : m; var html = document.documentElement; html.setAttribute('data-theme', eff); html.style.backgroundColor = (eff === 'dark') ? '#0b0f19' : '#ffffff'; } catch (e) { } })();</script>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="light dark" name="color-scheme" />
+  <title>TF Intl Coaching Platform • Case Study</title>
+  <link href="./assets/favicon.svg" rel="icon" type="image/svg+xml" />
+  <link href="./css/reset.css" rel="stylesheet" />
+  <link href="./css/tokens.css" rel="stylesheet" />
+  <link href="./css/main.css" rel="stylesheet" />
+  <link href="./css/case-study.css" rel="stylesheet" />
 
-     <script type="module"> 
-    import { Agents } from "https://rispose.com/cdn/v1/sdk.es.js" 
-    const agent = Agents.create('ag_q1hedw9ut6ze') 
-    </script> 
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WXHLV7P');</script>
-    <!-- End Google Tag Manager -->
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WXHLV7P');</script>
+  <!-- End Google Tag Manager -->
 </head>
 
 <body>
-    <!-- box-header -->
-    <div class="header">
-        <div class="progress-container">
-          <div class="progress-top-bar" id="myBar"></div>
-        </div>  
-    </div>
-    <div class="container-fluid">
-        <header class="box-header">
-            <div class="box-logo">
-                <a href="index.html"><img src="images/arrow-left.svg"></a>
-            </div>
-        </header>
-    </div>
-    <!-- end box-header -->
+  <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Introduction -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="col-md-12" data-aos="fade-right" data-aos-delay="300">
-                <h1>How To Effectively Connect Educators With The Audience?</h1>
-                <p><a href="index.html">Home</a> / Tom Ferry Intl E-Learning App</p>
-            </div>
-        </div>
-    </div>
-    <!-- end Introduction -->
-
-    <section>
-    <!-- Context -->
-        <div class="container" data-aos="fade-down" data-aos-delay="300">
-            <div class="col-md-3">
-                <h1>Context</h1>
-            </div>
-            <div class="col-md-9">
-                <p><b>🧭 Why are we here?</b></p>
-                <p>Tom Ferry International is a leading real estate coaching and training company that empowers agents to achieve their professional and personal goals. As the company grew, there was an opportunity to elevate the digital tools supporting their coaching, feedback, and learning processes that help agents stay engaged and perform at a higher level.
-                </p>
-                <p>Over the 6 months, I worked as a UI/UX Product Designer, focused on enhancing their B2C SaaS platforms related to performance management, agent feedback, and educational engagement.
-                </p>
-                <p><b>🤝 Who I collaborated with?</b></p>
-                <p>Throughout this project, I closely partnered with a product manager, engineering leads, and front-end developers to ensure our solutions were both technically feasible and strategically aligned. I also worked with internal coaching directors and training specialists to deeply understand the real-world needs of agents and their mentors. This helped us design tools that truly supported their day-to-day growth conversations.
-                </p>
-            </div>
-        </div>
-    <!-- End Context -->
-        <div class="container">
-            <div class="center" data-aos="fade-down" data-aos-delay="300">
-                <img src="images/tf-design-team.png" alt="" class="img-responsive image-asset" />
-            </div>
-        </div>
-    <!-- Problem -->
-        <div class="container">
-            <div class="col-md-3">
-                <h1>Problem</h1>
-            </div>
-            <div class="col-md-9">
-                <p><b>🚩 What are we trying to solve?</b></p>
-                <p>Real estate agents and their coaches were relying on outdated, fragmented tools that made it difficult to deliver meaningful feedback, track evolving goals, or celebrate day-to-day progress. This friction turned what should have been motivating coaching moments into administrative hurdles.</p>
-                <p>As a result:</p>
-                <ul>
-                    <li>Coaching sessions slowed down, often bogged down by manual data entry or searching for scattered performance notes; leaving less time for high-value strategy discussions.</li>
-                    <li>There was a growing disconnect between coaches and agents on clear expectations, with agents unsure of exactly where they stood or what to prioritize.</li>
-                    <li>Without frequent, bite-sized, actionable feedback, many agents felt overlooked, which gradually eroded motivation and ownership of their growth.</li>
-                </ul>
-                <p>Tom Ferry needed a more intuitive, continuous feedback ecosystem; one that could effortlessly scale across thousands of agents yet still feel tailored to individual journeys. It had to make coaching easier, more consistent, and ultimately more human.</p>
-            </div>
-        </div>
-    <!-- End Problem -->
-    <!-- Evidence -->    
-        <div class="container">
-            <div class="col-md-3">
-                <h1>Evidence</h1>
-            </div>
-            <div class="col-md-9">
-                <p><b>🔍 How do we know it’s a problem?</b></p>
-                <p>Through a mix of user interviews, platform analytics, and direct observation, it became clear that the existing feedback tools weren’t supporting effective coaching. Coaches found the system outdated and overly manual, which limited their time for meaningful conversations. Meanwhile, data showed infrequent feedback entries and inconsistent goal tracking, pointing to deeper engagement issues. Altogether, it signaled that the platform was falling short in fostering the continuous growth and accountability critical to real estate success.</p>
-                 <ul>
-                    <li>Qualitative signals: Feedback from coaches and internal teams revealed frustrations with outdated scorecards and one-off review sessions.</li>
-                    <li>Quantitative indicators: Engagement metrics showed lower frequency of feedback entries, plus inconsistent tracking of goals and milestones.</li>
-                    <li>Observations highlighted how much time coaches spent writing evaluations manually, which could have been spent deepening relationships.</li>
-                </ul>
-            </div>
-        </div>
-    <!-- End Evidence -->  
-    <!-- Role -->
-        <div class="container">
-            <div class="col-md-3">
-                <h1>My Role</h1>
-            </div>
-            <div class="col-md-9">
-            <p><b>🔨 What are my key responsibilities?</b></p>
-            <p>As the designer, I led the effort to create a solid foundation that would enhance collaboration, boost efficiency, and elevate the user experience across the platform. By doing so, we ensured Tom Ferry’s coaching tools were thoughtfully structured</b>
-            </p>
-            <p>Key responsibilities included:
-            </p>
-            <ul>
-                <li>Designed and optimized the UI/UX for a new performance management tool to promote continuous feedback, not just periodic reviews.</li>
-                <li>Collaborated closely with product & engineering to transform insights into scalable design systems.</li>
-                <li>Created experience flows and interactive prototypes to validate new models for feedback delivery, coaching conversations, and goal tracking.</li>
-                <li>Worked with internal trainers and sales enablement to ensure the tools supported real-world coaching needs.</li>
-            </ul>
-        </div>
-    <!-- End Role -->
-    <!-- Solution -->
-        <div class="container">
-            <div class="col-md-3">
-                <h1>Solution</h1>
-            </div>
-            <div class="col-md-9">
-                <p><b>💡What’s the suggested solution?</b></p>
-                <p>We launched a revamped platform with:</p>
-                <ul>
-                    <li>A continuous feedback model, making it easier for coaches to deliver quick, in-the-moment evaluations and for agents to see actionable insights.</li>
-                    <li>Simplified dashboards and visual scorecards that highlighted key progress metrics for agents, coaches, and managers.</li>
-                    <li>Embedded educational content tied to performance, nudging agents to take recommended courses or attend targeted sessions based on gaps.</li>
-                    <li>A scalable internal structure that helped senior managers coach their own coaches, reinforcing performance management across the organization.</li>
-                </ul>
-            </div>
-        </div>
-    <!-- End Solution -->
-    <!-- Impact -->
+  <div class="topbar">
     <div class="container">
-        <div class="col-md-3">
-            <h1>Impact</h1>
-        </div>
-        <div class="col-md-9">
-            <p><b>🚀What are the impacts we measured?</b></p>
-            <p><b>Quantitative</b></p>
-            <ul>
-                <li>Reduced time spent on writing feedback by ~30%, dropping average input time from 6 minutes to about 4 minutes per session. This efficiency gave coaches more bandwidth to focus on strategic, relationship-building conversations.</li>
-                <li>+42% increase in feedback submissions per agent per month. The simplified UI and inline feedback prompts encouraged coaches to deliver more frequent, bite-sized evaluations rather than waiting for quarterly or monthly reviews.</li>
-                <li>Monitored engagement through metrics like:</li>
-                    <ul>
-                        <li>📈 Goal creation and updates rose by 35%, indicating that agents were more proactive in setting and refining their targets.</li>
-                        <li>🖱 Clicks on engagement goal screens increased by 28%, showing deeper interest in tracking progress.</li>
-                        <li>🎯 Average progress updates per session grew from 1.2 to 2.0, meaning agents and coaches were consistently revisiting goals together.</li>
-                    </ul>
-            </ul>
-            <p><b>Qualitative</b></p>
-            <p>Coaches and managers shared that the new system felt less like an administrative requirement and more like a true coaching tool. They reported being able to have richer, more meaningful discussions because feedback was now structured, quick, and always accessible.</p>
-            <p>Agents expressed feeling clearer on expectations and more motivated, frequently noting that the regular check-ins and visual progress cues helped them celebrate small wins. Comments like “I finally see how my day-to-day work ties back to bigger goals” became common in follow-up interviews.</p>
-        </div>
-    </div>
-    <!-- End Impact -->
-    <!-- Belief -->
-        <div class="container">
-            <div class="col-md-3">
-                <h1>Belief</h1>
-            </div>
-            <div class="col-md-9">
-                <p><b>🧠 Why do we believe it will work?</b></p>
-                <p>When feedback is easy to give and tied directly to an agent’s growth journey supported by intuitive tools, it shifts from being a compliance task to a motivational driver. By building solutions that prioritize real-time coaching, progress visibility, and educational nudges, we anchored the platform in the behaviors that make high-performing agents thrive.</p>
-            </div>
-        </div>
-    <!-- End Belief -->
-    </section>
+      <header class="header" role="banner">
+        <a aria-label="Home" class="brand" href="./index.html">
+          <img class="avatar" src="./assets/william-avatar.jpg" alt="" aria-hidden="true" loading="eager"
+            decoding="async" />
+          <span class="brand-name">William Huynh</span>
+        </a>
 
-    <footer class="copyright">
-        <div class="up" id="up">
-            <i class="fas fa-chevron-up"></i>
+        <nav aria-label="Primary" class="nav">
+          <button aria-controls="primary-nav" aria-expanded="false" class="iconbtn mobile-toggle" data-mobile-toggle=""
+            type="button">
+            <span aria-hidden="true" class="hamburger"><span></span><span></span><span></span></span>
+            <span class="sr-only">Menu</span>
+          </button>
+
+          <div class="pillnav" data-pillnav="" id="primary-nav">
+            <span aria-hidden="true" class="pillnav-indicator"></span>
+            <a href="./index.html">Case Studies</a>
+            <a href="./design-process.html">Design Process</a>
+            <a href="./design-ai.html">Design &amp; AI</a>
+            <a href="./design-pillars.html">Design Pillars</a>
+            <a href="./about.html">About Me</a>
+          </div>
+
+          <button aria-pressed="false" class="iconbtn theme-toggle" data-theme-toggle="" type="button">
+            <span aria-hidden="true" class="theme-icon" data-theme-icon=""></span>
+            <span class="theme-label" data-theme-label="">Theme</span>
+          </button>
+        </nav>
+      </header>
+    </div>
+  </div>
+  <div aria-hidden="true" class="nav-overlay" data-nav-overlay=""></div>
+
+  <main id="main" role="main">
+
+    <!-- HERO -->
+    <header class="cs-hero">
+      <div class="container cs-hero-inner">
+        <a class="backlink" href="./index.html">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path
+              d="M15.7 5.3a1 1 0 0 1 0 1.4L10.41 12l5.3 5.3a1 1 0 1 1-1.42 1.4l-6-6a1 1 0 0 1 0-1.4l6-6a1 1 0 0 1 1.4 0Z"
+              fill="currentColor" />
+          </svg>
+          Back to Projects
+        </a>
+
+        <h1 class="cs-title">How To Effectively Connect Educators With The Audience?</h1>
+        <p class="cs-subtitle">An end‑to‑end redesign of Tom Ferry International’s coaching + learning
+          experience - improving clarity, reducing admin friction, and increasing engagement.</p>
+
+        <div class="cs-meta">
+          <span class="chip">B2C SaaS</span>
+          <span class="chip">E‑Learning</span>
+          <span class="chip">Feedback</span>
+          <span class="chip">Goal tracking</span>
         </div>
-        <p>&copy; 2025 William Huynh</p>
+
+        <div aria-label="Key results" class="kpis">
+          <div class="kpi"><strong>30%</strong><span>Less time writing feedback</span></div>
+          <div class="kpi"><strong>42%</strong><span>More feedback submissions</span></div>
+          <div class="kpi"><strong>35%</strong><span>More goal creation &amp; updates</span></div>
+          <div class="kpi"><strong>1.2→2.0</strong><span>Avg progress updates/session</span></div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="cs-layout">
+
+        <!-- Sticky TOC -->
+        <aside aria-label="Content" class="toc" data-toc="">
+          <h2>Content</h2>
+          <nav aria-label="Case study sections">
+            <a data-toc-link="" href="#context"><span>Context</span><span class="pill">01</span></a>
+            <a data-toc-link="" href="#problem"><span>Problem</span><span class="pill">02</span></a>
+            <a data-toc-link="" href="#evidence"><span>Evidence</span><span class="pill">03</span></a>
+            <a data-toc-link="" href="#role"><span>My Role</span><span class="pill">04</span></a>
+            <a data-toc-link="" href="#solution"><span>Solution</span><span class="pill">05</span></a>
+            <a data-toc-link="" href="#impact"><span>Impact</span><span class="pill">06</span></a>
+            <a data-toc-link="" href="#belief"><span>Belief</span><span class="pill">07</span></a>
+          </nav>
+        </aside>
+
+        <article aria-label="Case study" class="cs-article">
+
+          <!-- Context -->
+          <section class="cs-section" id="context">
+            <h2>Context</h2>
+
+            <div class="cs-q"><span aria-hidden="true" class="dot"></span><span>Why are we here?</span></div>
+            <p>
+              Tom Ferry International is a leading real estate coaching and training company that empowers agents to
+              achieve their professional and personal goals.
+              As the company grew, there was an opportunity to evolve the digital tools supporting their coaching,
+              feedback, and learning processes to help agents stay engaged and improve performance.
+            </p>
+            <p>
+              Over 6 months, I worked as a UI/UX Product Designer focused on enhancing their B2C SaaS
+              platform, specifically performance management, agent feedback, and educational engagement.
+            </p>
+
+            <div class="cs-q" style="margin-top:16px;"><span aria-hidden="true" class="dot"></span><span>Who I
+                collaborated with?</span></div>
+            <p>
+              Throughout this project, I partnered closely with a product manager, engineering leads, and front‑end
+              developers to ensure solutions were feasible and strategically aligned.
+              I also worked with internal coaching directors and training specialists to understand real‑world needs and
+              day‑to‑day growth conversations.
+            </p>
+
+            <figure>
+              <div class="figure">
+                <img alt="Tom Ferry International team photo" src="./assets/tf-design-team.png" loading="lazy"
+                  decoding="async" />
+                <figcaption>Project collaboration across product, engineering, and internal coaching teams.</figcaption>
+              </div>
+            </figure>
+          </section>
+
+          <!-- Problem -->
+          <section class="cs-section" id="problem">
+            <h2>Problem</h2>
+            <div class="cs-q"><span aria-hidden="true" class="dot"></span><span>What are we trying to solve?</span>
+            </div>
+            <p>
+              Real estate agents and their coaches were relying on outdated, fragmented tools that made it difficult to
+              deliver meaningful feedback, track progress, or celebrate day‑to‑day wins.
+              This friction turned what should have been motivating coaching moments into administrative hurdles.
+            </p>
+            <ul>
+              <li><strong>Coaching systems felt clunky</strong>, often bogged down by manual data entry and searching
+                for scattered performance notes.</li>
+              <li><strong>Expectations were unclear</strong>, creating a disconnect between coaches and agents on goals
+                and progress.</li>
+              <li><strong>Feedback wasn’t frequent or actionable</strong>, and many agents felt overlooked, which
+                reduced motivation and ownership of growth.</li>
+            </ul>
+            <p>
+              Tom Ferry needed a more intuitive, continuous feedback ecosystem that helped coaches and agents stay
+              aligned without adding extra overhead.
+            </p>
+          </section>
+
+          <!-- Evidence -->
+          <section class="cs-section" id="evidence">
+            <h2>Evidence</h2>
+            <div class="cs-q"><span aria-hidden="true" class="dot"></span><span>How do we know it’s a problem?</span>
+            </div>
+            <p>
+              Through user interviews, platform analytics, and direct observation, we found that the existing feedback
+              tools weren’t supporting effective coaching.
+              Coaches spent too much time collecting and managing information, often limiting time for meaningful
+              conversations.
+            </p>
+            <ul>
+              <li><strong>Qualitative:</strong> coaches reported frustration with outdated workflows and inconsistent
+                expectations.</li>
+              <li><strong>Quantitative:</strong> low engagement with feedback features and infrequent progress updates.
+              </li>
+              <li><strong>Behavioral:</strong> observations showed coaches writing evaluations manually instead of
+                focusing on relationships and strategy.</li>
+            </ul>
+          </section>
+
+          <!-- My Role -->
+          <section class="cs-section" id="role">
+            <h2>My Role</h2>
+            <div class="cs-q"><span aria-hidden="true" class="dot"></span><span>What are my key responsibilities?</span>
+            </div>
+            <p>
+              As the designer, I led the effort to create a more solid foundation that enhanced collaboration, reduced
+              friction, and elevated the user experience across the platform.
+            </p>
+            <p style="margin-top:12px;color:var(--muted);font-size:12px;">Key responsibilities included:</p>
+            <ul>
+              <li>🔁 Designed and optimized the UI/UX for a performance management tool to promote continuous feedback
+                not just periodic reviews.</li>
+              <li>🤝 Collaborated closely with product and engineering to transform insights into scalable design
+                systems.
+              </li>
+              <li>🧪 Created user flows and interactive prototypes to validate new models for feedback delivery,
+                coaching conversations, and goal tracking.</li>
+              <li>📣 Worked with internal trainers and sales enablement to ensure the tools served real‑world coaching
+                needs.</li>
+            </ul>
+          </section>
+
+          <!-- Solution -->
+          <section class="cs-section" id="solution">
+            <h2>Solution</h2>
+            <div class="cs-q"><span aria-hidden="true" class="dot"></span><span>What’s the suggested solution?</span>
+            </div>
+            <p>
+              We launched a revamped platform that made coaching feel continuous, lightweight, and motivating while
+              improving visibility for both coaches and agents.
+            </p>
+            <ul>
+              <li>A <strong>continuous feedback model</strong> that made in‑the‑moment evaluations easier for coaches
+                and actionable for agents.</li>
+              <li><strong>Simplified dashboards</strong> and visual scorecards highlighting key progress metrics for
+                agents and managers.</li>
+              <li><strong>Embedded educational content</strong> tied to performance, nudging agents toward recommended
+                courses based on gaps.</li>
+              <li>A <strong>scalable internal structure</strong> that helped senior managers coach their own
+                teamsr reinforcing clarity across the organization.</li>
+            </ul>
+          </section>
+
+          <!-- Impact -->
+          <section class="cs-section" id="impact">
+            <h2>Impact</h2>
+            <div class="cs-q"><span aria-hidden="true" class="dot"></span><span>What are the impacts we measured?</span>
+            </div>
+
+            <h3 style="margin-top:16px;">Quantitative</h3>
+            <ul>
+              <li><strong>30% reduction</strong> in time spent writing feedback - average input time dropped from 6
+                minutes to about 4 minutes per session.</li>
+              <li><strong>+42% increase</strong> in feedback submissions per agent per month - prompting more frequent,
+                bite‑sized evaluations.</li>
+              <li>Goal creation and updates rose by <strong>35%</strong>, indicating more proactive tracking and
+                refinement.</li>
+              <li>Engagement goal screen clicks increased by <strong>28%</strong>, showing deeper interest in tracking
+                progress.</li>
+              <li>Average progress updates per session grew from <strong>1.2 to 2.0</strong>, meaning agents and coaches
+                consistently revisited goals together.</li>
+            </ul>
+
+            <h3 style="margin-top:16px;">Qualitative</h3>
+            <p>
+              Coaches and managers shared that the new system felt less like an administrative requirement and more like
+              a true coaching tool.
+              Agents experienced richer conversations and more structured guidance. Many reported the regular check‑ins
+              and visual progress cues helped them celebrate small wins.
+            </p>
+          </section>
+
+          <!-- Belief -->
+          <section class="cs-section" id="belief">
+            <h2>Belief</h2>
+            <div class="cs-q"><span aria-hidden="true" class="dot"></span><span>Why do we believe it will work?</span>
+            </div>
+            <p>
+              When feedback is easy to give and easy to act on, it shifts from a compliance task to a motivational
+              driver.
+              By prioritizing real‑time coaching, progress visibility, and educational nudges, we anchored the platform
+              in behaviors that help high‑performing agents thrive.
+            </p>
+          </section>
+
+          <div class="cs-end">
+            <a class="btn" href="./index.html">Back to projects</a>
+            <a class="btn btn-secondary" href="./thrive-onboarding-experience.html">Next: Thrive Onboarding Experience</a>
+          </div>
+
+        </article>
+      </div>
+    </div>
+
+    <section aria-labelledby="cta-title" class="cta" id="contact">
+      <div class="container">
+        <h2 id="cta-title">Let’s build something great.</h2>
+        <p>Always open to connecting about roles, systems work, and solving messy problems.</p>
+        <div class="btnrow">
+          <a aria-label="Email me" class="btn primary" href="mailto:williamnhuynh@gmail.com">
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+              <path
+                d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"
+                fill="currentColor"></path>
+            </svg>
+            Contact me
+          </a>
+          <a aria-label="Connect on LinkedIn" class="btn" href="https://www.linkedin.com/in/williamnhuynh/"
+            rel="noreferrer noopener" target="_blank">
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+              <path
+                d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.8-1.8 3.7-1.8 4 0 4.7 2.6 4.7 6v5.6ZM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2ZM7.1 20.4H3.6V9h3.5v11.4Z"
+                fill="currentColor"></path>
+            </svg>
+            Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>William Huynh</h3>
+            <p>Product growth, Design systems, and AI-assisted UX. 8+ years shipping B2B/B2C products.</p>
+            <div style="margin-top:12px;display:inline-flex;gap:10px;align-items:center;">
+              <span class="chip">Senior Product Designer</span>
+            </div>
+            <div style="margin-top:12px;display:inline-flex;gap:10px;align-items:center;">
+              <span class="chip">PM-minded, code-literate</span>
+            </div>
+            <small>© <span id="year"></span> William Huynh • All rights reserved</small>
+          </div>
+          <div>
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="./index.html">Case Studies</a></li>
+              <li><a href="./design-process.html">Design Process</a></li>
+              <li><a href="./design-ai.html">Design &amp; AI</a></li>
+              <li><a href="./design-pillars.html">Design Pillars</a></li>
+              <li><a href="./about.html">About Me</a></li>
+              <li><a href="assets/William_Huynh_SeniorProductDesigner_Resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Connect</h3>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/williamnhuynh/" target="_blank">LinkedIn</a></li>
+              <li><a href="mailto: williamnhuynh@gmail.com">Email</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </footer>
 
+    <script defer="" src="./js/main.js"></script>
     <script>
-        // When the user scrolls the page, execute myFunction 
-        window.onscroll = function() {myFunction()};
-        
-        function myFunction() {
-          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-          var scrolled = (winScroll / height) * 100;
-          document.getElementById("myBar").style.width = scrolled + "%";
-        }
+      // tiny footer year helper
+      document.getElementById('year').textContent = new Date().getFullYear();
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="main.js"></script>
+    <style>
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
 
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXHLV7P"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXHLV7P" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 </body>
 

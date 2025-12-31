@@ -1,337 +1,512 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Thrive Design System | Case Study</title>
-    <meta property="og:image" content="http://williamnhuynh.com/images/hero-thumbnail.png">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora&display=swap">
-    <link rel="stylesheet" href="css/projects.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="icon" href="images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/css/twentytwenty.min.css">
+  <meta charset="utf-8" />
+  <script>document.documentElement.classList.add('js');</script>
+  <script>(function () { try { var t = localStorage.getItem('theme'); var m = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; var eff = (t === 'dark' || t === 'light') ? t : m; var html = document.documentElement; html.setAttribute('data-theme', eff); html.style.backgroundColor = (eff === 'dark') ? '#0b0f19' : '#ffffff'; } catch (e) { } })();</script>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <title>Thrive Design System • Case Study</title>
+  <meta
+    content="A 3-part case study on building the foundations of a design system: audit, tokens, components, documentation, and governance."
+    name="description" />
+  <link href="./assets/favicon.svg" rel="icon" type="image/svg+xml" />
+  <link href="./css/reset.css" rel="stylesheet" />
+  <link href="./css/tokens.css" rel="stylesheet" />
+  <link href="./css/main.css" rel="stylesheet" />
+  <link href="./css/case-study.css" rel="stylesheet" />
 
-    <script src="https://kit.fontawesome.com/81f4807ff7.js" crossorigin="anonymous"></script>
-
-     <script type="module"> 
-    import { Agents } from "https://rispose.com/cdn/v1/sdk.es.js" 
-    const agent = Agents.create('ag_q1hedw9ut6ze') 
-    </script> 
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WXHLV7P');</script>
-    <!-- End Google Tag Manager -->
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WXHLV7P');</script>
+  <!-- End Google Tag Manager -->
 </head>
 
 <body>
-    <!-- box-header -->
-    <div class="header">
-        <div class="progress-container">
-          <div class="progress-top-bar" id="myBar"></div>
-        </div>  
-    </div>
-    <div class="container-fluid">
-        <header class="box-header">
-            <div class="box-logo">
-                <a href="index.html"><img src="images/arrow-left.svg"></a>
-            </div>
-        </header>
-    </div>
-    <!-- end box-header -->
-
-    <!-- Introduction -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="col-md-12" data-aos="fade-right" data-aos-delay="300">
-                <h1>With a bucket of Lego, you can tell any great story.</h1>
-                <p><a href="index.html">Home</a> / Thrive Leafkit Design System</p>
-            </div>
-        </div>
-    </div>
-    <!-- end Introduction -->
-
-    <section>
-   <!-- Synopsis -->
-   <div class="container" data-aos="fade-down" data-aos-delay="300">
-    <div class="col-md-3">
-        <h1>Synopsis</h1>
-    </div>
-    <div class="col-md-9">
-        <p><b>Designing Well-being at Scale: My Role in Elevating Thrive Global’s Core Experience</b>
-        </p>
-        <p>As the sole product designer focused on design systems at Thrive Global, I partnered with 14+ cross-functional teams throughout the years to help shape an experience rooted in mindfulness, science, and behavior change. From reducing stress to building healthier habits, the Thrive app delivers key features that empower users every day:
-        </p>
-        <ul>
-            <li><i>Microsteps</i> – Tiny, science-backed actions that help users make meaningful behavior changes.</li>
-            <li><i>Thrive Reset</i> – 60-second guided breaks with calming visuals and audio to manage stress in real time.</li>
-            <li><i>Content Library</i> – Curated articles, videos, and tips that support well-being and productivity.</li>
-            <li><i>Workplace Integration</i> – Scalable tools that help managers and teams build healthier work cultures.</li>
-        </ul>
-        <p>While collaborating with two senior engineers, I also led the overhaul of the integrated design system used across Thrive’s core products. The system faced real challenges: inconsistent design patterns, outdated components, accessibility and localization gaps, and an overall lack of documentation that led to fragmented implementation.
-        </p>
-        <p>I’ll walk you through the strategic approach I used to bring clarity, consistency, and scalability to the system—laying the foundation for a more seamless product experience.
-        </p>
-    </div>
-    </div>
-    <!-- End Synopsis -->
-        <div class="container">
-            <div class="center" data-aos="fade-down" data-aos-delay="300">
-                <img src="images/thrive-intro-image.gif" alt="" class="img-responsive image-asset" />
-            </div>
-        </div>
-    <!-- Overview -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="topbar">
     <div class="container">
-        <div class="col-md-3">
-            <h1>3 part story</h1>
-        </div>
-        <div class="col-md-9">
-            <h3>🟡 Part 1: Foundations</h3>
-            <p><i>Building the Groundwork: Unifying Design Across Teams</i></p>
-            <p>When I first joined, the design landscape was fragmented—multiple products, inconsistent UI, and duplicated components. I led the effort to establish a foundational design system that aligned teams, streamlined workflows, and created visual consistency across the product suite.
-            </p>
-             <p>Some of the results I’ve delivered:</p>
-                <ul>
-                    <li><b style="color: #2d2d2d;">↘️ 25% faster implementation time</b> -<br>Faster time-to-market: Reduced front-end implementation time by ~25% by giving engineers reusable, production-ready components.</li>
-                    <li><b style="color: #2d2d2d;">↗️ 35% faster design workflow</b> -<br>35% increase in design efficiency: Designers now work from a shared system instead of rebuilding common components and patterns.</li>
-                    <li><b style="color: #2d2d2d;">⬆️ Over 90% of components are AA compliant</b> -<br>Over 90% component coverage with accessibility standards, supporting more inclusive experiences out of the box.</li>
-                </ul>
-            <a class="button round" href="#part1"><h4>Skip to section</h4></a>
-            <hr>
-            <h3>🟢 Part 2: Scaling & Evolving</h3>
-            <p><i>Scaling the System: From Design Library to Cross-Platform Ecosystem</i></p>
-            <p>As the company grew, so did the complexity of our design needs. I helped evolve the system to support responsive web and mobile platforms, added robust documentation, and introduced new governance models to support scalability and adoption across multiple teams.
-            </p>
-            <a class="button round" href="#part2"><h4>Skip to section</h4></a>
-            <hr>
-            <h3>🔵 Part 3: Maturing with Accessibility & Localization</h3>
-            <p><i>Designing for Everyone: Accessibility, Localization & Global Readiness</i></p>
-            <p>With a broader, more global user base, our design system had to do more than look good—it needed to be inclusive. I led accessibility improvements and adapted components to support multiple languages and cultural norms, ensuring our products worked for every user, everywhere.
-            </p>
-            <a class="button round" href="#part3"><h4>Skip to section</h4></a>
-            <hr>
-        </div>
+      <header class="header" role="banner">
+        <a aria-label="Home" class="brand" href="./index.html">
+          <img class="avatar" src="./assets/william-avatar.jpg" alt="" aria-hidden="true" loading="eager"
+            decoding="async" />
+          <span class="brand-name">William Huynh</span>
+        </a>
+        <nav aria-label="Primary" class="nav">
+          <button aria-controls="primary-nav" aria-expanded="false" class="iconbtn mobile-toggle" data-mobile-toggle=""
+            type="button">
+            <span aria-hidden="true" class="hamburger"><span></span><span></span><span></span></span>
+            <span class="sr-only">Menu</span>
+          </button>
+          <div class="pillnav" data-pillnav="" id="primary-nav">
+            <span aria-hidden="true" class="pillnav-indicator"></span>
+            <a href="./index.html">Case Studies</a>
+            <a href="./design-process.html">Design Process</a>
+            <a href="./design-ai.html">Design &amp; AI</a>
+            <a href="./design-pillars.html">Design Pillars</a>
+            <a href="./about.html">About Me</a>
+          </div>
+          <button aria-pressed="false" class="iconbtn theme-toggle" data-theme-toggle="" type="button">
+            <span aria-hidden="true" class="theme-icon" data-theme-icon=""></span>
+            <span class="theme-label" data-theme-label="">Theme</span>
+          </button>
+        </nav>
+      </header>
     </div>
-    <!-- End Overview -->
-    <!-- Overview -->
-    <div class="container" id="part1">
-        <div class="col-md-3">
-            <h1>🟡 Part 1: Foundations</h1>
+  </div>
+  <div aria-hidden="true" class="nav-overlay" data-nav-overlay=""></div>
+  <main id="main">
+    <header class="cs-hero">
+      <div class="container cs-hero-inner">
+        <a class="backlink" href="./index.html">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path
+              d="M15.7 5.3a1 1 0 0 1 0 1.4L10.41 12l5.3 5.3a1 1 0 1 1-1.42 1.4l-6-6a1 1 0 0 1 0-1.4l6-6a1 1 0 0 1 1.4 0Z"
+              fill="currentColor" />
+          </svg>
+          Back to Projects
+        </a>
+        <h1 class="cs-title">With a bucket of Lego, you can tell any great story.</h1>
+        <p class="cs-subtitle">
+          A 3-part case study on building a scalable design system foundation starting with audit, tokens, and core
+          components
+          so product teams can move faster without sacrificing quality.
+        </p>
+        <div class="cs-meta">
+          <div class="meta">
+            <span class="label">My Role:</span>
+            <strong>Senior Product Designer (Design Systems)</strong>
+          </div>
+          <div class="meta">
+            <span class="label">Scope:</span>
+            <strong>Audit • Tokens • Components • Docs • Governance</strong>
+          </div>
+          <div class="meta">
+            <span class="label">Team:</span>
+            <strong>1 Designer (me) • 2 UX Engineers</strong>
+          </div>
         </div>
-        <div class="col-md-9">
-            <p><b>Too many lego pieces</b></p>
-            <p>For the most part, every Lego piece connects to every other Lego piece. There is no silo of green pieces that refuse to connect with the blues. Yellow pieces aren’t busy trying to establish their own kingdom. Larger Lego pieces don’t take over meetings or require more attention. All Lego pieces work together toward a common and unified goal. While that seems like a good idea; being able to interchange and combine any Lego pieces, the output would not be ideal. It can be mismatched and oftentimes, it could be a messy process.<br><br>Here are the problems that were happening in our kingdom: low usage in reusable components, unclear guidelines within the documentation, and the majority of the components did not meet accessibility standards.</p>
+        <div class="kpis">
+          <div class="kpi">
+            <strong>25-30%</strong>
+            <span>Faster release velocity (est.)</span>
+          </div>
+          <div class="kpi">
+            <strong>70+</strong>
+            <span>Engineers supported</span>
+          </div>
+          <div class="kpi">
+            <strong>WCAG</strong>
+            <span>Baseline AA-ready patterns</span>
+          </div>
+          <div class="kpi">
+            <strong>Tokens</strong>
+            <span>Semantic-first foundation</span>
+          </div>
         </div>
-    </div>
-    <!-- End Overview -->
-    <!-- My Role -->
+      </div>
+    </header>
     <div class="container">
-        <div class="col-md-3">
+      <div class="cs-layout">
+        <aside aria-label="Content" class="toc" data-toc="">
+          <h2>Content</h2>
+          <nav aria-label="Case study sections">
+            <a data-toc-link="" href="#synopsis"><span>Synopsis</span><span class="pill">01</span></a>
+            <a data-toc-link="" href="#parts"><span>3 part story</span><span class="pill">02</span></a>
+            <a data-toc-link="" href="#part1"><span>Part 1: Foundations</span><span class="pill">03</span></a>
+            <a data-toc-link="" href="#role"><span>My Role</span><span class="pill">04</span></a>
+            <a data-toc-link="" href="#problem"><span>Problem</span><span class="pill">05</span></a>
+            <a data-toc-link="" href="#solution"><span>Solution</span><span class="pill">06</span></a>
+            <a data-toc-link="" href="#impact"><span>Impact</span><span class="pill">07</span></a>
+            <a data-toc-link="" href="#reflection"><span>Reflection</span><span class="pill">08</span></a>
+            <a data-toc-link="" href="#part2"><span>Part 2: Scaling &amp; Evolving</span><span
+                class="pill">09</span></a>
+            <a data-toc-link="" href="#part3"><span>Part 3: Accessibility &amp; Localization</span><span
+                class="pill">10</span></a>
+          </nav>
+        </aside>
+        <article class="cs-article">
+          <section class="cs-section" id="synopsis">
+            <h2>Synopsis</h2>
+            <p>
+              Design systems are only useful if they reduce friction for teams. This work focused on building the
+              “boring” foundations (audit, tokens, components, and docs) so teams can ship consistently and so future
+              parts of the story can scale without rework.
+            </p>
+            <br>
+            <div aria-label="Project walkthrough" class="embed">
+              <div class="ratio">
+                <img alt="Thrive screens overview" loading="lazy"
+                  src="./assets/thriveglobal/thrive-design-system-intro-image.gif" />
+              </div>
+            </div>
+          </section>
+          <section class="cs-section" id="parts">
+            <h2>3 part story</h2>
+            <p>
+              This case study is written as a trilogy: build the foundation, scale it across teams, then mature it with
+              accessibility and localization readiness.
+            </p>
+            <div class="part-grid">
+              <div class="part-card">
+                <div class="part-meta">
+                  <span class="part-tag">Part 1</span>
+                  <span class="status">Published</span>
+                </div>
+                <h3>Foundations</h3>
+                <p>Audit → token architecture → core components → docs &amp; governance baseline.</p>
+                <a href="#part1">Jump to Part 1</a>
+              </div>
+              <div class="part-card">
+                <div class="part-meta">
+                  <span class="part-tag">Part 2</span>
+                  <span class="status">Coming soon</span>
+                </div>
+                <h3>Scaling &amp; Evolving</h3>
+                <p>Adoption strategy, migration playbooks, and integrating with product workflows.</p>
+                <a href="#part2">Jump to Part 2</a>
+              </div>
+              <div class="part-card">
+                <div class="part-meta">
+                  <span class="part-tag">Part 3</span>
+                  <span class="status">Coming soon</span>
+                </div>
+                <h3>Accessibility &amp; Localization</h3>
+                <p>WCAG patterns, content guidelines, and i18n/RTL-ready components &amp; tokens.</p>
+                <a href="#part3">Jump to Part 3</a>
+              </div>
+            </div>
+          </section>
+          <section class="cs-section" id="part1">
+            <h2>Part 1: Foundations</h2>
+            <div class="cs-q">
+              <span aria-hidden="true" class="dot"></span>
+              <span>Too many lego pieces</span>
+            </div>
+            <p>For the most part, every Lego piece connects to every other Lego piece. There is no silo of green pieces
+              that refuse to connect with the blues. Yellow pieces aren’t busy trying to establish their own kingdom.
+              Larger Lego pieces don’t take over meetings or require more attention. All Lego pieces work together
+              toward a common and unified goal. While that seems like a good idea; being able to interchange and combine
+              any Lego pieces, the output would not be ideal. It can be mismatched and oftentimes, it could be a messy
+              process.<br><br>Here are the problems that were happening in our kingdom: low usage in reusable
+              components, unclear guidelines within the documentation, and the majority of the components did not meet
+              accessibility standards.</p>
+          </section>
+          <section class="cs-section" id="role">
             <h2>My Role</h2>
-        </div>
-    <div class="col-md-9">
-        <p>As the design systems lead, I owned the effort to lay a strong foundation that would improve collaboration, efficiency, and user experience across teams. This will help start building the right Lego set for Thrive.</b>
-        </p>
-        <p>Key responsibilities included:
-        </p>
-        <ul>
-            <li><b>🔍 System Audit & UX Diagnosis</b> -<br>Conducted a cross-platform audit of 100+ screens to identify redundant patterns, design gaps, and accessibility violations.</li>
-            <li><b>🧱 Foundation Design & Token Definition</b> -<br>Established base design tokens for color, typography, spacing, and elevation, aligning both design and code.</li>
-            <li><b>📦 Component Library Creation</b> -<br>Partnered with engineering to build a centralized, accessible component library in Figma and aligned with Storybook.</li>
-            <li><b>♿ Accessibility Integration</b> -<br>Embedded accessible defaults (contrast, focus states, ARIA roles) into the system and created guidelines for inclusive design.</li>
-            <li><b>📚 Documentation & Governance</b> -<br>Created usage documentation and helped shape a governance model for ongoing contribution, versioning, and maintenance.</li>
-        </ul>
-    </div>
-    </div>
-    <!-- End My Role -->
-    <!-- Problem -->
-    <div class="container">
-        <div class="col-md-3">
-            <h2>Problem</h2>
-        </div>
-        <div class="col-md-9">
-            <p>When I joined the team, there was no single source of truth for our design language. The absence of a centralized design system led to a disjointed product experience and operational inefficiencies. Through an audit and cross-functional conversations, I identified 3 key issues:</p>
-            <img src="images/thrive-component-fragmentation-across-teams.png" class="img-responsive image-asset-small">
-            <p><b>1. Component Fragmentation Across Teams</b><br>
-            Each product team built their own set of UI components over time; components like buttons, modals, inputs—all slightly different in spacing, behavior, or interaction. This led to a fragmented user experience and extra overhead for both design and engineering. Fixing a bug in one place of a component didn’t guarantee it was fixed elsewhere. Often times, it was not always under the hood change. It also made onboarding harder, since new team members had to navigate inconsistent patterns across the platform.</p><br>
-            <!-- <div class="metric-box"><p><b>1. Component Fragmentation Across Teams</b><br>
-            Each product team created and maintained their own UI components, resulting in visual and behavioral inconsistencies across the platform.</p></div> -->
-            <img src="images/thrive-inconsistent-common-components.png" class="img-responsive image-asset-small">
-            <p><b>2. Inefficient Design-to-Development Workflow</b><br>
-            Without a shared set of common components, designers were constantly recreating the same UI patterns from scratch (ex. buttons, cards, inputs—often with slight variations). Handoffs became messy since engineers had to interpret and rebuild designs manually, which led to inconsistencies and back-and-forth revisions. It slowed everyone down and made even simple features feel heavier to ship. A lot of time was wasted fixing things that could’ve been solved upfront with standardization.</p><br>
-            <img src="images/thrive-missing-accessibility-standards.png" class="img-responsive image-asset-small">
-            <p><b>3. Missing Accessibility Standards</b><br>
-            A lot of the existing components didn’t follow basic accessibility standards. A few examples like proper color contrast, keyboard navigation, or semantic HTML were either missing or inconsistent. That meant every team had to solve for accessibility on their own, often overlooking key details or duplicating efforts. It also made it hard to scale inclusive design across the platform, since there was no reliable baseline to build from. We needed a more thoughtful, centralized approach to bake accessibility in from the start.</p>
-        </div>
-    </div>
-    <!-- End Problem -->
-    <!-- Solution -->
-    <div class="container">
-        <div class="col-md-3">
-            <h2>Solution</h2>
-        </div>
-        <div class="col-md-9">
-            <p>To address these issues, I led the creation of a foundational design system focused on scalability, usability, and accessibility. This included:
+            <p>
+              I owned the end-to-end foundation work, from discovery and audit through token decisions, component
+              patterns,
+              and documentation scaffolding.
             </p>
+            <p style="margin-top:12px;color:var(--muted);font-size:12px;">Key responsibilities included:</p>
+            <ul>
+              <li><strong>🔍 System Audit & UX Diagnosis</strong> - Conducted a cross-platform audit of 100+ screens to
+                identify redundant patterns, design gaps, and accessibility violations.</li>
+              <li><strong>🧱 Foundation Design & Token Definition</strong> - Established base design tokens for color,
+                typography, spacing, and elevation, aligning both design and code.</li>
+              <li><strong>📦 Component Library Creation</strong> - Partnered with engineering to build a centralized,
+                accessible component library in Figma and aligned with Storybook.</li>
+              <li><strong>♿ Accessibility Integration</strong> - Embedded accessible defaults (contrast, focus states,
+                ARIA roles) into the system and created guidelines for inclusive design.</li>
+              <li><strong>📚 Documentation & Governance</strong> - Created usage documentation and helped shape a
+                governance model for ongoing contribution, versioning, and maintenance.</li>
+            </ul>
+          </section>
+          <section class="cs-section" id="problem">
+            <h2>Problem</h2>
+            <div class="cs-q">
+              <span aria-hidden="true" class="dot"></span>
+              <span>What was broken?</span>
+            </div>
+            <p>
+              The product UI had grown organically. Patterns diverged across squads, components were duplicated,
+              and design decisions lived in people’s heads instead of in the system. there was no single source of truth
+              for our design language. The absence of a centralized design system led to a disjointed product experience
+              and operational inefficiencies.<br><br>Through an audit and cross-functional conversations, I identified 3
+              key issues:
+            </p>
+            <p><strong>1. Component Fragmentation Across Teams</strong><br>Each product team built their own set of UI
+              components over time; components like buttons, modals, inputs; all slightly different in spacing,
+              behavior, or interaction. This led to a fragmented user experience and extra overhead for both design and
+              engineering. Fixing a bug in one place of a component didn’t guarantee it was fixed elsewhere. Often
+              times, it was not always under the hood change. It also made onboarding harder, since new team members had
+              to navigate inconsistent patterns across the platform.</p>
+            <figure>
+              <div class="figure">
+                <img alt="Figma product teams' files"
+                  src="./assets/thriveglobal/thrive-component-fragmentation-across-teams.png" />
+                <figcaption>Preview: team, project and file organization in Figma.
+                </figcaption>
+              </div>
+            </figure>
             <br>
-            <img src="images/thrive-calendar-DS-working-modal.png" class="img-responsive image-asset-small">
-            <p>We set up a <b>collaborative working model</b> with design and engineering leads to make sure the system wasn’t just built in isolation. For example, we’d co-create components like tables or filters together, aligning early on technical constraints and design needs. We also ran pilots with a few product teams to gather feedback before rolling things out more broadly. This helped us catch edge cases early, make quick adjustments, and build trust. Over time, that collaboration turned into shared ownership, which made adoption smoother and more sustainable.</p>
+            <p><strong>2. Inefficient Design-to-Development Workflow</strong><br>Without a shared set of common
+              components, designers were constantly recreating the same UI patterns from scratch (ex. buttons, cards,
+              inputs - often with slight variations). Handoffs became messy since engineers had to interpret and rebuild
+              designs manually, which led to inconsistencies and back-and-forth revisions. It slowed everyone down and
+              made even simple features feel heavier to ship. A lot of time was wasted fixing things that could’ve been
+              solved upfront with standardization.</p>
+            <figure>
+              <div class="figure">
+                <img alt="Inconsistent menu experience across the application"
+                  src="./assets/thriveglobal/thrive-inconsistent-common-components.png" />
+                <figcaption>Example: inconsistent menu experience across the application.
+                </figcaption>
+              </div>
+            </figure>
             <br>
-            <img src="images/thrive-accessibility-passing.png" class="img-responsive image-asset-small">
-            <p>Most components are designed to meet <b>AA-level accessibility standards</b> outlined in WCAG 2.1 and 2.2. We regularly use Accessibility Insights to audit components for issues like insufficient color contrast, missing ARIA labels, or poor keyboard navigation. For example, we caught low contrast in secondary buttons and missing focus states in modals, which we quickly resolved. We also ensured icon-only buttons had proper aria-labels for screen readers. This ongoing accessibility review process helps us catch issues early and ship components that are usable for everyone.</p>
+            <p><strong>3. Missing Accessibility Standards</strong><br>A lot of the existing components didn’t follow
+              basic accessibility standards. A few examples like proper color contrast, keyboard navigation, or semantic
+              HTML were either missing or inconsistent. That meant every team had to solve for accessibility on their
+              own, often overlooking key details or duplicating efforts. It also made it hard to scale inclusive design
+              across the platform, since there was no reliable baseline to build from. We needed a more thoughtful,
+              centralized approach to bake accessibility in from the start.</p>
+            <figure>
+              <div class="figure">
+                <img alt="Accessibility Insights automated checks on a root page"
+                  src="./assets/thriveglobal/thrive-missing-accessibility-standards.png" />
+                <figcaption>Accessibility automated checks results on one of the root pages.
+                </figcaption>
+              </div>
+            </figure>
+          </section>
+          <section class="cs-section" id="solution">
+            <h2>Solution</h2>
+            <p>To address these issues, I led the creation of a foundational design system focused on scalability,
+              usability, and accessibility. This included:
+            </p>
+            <p>We set up a <strong>collaborative working model</strong> with design and engineering leads to make sure
+              the system wasn’t just built in isolation. For example, we’d co-create components like tables or filters
+              together, aligning early on technical constraints and design needs. We also ran pilots with a few product
+              teams to gather feedback before rolling things out more broadly. This helped us catch edge cases early,
+              make quick adjustments, and build trust. Over time, that collaboration turned into shared ownership, which
+              made adoption smoother and more sustainable.</p>
+            <figure>
+              <div class="figure">
+                <img alt="Design system working modal"
+                  src="./assets/thriveglobal/thrive-calendar-DS-working-modal.png" />
+                <figcaption>Preview of the design system working modals and rituals for product teams.
+                </figcaption>
+              </div>
+            </figure>
             <br>
-            <img src="images/thrive-token-examples.png" class="img-responsive image-asset-small">
-            <p>We built a <b>shared design token architecture that kept Figma and the codebase in sync.</b> UI elements like color, spacing, and typography were defined in one source of truth. For example, we mapped semantic tokens like button-primary-bg and text-muted directly from our design library to the front-end, which reduced handoff confusion and visual mismatches. When we updated a global spacing token, it reflected consistently across both platforms without manual overrides. This alignment made implementation faster and helped designers and engineers speak the same language. It also reduced drift over time and simplified onboarding for new team members.</p>
+            <p>Most components are designed to meet <strong>AA-level accessibility standards</strong> outlined in WCAG
+              2.1 and 2.2. We regularly use Accessibility Insights to audit components for issues like insufficient
+              color contrast, missing ARIA labels, or poor keyboard navigation. For example, we caught low contrast in
+              secondary buttons and missing focus states in modals, which we quickly resolved. We also ensured icon-only
+              buttons had proper aria-labels for screen readers. This ongoing accessibility review process helps us
+              catch issues early and ship components that are usable for everyone.</p>
+            <figure>
+              <div class="figure">
+                <img alt="Accessibility passing" src="./assets/thriveglobal/thrive-accessibility-passing.png" />
+                <figcaption>Accessibility Insights summary of the whole application.
+                </figcaption>
+              </div>
+            </figure>
             <br>
-            <img src="images/thrive-design-systems-list.png" class="img-responsive image-asset-small">
-            <p>We built a <b>centralized component library shared across teams</b>, with clear specs, usage guidelines, and interaction patterns baked in. Since we support three design systems, we separated them into distinct libraries—each tailored to a specific product surface—so teams knew exactly where to go without second-guessing. This structure cut down confusion, reduced duplicate work, and made adoption much smoother. It also gave us more control when rolling out updates specific to each system.</p>
-        </div>
-    </div>
-    <!-- End Solution -->
-    <!-- Impact -->
-    <div class="container">
-        <div class="col-md-3">
+            <p>We built a <strong>shared design token architecture</strong> that kept Figma and the codebase in sync. UI
+              elements like color, spacing, and typography were defined in one source of truth. For example, we mapped
+              semantic tokens like button-primary-bg and text-muted directly from our design library to the front-end,
+              which reduced handoff confusion and visual mismatches. When we updated a global spacing token, it
+              reflected consistently across both platforms without manual overrides. This alignment made implementation
+              faster and helped designers and engineers speak the same language. It also reduced drift over time and
+              simplified onboarding for new team members.</p>
+            <figure>
+              <div class="figure">
+                <img alt="One of the semantic token listing for data visualization"
+                  src="./assets/thriveglobal/thrive-token-examples.png" />
+                <figcaption>A preview of the semantic design tokens in data visualization section.
+                </figcaption>
+              </div>
+            </figure>
+            <br>
+            <p>We built a <strong>centralized component library shared across teams</strong>, with clear specs, usage
+              guidelines, and interaction patterns baked in. Since we support three design systems, we separated them
+              into distinct libraries, each tailored to a specific product surface, so teams knew exactly where to go
+              without second-guessing. This structure cut down confusion, reduced duplicate work, and made adoption much
+              smoother. It also gave us more control when rolling out updates specific to each system.</p>
+            <figure>
+              <div class="figure">
+                <img alt="Leafkit design system centralized Figma files"
+                  src="./assets/thriveglobal/thrive-design-systems-list.png" />
+                <figcaption>A directory of where Leafkit design system centralized Figma files live.
+                </figcaption>
+              </div>
+            </figure>
+          </section>
+          <section class="cs-section" id="impact">
             <h2>Impact</h2>
-        </div>
-        <div class="col-md-9">
-            <p>This foundational work delivered tangible results across the organization:</p>
-            <div class="col-md-12">
-                <h3>💼 Business Impact</h3>
+            <p>
+              The system reduced inconsistencies and sped up delivery by making decisions reusable. We also created a
+              foundation to scale future parts of the system without rewrites.
+            </p>
+            <div class="kpis" style="margin-top: 14px;">
+              <div class="kpi"><strong>25-30%</strong><span>Time savings (est.) from reuse + fewer handoff loops</span>
+              </div>
+              <div class="kpi"><strong>Reduced drift</strong><span>Fewer duplicated patterns across squads</span></div>
+              <div class="kpi"><strong>AA-ready</strong><span>Accessible defaults baked into core components</span>
+              </div>
+              <div class="kpi"><strong>Faster onboarding</strong><span>Clear docs helped new contributors ramp
+                  quickly</span></div>
             </div>
-            <div class="col-md-6">
-                <img src="images/impact-card-box-part1.1.png" class="img-responsive image-asset-small">
+            <div class="panel" style="margin-top: 14px;">
+              <h3>What I’m tracking next</h3>
+              <p>
+                Adoption by team, component reuse rates, design/development cycle time, and accessibility defect trends.
+              </p>
             </div>
-            <div class="col-md-6">
-                <img src="images/impact-card-box-part1.2.png" class="img-responsive image-asset-small">
-            </div>
-            <div class="col-md-6">
-                <img src="images/impact-card-box-part1.3.png" class="img-responsive image-asset-small">
-            </div>
-            <div class="col-md-12">
-                <hr>
-                <h3>🎨 Design Team Impact</h3>
-            </div>
-            <div class="col-md-6">
-                <img src="images/impact-card-box-part1.4.png" class="img-responsive image-asset-small">
-            </div>
-            <div class="col-md-6">
-                <img src="images/impact-card-box-part1.5.png" class="img-responsive image-asset-small">
-            </div>
-            <div class="col-md-6">
-                <img src="images/impact-card-box-part1.6.png" class="img-responsive image-asset-small">
-            </div>
-            <div class="col-md-6">
-                <img src="images/impact-card-box-part1.7.png" class="img-responsive image-asset-small">
-            </div>
-        </div>
-    </div>
-    <!-- End Impact -->
-    <!-- Reflection -->
-    <div class="container">
-        <div class="col-md-3">
+          </section>
+          <section class="cs-section" id="reflection">
             <h2>Reflection</h2>
-        </div>
-        <div class="col-md-9">
-            <img src="images/thrive-screens-preview.png" class="img-responsive"> 
-            <p>For me, this work wasn’t just about making things look consistent—it was about building the right blocks so the people creating the product could move faster and with less friction. Like snapping Legos into place, watching designers and engineers finally use the same pieces and speak the same visual language felt like a real win.
-            </b></p>
-            <p>If I were to do it again, I’d push to get stakeholders aligned even earlier and be more intentional about tracking the system’s impact from day one. That said, getting this foundation in place was a huge unlock. It gave us the momentum to move faster, ship with more confidence, and focus on solving bigger product problems.</p>
-        </div>
-    </div>
-    <!-- End Reflection -->
-    <!-- Overview -->
-    <div class="container work-container" id="part2">
-        <div class="col-md-3">
-            <h1>🟢 Part 2: Scaling & Evolving</h1>
-        </div>
-        <div class="col-md-9">
-            <img src="images/coming-soon.gif" class="img-responsive image-asset">
-        </div>
-    </div>
-    <!-- End Overview -->
-    <!-- Overview -->
-    <div class="container work-container" id="part3">
-        <div class="col-md-3">
-            <h1>🔵 Part 3: Maturing with Accessibility & Localization</h1>
-        </div>
-        <div class="col-md-9">
-            <img src="images/coming-soon.gif" class="img-responsive image-asset">
-            <!-- Before and After
-            <div id="image3">
-                <img src="images/thrive-theme.png" class="img-responsive image-asset">
-                <img src="images/thrive-high-contrast-theme.png" class="img-responsive image-asset">
+            <p>
+              For me, this work wasn’t just about making things look consistent; it was about building the right blocks
+              so the people creating the product could move faster and with less friction. Like snapping Legos into
+              place, watching designers and engineers finally use the same pieces and speak the same visual language
+              felt like a real win.
+              <br><br>
+              If I were to do it again, I’d push to get stakeholders aligned even earlier and be more intentional about
+              tracking the system’s impact from day one. That said, getting this foundation in place was a huge unlock.
+              It gave us the momentum to move faster, ship with more confidence, and focus on solving bigger product
+              problems.
+            </p>
+            <figure class="figure">
+              <img alt="Preview of Thrive Product Screens" loading="lazy"
+                src="./assets/thriveglobal/thrive-screens-preview.png" />
+              <figcaption>Preview of Leafkit design system components throughout the product screens.</figcaption>
+            </figure>
+            <br>
+            <div class="cs-q">
+              <span aria-hidden="true" class="dot"></span>
+              <span>Lessons learned</span>
             </div>
-            <br><br>
-            <div id="image4">
-                <img src="images/thrive-theme.png" class="img-responsive image-asset">
-                <img src="images/thrive-dark-mode-theme.png" class="img-responsive image-asset">
-            </div>
-            -->
-        </div>
+            <ul>
+              <li><strong>Evidence beats opinion.</strong> Audit artifacts made decisions faster and less political.
+              </li>
+              <li><strong>Tokens are an API.</strong> Naming by intent makes future theming and refactors survivable.
+              </li>
+              <li><strong>Docs are part of the component.</strong> Missing guidance becomes Slack messages and bugs.
+              </li>
+              <li><strong>Governance can be lightweight.</strong> A simple intake + review process prevents drift.</li>
+            </ul>
+          </section>
+          <section class="cs-section" id="part2">
+            <h2>Part 2: Scaling &amp; Evolving</h2>
+            <p>
+              This section is intentionally a placeholder while Part 2 is being written.
+            </p>
+            <figure class="figure">
+              <img alt="Coming soon placeholder" loading="lazy" src="./assets/coming-soon.svg" />
+              <figcaption>Coming soon: migration playbooks, adoption strategy, and cross-team enablement.</figcaption>
+            </figure>
+          </section>
+          <section class="cs-section" id="part3">
+            <h2>Part 3: Maturing with Accessibility &amp; Localization</h2>
+            <p>
+              This section is intentionally a placeholder while Part 3 is being written.
+            </p>
+            <figure class="figure">
+              <img alt="Coming soon placeholder" loading="lazy" src="./assets/coming-soon-part-3of3.svg" />
+              <figcaption>Coming soon: WCAG patterns, content guidelines, i18n/RTL readiness.</figcaption>
+            </figure>
+          </section>
+          <div class="cs-end">
+            <a class="btn" href="./index.html">Back to projects</a>
+            <a class="btn btn-secondary" href="./wpromote-design-system.html">Next: Wpromote Design System</a>
+          </div>
+        </article>
+      </div>
     </div>
-    <!-- End Overview -->
+    <section aria-labelledby="cta-title" class="cta" id="contact">
+      <div class="container">
+        <h2 id="cta-title">Let’s build something great.</h2>
+        <p>Always open to connecting about roles, systems work, and solving messy problems.</p>
+        <div class="btnrow">
+          <a aria-label="Email me" class="btn primary" href="mailto:williamnhuynh@gmail.com">
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+              <path
+                d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"
+                fill="currentColor"></path>
+            </svg>
+            Contact me
+          </a>
+          <a aria-label="Connect on LinkedIn" class="btn" href="https://www.linkedin.com/in/williamnhuynh/"
+            rel="noreferrer noopener" target="_blank">
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+              <path
+                d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.8-1.8 3.7-1.8 4 0 4.7 2.6 4.7 6v5.6ZM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2ZM7.1 20.4H3.6V9h3.5v11.4Z"
+                fill="currentColor"></path>
+            </svg>
+            Connect on LinkedIn
+          </a>
+        </div>
+      </div>
     </section>
-
-    <footer class="copyright">
-        <div class="up" id="up">
-            <i class="fas fa-chevron-up"></i>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>William Huynh</h3>
+            <p>Product growth, Design systems, and AI-assisted UX. 8+ years shipping B2B/B2C products.</p>
+            <div style="margin-top:12px;display:inline-flex;gap:10px;align-items:center;">
+              <span class="chip">Senior Product Designer</span>
+            </div>
+            <div style="margin-top:12px;display:inline-flex;gap:10px;align-items:center;">
+              <span class="chip">PM-minded, code-literate</span>
+            </div>
+            <small>© <span id="year"></span> William Huynh • All rights reserved</small>
+          </div>
+          <div>
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="./index.html">Case Studies</a></li>
+              <li><a href="./design-process.html">Design Process</a></li>
+              <li><a href="./design-ai.html">Design &amp; AI</a></li>
+              <li><a href="./design-pillars.html">Design Pillars</a></li>
+              <li><a href="./about.html">About Me</a></li>
+              <li><a href="assets/William_Huynh_SeniorProductDesigner_Resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Connect</h3>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/williamnhuynh/" target="_blank">LinkedIn</a></li>
+              <li><a href="mailto: williamnhuynh@gmail.com">Email</a></li>
+            </ul>
+          </div>
         </div>
-        <p>&copy; 2025 William Huynh</p>
+      </div>
     </footer>
 
+    <script defer="" src="./js/main.js"></script>
     <script>
-        // When the user scrolls the page, execute myFunction 
-        window.onscroll = function() {myFunction()};
-        
-        function myFunction() {
-          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-          var scrolled = (winScroll / height) * 100;
-          document.getElementById("myBar").style.width = scrolled + "%";
-        }
+      // tiny footer year helper
+      document.getElementById('year').textContent = new Date().getFullYear();
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="main.js"></script>
-    
-    <script> src="https://code.jquery.com/jquery-2.1.1.min.js"</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.event.move.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.twentytwenty.js"></script>
-
-    <script>
-        $(function(){
-            $("#image1").twentytwenty();
-        });
-    </script>
-
-    <script>
-        $(function(){
-            $("#image2").twentytwenty();
-        });
-    </script>
-
-    <script>
-        $(function(){
-            $("#image3").twentytwenty();
-        });
-    </script>
-
-    <script>
-        $(function(){
-            $("#image4").twentytwenty();
-        });
-    </script>
+    <style>
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
 
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXHLV7P"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXHLV7P" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 </body>
 

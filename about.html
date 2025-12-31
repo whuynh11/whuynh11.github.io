@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <script>document.documentElement.classList.add('js');</script>
+  <script>(function () { try { var t = localStorage.getItem('theme'); var m = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; var eff = (t === 'dark' || t === 'light') ? t : m; var html = document.documentElement; html.setAttribute('data-theme', eff); html.style.backgroundColor = (eff === 'dark') ? '#0b0f19' : '#ffffff'; } catch (e) { } })();</script>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="light dark" name="color-scheme" />
+  <title>About William Huynh • Portfolio</title>
+  <meta content="Case studies with clear breakdowns of past projects, challenges, and outcomes." name="description" />
+  <link href="./assets/favicon.svg" rel="icon" type="image/svg+xml" />
+  <link href="./css/reset.css" rel="stylesheet" />
+  <link href="./css/tokens.css" rel="stylesheet" />
+  <link href="./css/main.css" rel="stylesheet" />
+  <link href="./css/about.css" rel="stylesheet" />
+  <link href="./css/about-icons.css" rel="stylesheet" />
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WXHLV7P');</script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="topbar">
+    <div class="container">
+      <header class="header" role="banner">
+        <a aria-label="Home" class="brand" href="./index.html">
+          <img class="avatar" src="./assets/william-avatar.jpg" alt="" aria-hidden="true" loading="eager"
+            decoding="async" />
+          <span class="brand-name">William Huynh</span>
+        </a>
+        <nav aria-label="Primary" class="nav">
+          <button aria-controls="primary-nav" aria-expanded="false" class="iconbtn mobile-toggle" data-mobile-toggle=""
+            type="button">
+            <span aria-hidden="true" class="hamburger"><span></span><span></span><span></span></span>
+            <span class="sr-only">Menu</span>
+          </button>
+          <div class="pillnav" data-pillnav="" id="primary-nav">
+            <span aria-hidden="true" class="pillnav-indicator"></span>
+            <a href="./index.html">Case Studies</a>
+            <a href="./design-process.html">Design Process</a>
+            <a href="./design-ai.html">Design &amp; AI</a>
+            <a href="./design-pillars.html">Design Pillars</a>
+            <a href="./about.html">About Me</a>
+          </div>
+          <button aria-pressed="false" class="iconbtn theme-toggle" data-theme-toggle="" type="button">
+            <span aria-hidden="true" class="theme-icon" data-theme-icon=""></span>
+            <span class="theme-label" data-theme-label="">Theme</span>
+          </button>
+        </nav>
+      </header>
+    </div>
+  </div>
+  <div aria-hidden="true" class="nav-overlay" data-nav-overlay=""></div>
+  <main class="page" id="main">
+    <section class="section">
+      <div class="container about-hero">
+        <div class="about-hero__media">
+          <img alt="Portrait of William Huynh." loading="eager" src="./assets/about-hero.jpg" />
+        </div>
+        <div class="about-hero__content">
+          <h1 class="about-hero__title">About Me</h1>
+          <p class="about-hero__lede">
+            I’m a Senior Product Designer who blends systems thinking with product growth, shipping experiences that
+            move key metrics and building the system layer that helps teams scale with confidence.
+          </p>
+          <p class="about-hero__lede">I’ve spent 8+ years shipping B2B and B2C experiences across web + mobile, with a
+            focus on activation, engagement loops, and retention. My hybrid background (product-minded, technically
+            fluent) helps me bridge PM and engineering, turning ambiguous problems into clear experiments and
+            production-ready solutions.</p>
+          <p class="about-hero__lede">I build the design system foundations that make wins repeatable: components,
+            tokens, accessibility standards, and lightweight governance that reduce rework and increase velocity.
+            Recently, I’ve been leveraging AI to tighten the cycle from insight → hypothesis → prototype → QA, so teams
+            can move faster without lowering the quality bar.</p>
+          <a class="btn about-hero__cta" href="./assets/William_Huynh_SeniorProductDesigner_Resume.pdf"
+            rel="noreferrer noopener" target="_blank">
+            <svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 2H7a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7l-5-5Z" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M14 2v5h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path d="M9 13h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M9 17h6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M9 9h1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>View My Resume</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section class="section section--tight">
+      <div class="container">
+        <div class="stats" role="list">
+          <div class="stat" role="listitem">
+            <div class="stat__value">8+</div>
+            <div class="stat__label">Years of Experience</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat__value">9+</div>
+            <div class="stat__label">Design Systems Built</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat__value">100+</div>
+            <div class="stat__label">End-to-End Product Initiatives</div>
+          </div>
+          <div class="stat" role="listitem">
+            <div class="stat__value">40+</div>
+            <div class="stat__label">Designers Mentored</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section aria-label="Testimonials" class="section testimonials testimonials--anton" data-reveal=""
+      style="margin-bottom: 50px; margin-top: 50px;">
+      <div class="container">
+        <div class="testimonials__intro" data-reveal="">
+          <h2 class="beyond__title">What people say about<br />working with me.</h2>
+          <div class="testimonials__lede">
+            <p>I’ve worked with teams across fast-moving startups and global brands, and the best outcomes come from
+              genuine collaboration.</p>
+            <p>Here’s what product leaders, founders, and teammates say about how I show up and what we shipped
+              together.
+            </p>
+          </div>
+        </div>
+        <div class="testimonials__grid" data-stagger="">
+          <!-- 1 -->
+          <article class="tbox" tabindex="0">
+            <h3 class="tbox__title">Commitment to quality</h3>
+            <div class="tbox__body">
+              <p>I had the pleasure of skip-level managing Will at Thrive and was consistently impressed by his
+                thoughtfulness, integrity, and commitment to quality. Will brings a rare combination of deep design
+                craft and a humble, collaborative spirit that makes everyone around him better.</p>
+              <p>He led the Leafkit design system with care and precision, enabling teams to work faster and more
+                consistently. He also prioritized accessibility and global inclusion, not because it was required, but
+                because it was the right thing to do.</p>
+            </div>
+            <div class="tbox__person">
+              <div class="tbox__meta">
+                <div class="tbox__name">Nitasha Walia</div>
+                <div class="tbox__role">Chief Product Officer</div>
+              </div>
+            </div>
+          </article>
+          <!-- 2 -->
+          <article class="tbox" tabindex="0">
+            <h3 class="tbox__title">Engineers absolutely loved working with him</h3>
+            <div class="tbox__body">
+              <p>I had the pleasure of hiring and managing William Huynh as he led the creation of our design system
+                from the ground up. William is one of those rare designers who brings both craft and enablement to the
+                table; his work was consistently high quality, thoughtfully accessible, and always aimed at unblocking
+                and accelerating product teams.</p>
+              <p>He was an exceptional collaborator, not just within the design team but across disciplines. Engineers
+                absolutely loved working with him; he was clear, responsive, and always a few steps ahead when it came
+                to anticipating edge cases or constraints. His systems work brought much-needed consistency and cohesion
+                to our product, and he helped raise the overall quality bar through thoughtful documentation and
+                tooling.</p>
+            </div>
+            <div class="tbox__person">
+              <div class="tbox__meta">
+                <div class="tbox__name">Chelsea Bathurst</div>
+                <div class="tbox__role">Director of Product Design</div>
+              </div>
+            </div>
+          </article>
+          <!-- 3 -->
+          <article class="tbox" tabindex="0">
+            <h3 class="tbox__title">An absolute joy to work with</h3>
+            <div class="tbox__body">
+              <p>Will is an absolute joy to work with. He's thoughtful, dedicated, and just one of those people that
+                levels up the entire team. We met regularly while I was running Product at Thrive and he was the lead
+                designer on our design system. I know our design team was so grateful for his thorough and responsive
+                work. I'd recommend Will in a heartbeat for any team.</p>
+            </div>
+            <div class="tbox__person">
+              <div class="tbox__meta">
+                <div class="tbox__name">Emily Mias</div>
+                <div class="tbox__role">Head of Product</div>
+              </div>
+            </div>
+          </article>
+          <!-- 4 -->
+          <article class="tbox" tabindex="0">
+            <h3 class="tbox__title">A force multiplier in design</h3>
+            <div class="tbox__body">
+              <p>I was fortunate enough to work with with William at Thrive on both our product and brand design teams.
+                William is one of the rare designers that brings far more thought and attention to detail to the table
+                than is required or remotely asked for. I’ve never worked with anyone else so thoughtful, deliberate,
+                meticulous in their work and so empathetic and open minded in their collaboration.</p>
+              <p>This attention to detail elevates the systems and design processes we all use as a team and
+                collectively elevates everyone’s work. He brings an engineers rigor to the design process that creates
+                efficient systems that scale broadly across organizations, yet he’s always willing, open, and actively
+                looking for team input to help shape the work he’s doing. It’s not often you find someone who can
+                simultaneously work and collaborate at that high of a level. William is absolutely a force multiplier in
+                design</p>
+            </div>
+            <div class="tbox__person">
+              <div class="tbox__meta">
+                <div class="tbox__name">Andrew Lakata</div>
+                <div class="tbox__role">Senior Director of Brand and Product Design</div>
+              </div>
+            </div>
+          </article>
+          <!-- 5 -->
+          <article class="tbox" tabindex="0">
+            <h3 class="tbox__title">"Jack of all trades" ability</h3>
+            <div class="tbox__body">
+              <p>I have had the enormous pleasure to work with William during my time at Thrive Global, and I can't
+                speak highly enough of his enthusiasm and desire to put out phenomenal work. While he was never on my
+                direct team, he had a unique "jack of all trades" ability to work with every PM at Thrive, supporting
+                the whole product via the design system, input for accessibility, localization - and more. </p>
+              <p>If something needed to be scalable across the app, he was the one to do to to make sure it would fit
+                in. Any team needing someone to help connect the dots and be a partner in design (and crime lol), would
+                benefit from William.</p>
+            </div>
+            <div class="tbox__person">
+              <div class="tbox__meta">
+                <div class="tbox__name">Elizabeth Cavallo</div>
+                <div class="tbox__role">Product Manager</div>
+              </div>
+            </div>
+          </article>
+          <!-- 6 -->
+          <article class="tbox" tabindex="0">
+            <h3 class="tbox__title">My partner in crime on the design side</h3>
+            <div class="tbox__body">
+              <p>William was the designer for the web platform team I lead during my time at Thrive. He was my partner
+                in crime on the design side, and the bridge between engineering and design. I loved his dedication to
+                real world UX and development concerns, such as accessibility, component design, documentation, making
+                sure devs are involved in the decisions and more. He made sure to understand the engineering constraints
+                and was constantly improving our processes.</p>
+              <p>Any team would be lucky to have him.</p>
+            </div>
+            <div class="tbox__person">
+              <div class="tbox__meta">
+                <div class="tbox__name">Francois Ward</div>
+                <div class="tbox__role">Director of Engineering</div>
+              </div>
+            </div>
+          </article>
+          <!-- 7 -->
+          <article class="tbox" tabindex="0">
+            <h3 class="tbox__title">An incredible mentor</h3>
+            <div class="tbox__body">
+              <p>William has been an incredible mentor, especially during my first time working on design systems at a
+                large company. I already had experience with design systems, but stepping into a dedicated role at that
+                scale came with new challenges. William helped me level up quickly, not by giving me all the answers,
+                but by guiding me through the right questions and helping me think more strategically.</p>
+              <p>He’s the kind of person who makes complex problems feel manageable. He’s clear, patient, and
+                intentional in the way he explains things, whether it’s token structure, accessibility decisions, or
+                figuring out how product features and systems should intersect. His passion for the work is contagious,
+                and he brings a thoughtful, collaborative energy to every conversation.</p>
+              <p>What I appreciated most was how much he truly cared about helping me grow. He never made assumptions,
+                never rushed through answers, and always created space for open discussion. It felt like a real
+                partnership, not a one-way mentorship.</p>
+            </div>
+            <div class="tbox__person">
+              <div class="tbox__meta">
+                <div class="tbox__name">Chela Giraldo</div>
+                <div class="tbox__role">Senior Product Designer, Design Systems</div>
+              </div>
+            </div>
+          </article>
+          <!-- 8 -->
+          <article class="tbox" tabindex="0">
+            <h3 class="tbox__title">Helped in a wide range of verticals</h3>
+            <div class="tbox__body">
+              <p>Will is a great asset to our Digital Experience team at Wpromote. He is able to give thoughtful and
+                informed recommendations for our clients in both UX/UI and design. He is a team player and takes
+                anything I throw at him with a smile. He loves to collaborate as much as possible and is proactive in
+                looking at new ways to bring better, effective digital experiences to our clients.</p>
+              <p>He has helped in a wide range of verticals including Financial Services, Retail/Ecommerce and more. He
+                is also great in presenting his ideas and recommendations to our clients first-hand, which makes for a
+                very strong asset to any team. Lastly, he has a very positive attitude to the work he is engaged in, and
+                makes having Will a pleasure to work with!</p>
+            </div>
+            <div class="tbox__person">
+              <div class="tbox__meta">
+                <div class="tbox__name">Steve Comando</div>
+                <div class="tbox__role">Senior Creative Director</div>
+              </div>
+            </div>
+          </article>
+          <!-- 9 -->
+          <article class="tbox" tabindex="0">
+            <h3 class="tbox__title">Detail-oriented design systems expert</h3>
+            <div class="tbox__body">
+              <p>Working with William has been a highlight of my time here at Thrive! From the very beginning, he played
+                a key role in helping onboard me to the design team. He was endlessly patient, always willing to jump on
+                a call to walk through the details of our Leafkit design system, and never made any question feel too
+                small. William has a natural way of making you feel supported, and his kindness and calm energy set the
+                tone for great collaboration.</p>
+              <p>Beyond that, William is one of the most thoughtful and detail-oriented design systems experts I’ve
+                worked with. He has deep knowledge of accessibility and never hesitated to dive into the specifics of
+                what made our components meet various standards. He was proactive in asking for feedback, and I always
+                enjoyed jamming with him to polish visuals and push our system further. Any design org, especially one
+                navigating enterprise complexity or accessibility requirements, would be lucky to have him.</p>
+            </div>
+            <div class="tbox__person">
+              <div class="tbox__meta">
+                <div class="tbox__name">Raymond Banke</div>
+                <div class="tbox__role">Product Designer</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="cta-title" class="cta" id="contact">
+      <div class="container">
+        <h2 id="cta-title">Let’s build something great.</h2>
+        <p>Always open to connecting about roles, systems work, and solving messy problems.</p>
+        <div class="btnrow">
+          <a aria-label="Email me" class="btn primary" href="mailto:williamnhuynh@gmail.com">
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+              <path
+                d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"
+                fill="currentColor"></path>
+            </svg>
+            Contact me
+          </a>
+          <a aria-label="Connect on LinkedIn" class="btn" href="https://www.linkedin.com/in/williamnhuynh/"
+            rel="noreferrer noopener" target="_blank">
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+              <path
+                d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.8-1.8 3.7-1.8 4 0 4.7 2.6 4.7 6v5.6ZM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2ZM7.1 20.4H3.6V9h3.5v11.4Z"
+                fill="currentColor"></path>
+            </svg>
+            Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>William Huynh</h3>
+            <p>Product growth, Design systems, and AI-assisted UX. 8+ years shipping B2B/B2C products.</p>
+            <div style="margin-top:12px;display:inline-flex;gap:10px;align-items:center;">
+              <span class="chip">Senior Product Designer</span>
+            </div>
+            <div style="margin-top:12px;display:inline-flex;gap:10px;align-items:center;">
+              <span class="chip">PM-minded, code-literate</span>
+            </div>
+            <small>© <span id="year"></span> William Huynh • All rights reserved</small>
+          </div>
+          <div>
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="./index.html">Case Studies</a></li>
+              <li><a href="./design-process.html">Design Process</a></li>
+              <li><a href="./design-ai.html">Design &amp; AI</a></li>
+              <li><a href="./design-pillars.html">Design Pillars</a></li>
+              <li><a href="./about.html">About Me</a></li>
+              <li><a href="assets/William_Huynh_SeniorProductDesigner_Resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Connect</h3>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/williamnhuynh/" target="_blank">LinkedIn</a></li>
+              <li><a href="mailto: williamnhuynh@gmail.com">Email</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script defer="" src="./js/main.js"></script>
+    <style>
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXHLV7P" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+
+</html>

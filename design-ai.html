@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <script>document.documentElement.classList.add('js');</script>
+  <script>(function () { try { var t = localStorage.getItem('theme'); var m = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; var eff = (t === 'dark' || t === 'light') ? t : m; var html = document.documentElement; html.setAttribute('data-theme', eff); html.style.backgroundColor = (eff === 'dark') ? '#0b0f19' : '#ffffff'; } catch (e) { } })();</script>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="light dark" name="color-scheme" />
+  <title>Design &amp; AI • Portfolio</title>
+  <link href="./assets/favicon.svg" rel="icon" type="image/svg+xml" />
+  <link href="./css/reset.css" rel="stylesheet" />
+  <link href="./css/tokens.css" rel="stylesheet" />
+  <link href="./css/main.css" rel="stylesheet" />
+  <link href="./css/drawer.css" rel="stylesheet" />
+  <link href="./css/ai.css" rel="stylesheet" />
+
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WXHLV7P');</script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="topbar">
+    <div class="container">
+      <header class="header" role="banner">
+        <a aria-label="Home" class="brand" href="./index.html">
+          <img class="avatar" src="./assets/william-avatar.jpg" alt="" aria-hidden="true" loading="eager"
+            decoding="async" />
+          <span class="brand-name">William Huynh</span>
+        </a>
+        <nav aria-label="Primary" class="nav">
+          <button aria-controls="primary-nav" aria-expanded="false" class="iconbtn mobile-toggle" data-mobile-toggle=""
+            type="button">
+            <span aria-hidden="true" class="hamburger"><span></span><span></span><span></span></span>
+            <span class="sr-only">Menu</span>
+          </button>
+          <div class="pillnav" data-pillnav="" id="primary-nav">
+            <span aria-hidden="true" class="pillnav-indicator"></span>
+            <a href="./index.html">Case Studies</a>
+            <a href="./design-process.html">Design Process</a>
+            <a href="./design-ai.html">Design &amp; AI</a>
+            <a href="./design-pillars.html">Design Pillars</a>
+            <a href="./about.html">About Me</a>
+          </div>
+          <button aria-pressed="false" class="iconbtn theme-toggle" data-theme-toggle="" type="button">
+            <span aria-hidden="true" class="theme-icon" data-theme-icon=""></span>
+            <span class="theme-label" data-theme-label="">Theme</span>
+          </button>
+        </nav>
+      </header>
+    </div>
+  </div>
+  <div aria-hidden="true" class="nav-overlay" data-nav-overlay=""></div>
+  <main id="main" role="main">
+    <div class="container">
+      <section aria-label="AI page intro" class="ai-hero">
+        <h1>My approach to using AI</h1>
+        <p>I use AI to move faster on the work that benefits from speed, and I keep judgment, craft, and systems
+          thinking human-led.</p>
+      </section>
+      <section aria-label="AI strengths" class="ai-section">
+        <h2 class="ai-section-title">AI’s strengths → Where AI helps most</h2>
+        <div class="ai-grid">
+          <article aria-label="Open Pattern recognition" class="ai-card" data-drawer-open="pattern-recognition"
+            role="button" tabindex="0">
+            <div class="ai-card__row">
+              <div aria-hidden="true" class="ai-icon ai-icon--green"></div>
+              <div style="flex:1">
+                <h3>Pattern recognition</h3>
+                <p>AI is great at scanning large volumes of notes, feedback, and data to spot themes, repeats, and
+                  outliers I might miss.</p>
+                <div aria-hidden="true" class="ai-card__cta">How I use this <span>→</span></div>
+              </div>
+            </div>
+          </article>
+          <article aria-label="Open Summarization &amp; synthesis" class="ai-card"
+            data-drawer-open="summarization-synthesis" role="button" tabindex="0">
+            <div class="ai-card__row">
+              <div aria-hidden="true" class="ai-icon ai-icon--green"></div>
+              <div style="flex:1">
+                <h3>Summarization &amp; synthesis</h3>
+                <p>AI helps turn messy, unstructured inputs into clearer summaries I can sanity-check, refine, and share
+                  with the team.</p>
+                <div aria-hidden="true" class="ai-card__cta">How I use this <span>→</span></div>
+              </div>
+            </div>
+          </article>
+          <article aria-label="Open Speed and iteration" class="ai-card" data-drawer-open="speed-iteration"
+            role="button" tabindex="0">
+            <div class="ai-card__row">
+              <div aria-hidden="true" class="ai-icon ai-icon--green"></div>
+              <div style="flex:1">
+                <h3>Speed and iteration</h3>
+                <p>AI helps me generate options quickly, explore variations, and unblock early thinking without
+                  over-investing in one direction.</p>
+                <div aria-hidden="true" class="ai-card__cta">How I use this <span>→</span></div>
+              </div>
+            </div>
+          </article>
+          <article aria-label="Open Scalability and consistency" class="ai-card"
+            data-drawer-open="scalability-consistency" role="button" tabindex="0">
+            <div class="ai-card__row">
+              <div aria-hidden="true" class="ai-icon ai-icon--green"></div>
+              <div style="flex:1">
+                <h3>Scalability and consistency</h3>
+                <p>AI is reliable for repeatable tasks: applying rules, formatting, and keeping outputs consistent
+                  across docs, specs, and systems work.</p>
+                <div aria-hidden="true" class="ai-card__cta">How I use this <span>→</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section aria-label="AI weaknesses" class="ai-section" style="padding-top: 22px;">
+        <h2 class="ai-section-title">AI’s weaknesses → Where I keep it human-led</h2>
+        <div class="ai-grid">
+          <article aria-label="Open Deep problem framing" class="ai-card" data-drawer-open="deep-problem-framing"
+            role="button" tabindex="0">
+            <div class="ai-card__row">
+              <div aria-hidden="true" class="ai-icon ai-icon--red"></div>
+              <div style="flex:1">
+                <h3>Deep problem framing</h3>
+                <p>AI can restate what it’s given, but it often misses the “why” behind behavior: motivations,
+                  constraints, and what’s actually at stake.</p>
+                <div aria-hidden="true" class="ai-card__cta">How I use this <span>→</span></div>
+              </div>
+            </div>
+          </article>
+          <article aria-label="Open Emotional understanding" class="ai-card" data-drawer-open="emotional-understanding"
+            role="button" tabindex="0">
+            <div class="ai-card__row">
+              <div aria-hidden="true" class="ai-icon ai-icon--red"></div>
+              <div style="flex:1">
+                <h3>Emotional understanding</h3>
+                <p>AI doesn’t carry lived context. It can miss tone, trust, and the emotional weight behind user
+                  decisions.</p>
+                <div aria-hidden="true" class="ai-card__cta">How I use this <span>→</span></div>
+              </div>
+            </div>
+          </article>
+          <article aria-label="Open Complex system thinking" class="ai-card" data-drawer-open="complex-system-thinking"
+            role="button" tabindex="0">
+            <div class="ai-card__row">
+              <div aria-hidden="true" class="ai-icon ai-icon--red"></div>
+              <div style="flex:1">
+                <h3>Complex system thinking</h3>
+                <p>AI struggles with multi-step dependencies. It can miss how a change in one place affects edge cases,
+                  states, and downstream surfaces.</p>
+                <div aria-hidden="true" class="ai-card__cta">How I use this <span>→</span></div>
+              </div>
+            </div>
+          </article>
+          <article aria-label="Open Taste &amp; craft" class="ai-card" data-drawer-open="taste-craft" role="button"
+            tabindex="0">
+            <div class="ai-card__row">
+              <div aria-hidden="true" class="ai-icon ai-icon--red"></div>
+              <div style="flex:1">
+                <h3>Taste &amp; craft</h3>
+                <p>AI can produce options, but it can’t own the final call. Great design is choosing the right direction
+                  and sweating the details.</p>
+                <div aria-hidden="true" class="ai-card__cta">How I use this <span>→</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section aria-label="How this all fits together" class="ai-fits">
+        <h2>How this all fits together</h2>
+        <p>AI accelerates the work that benefits from speed and scale. I handle the parts that require judgment, systems
+          thinking, and craft. The result is faster execution without sacrificing quality.</p>
+      </section>
+    </div>
+
+    <section aria-labelledby="cta-title" class="cta" id="contact">
+      <div class="container">
+        <h2 id="cta-title">Let’s build something great.</h2>
+        <p>Always open to connecting about roles, systems work, and solving messy problems.</p>
+        <div class="btnrow">
+          <a aria-label="Email me" class="btn primary" href="mailto:williamnhuynh@gmail.com">
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+              <path
+                d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"
+                fill="currentColor"></path>
+            </svg>
+            Contact me
+          </a>
+          <a aria-label="Connect on LinkedIn" class="btn" href="https://www.linkedin.com/in/williamnhuynh/"
+            rel="noreferrer noopener" target="_blank">
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+              <path
+                d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.8-1.8 3.7-1.8 4 0 4.7 2.6 4.7 6v5.6ZM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2ZM7.1 20.4H3.6V9h3.5v11.4Z"
+                fill="currentColor"></path>
+            </svg>
+            Connect on LinkedIn
+          </a>
+        </div>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>William Huynh</h3>
+            <p>Product growth, Design systems, and AI-assisted UX. 8+ years shipping B2B/B2C products.</p>
+            <div style="margin-top:12px;display:inline-flex;gap:10px;align-items:center;">
+              <span class="chip">Senior Product Designer</span>
+            </div>
+            <div style="margin-top:12px;display:inline-flex;gap:10px;align-items:center;">
+              <span class="chip">PM-minded, code-literate</span>
+            </div>
+            <small>© <span id="year"></span> William Huynh • All rights reserved</small>
+          </div>
+          <div>
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="./index.html">Case Studies</a></li>
+              <li><a href="./design-process.html">Design Process</a></li>
+              <li><a href="./design-ai.html">Design &amp; AI</a></li>
+              <li><a href="./design-pillars.html">Design Pillars</a></li>
+              <li><a href="./about.html">About Me</a></li>
+              <li><a href="assets/William_Huynh_SeniorProductDesigner_Resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Connect</h3>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/williamnhuynh/" target="_blank">LinkedIn</a></li>
+              <li><a href="mailto: williamnhuynh@gmail.com">Email</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+
+    <!-- Drawer -->
+    <div class="drawer-overlay" data-drawer-overlay hidden></div>
+    <aside class="drawer" role="dialog" aria-modal="true" aria-labelledby="drawer-title" data-drawer
+      data-drawer-global="AI_DRAWER_CONTENT" data-drawer-src="./assets/ai-drawer-content.json" hidden>
+      <div class="drawer-header">
+        <div>
+          <h3 class="drawer-title" id="drawer-title">Details</h3>
+          <p class="drawer-subtitle" id="drawer-subtitle"> </p>
+        </div>
+        <button class="iconbtn drawer-close" type="button" data-drawer-close aria-label="Close">
+          <svg aria-hidden="true" viewBox="0 0 24 24">
+            <path
+              d="M13.4 12l4.9 4.9a1 1 0 1 1-1.4 1.4L12 13.4l-4.9 4.9a1 1 0 0 1-1.4-1.4L10.6 12 5.7 7.1a1 1 0 1 1 1.4-1.4L12 10.6l4.9-4.9a1 1 0 0 1 1.4 1.4L13.4 12Z"
+              fill="currentColor"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="drawer-body" id="drawer-body"></div>
+    </aside>
+
+    <!-- Inline drawer content fallback (supports file:// usage where fetch() may fail) -->
+    <script src="./assets/ai-drawer-content.js"></script>
+
+    <script defer="" src="./js/main.js"></script>
+    <style>
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXHLV7P" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+
+</html>

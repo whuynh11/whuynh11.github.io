@@ -1,229 +1,382 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Thrive Onboarding Experience | Case Study</title>
-    <meta property="og:image" content="http://williamnhuynh.com/images/hero-thumbnail.png">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora&display=swap">
-    <link rel="stylesheet" href="css/projects.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="icon" href="images/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/css/twentytwenty.min.css">
+  <meta charset="utf-8" />
+  <script>document.documentElement.classList.add('js');</script>
+  <script>(function () { try { var t = localStorage.getItem('theme'); var m = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; var eff = (t === 'dark' || t === 'light') ? t : m; var html = document.documentElement; html.setAttribute('data-theme', eff); html.style.backgroundColor = (eff === 'dark') ? '#0b0f19' : '#ffffff'; } catch (e) { } })();</script>
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="light dark" name="color-scheme" />
+  <title>Thrive Onboarding Experience • Case Study</title>
+  <link href="./assets/favicon.svg" rel="icon" type="image/svg+xml" />
+  <link href="./css/reset.css" rel="stylesheet" />
+  <link href="./css/tokens.css" rel="stylesheet" />
+  <link href="./css/main.css" rel="stylesheet" />
+  <link href="./css/case-study.css" rel="stylesheet" />
 
-     <script type="module"> 
-    import { Agents } from "https://rispose.com/cdn/v1/sdk.es.js" 
-    const agent = Agents.create('ag_q1hedw9ut6ze') 
-    </script> 
-
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-WXHLV7P');</script>
-    <!-- End Google Tag Manager -->
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-WXHLV7P');</script>
+  <!-- End Google Tag Manager -->
 </head>
 
 <body>
-    <!-- box-header -->
-    <div class="header">
-        <div class="progress-container">
-          <div class="progress-top-bar" id="myBar"></div>
-        </div>  
-    </div>
-    <div class="container-fluid">
-        <header class="box-header">
-            <div class="box-logo">
-                <a href="index.html"><img src="images/arrow-left.svg"></a>
-            </div>
-        </header>
-    </div>
-    <!-- end box-header -->
-
-    <!-- Introduction -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="col-md-12" data-aos="fade-right" data-aos-delay="300">
-                <h1>Less Noise, More Relevance: Personalizing Thrive’s Onboarding to Drive 23% More First-Week Engagement</h1>
-                <p><a href="index.html">Home</a> / Thrive Onboarding Experience</p>
-            </div>
-        </div>
-    </div>
-    <!-- end Introduction -->
-
-    <section>
-    <!-- Context -->
-        <div class="container" data-aos="fade-down" data-aos-delay="300">
-            <div class="col-md-3">
-                <h1>Context</h1>
-            </div>
-            <div class="col-md-9">
-                <p><b>🧭 Why are we here?</b></p>
-                <p>Thrive Global is a B2B SaaS platform that helps organizations support employee well-being through personalized behavior change programs. As the company expanded partnerships with large enterprise clients, we noticed that user retention in the first 30 days had dropped; making it harder to drive widespread use and sustained engagement.
-                </p>
-                <p>To address this, we focused on reimagining the onboarding experience, with the goal of building a stronger foundation for long-term product success.
-                </p>
-            </div>
-        </div>
-    <!-- End Context -->
-        <div class="container">
-            <div class="center" data-aos="fade-down" data-aos-delay="300">
-                <img src="images/thrive-onboarding-hero.png" alt="" class="img-responsive image-asset" />
-            </div>
-        </div>
-    <!-- Problem -->
-        <div class="container">
-            <div class="col-md-3">
-                <h1>Problem</h1>
-            </div>
-            <div class="col-md-9">
-                <p><b>🚩 What are we trying to solve?</b></p>
-                <p>The onboarding flow was overloaded with information and lacked personalization, causing users to:</p>
-                <ul>
-                    <li>Miss opportunities to tailor Thrive Global to their personal needs (e.g., choosing preferred areas of growth, adjusting notification cadence)</li>
-                    <li>Drop off before reaching meaningful engagement with the core tools</li>
-                    <li>Feel overwhelmed after completing the onboarding flow with very little instructions on what to do first</li>
-                </ul>
-                <p>This led to fewer users building healthy habits or discovering the full value of Thrive.</p>
-            </div>
-        </div>
-    <!-- End Problem -->
-    <!-- Evidence -->    
-        <div class="container">
-            <div class="col-md-3">
-                <h1>Evidence</h1>
-            </div>
-            <div class="col-md-9">
-                <p><b>🔍 How do we know it’s a problem?</b></p>
-                <p>Through a combination of product analytics, user research, and enterprise client feedback, we uncovered:</p>
-                 <ul>
-                    <li>10% of users dropped off before completing onboarding</li>
-                    <li>Session recordings showed confusion at decision-heavy moments, and frustration with long instructional screens</li>
-                    <li>User interviews revealed that employees wanted to set boundaries up front, like how often Thrive would check in with them, and to prioritize what mattered most (focus vs. sleep vs. relationships)</li>
-                </ul>
-                <p>We also heard from HR leaders that employees often disengaged early because onboarding felt “like another corporate task” rather than a supportive experience.</p>
-            </div>
-        </div>
-    <!-- End Evidence -->  
-    <!-- Role -->
-        <div class="container">
-            <div class="col-md-3">
-                <h1>My Role</h1>
-            </div>
-            <div class="col-md-9">
-            <p>As the lead designer for Thrive’s onboarding initiative, I focused on building a scalable foundation that streamlined collaboration across teams, improved efficiency in delivery, and elevated the end-user experience for enterprise clients.</b>
-            </p>
-            <p>Key responsibilities included:
-            </p>
-            <ul>
-                <li><b>🔄 Ran end-to-end design</b> –<br>From research synthesis and journey mapping to high-fidelity prototyping and developer handoff</li>
-                <li><b>🧠 Facilitated workshops</b> –<br>With PM, engineers, and various stakeholders to define key moments of personalization</li>
-                <li><b>🧱 Scaling with the design system</b> –<br>To create modular, scalable onboarding components that could be easily adjusted for different enterprise clients</li>
-                <li><b>🧪 Conducted moderated usability tests</b> –<br>With 15+ users to validate flows and microinteractions, iterating based on findings</li>
-                <li><b>🤝 Collaborated with the customer success team</b> –<br>To ensure the experience aligned with B2B client goals and communication styles</li>
-            </ul>
-        </div>
-    <!-- End Role -->
-    <!-- Solution -->
-        <div class="container">
-            <div class="col-md-3">
-                <h1>Solution</h1>
-            </div>
-            <div class="col-md-9">
-                <p><b>💡 What’s the suggested solution?</b></p>
-                <p>We streamlined and personalized the onboarding experience, introducing:</p>
-                <ul>
-                    <li>A priorities selector at the start, allowing users to pick focus areas (e.g., reducing stress, improving sleep, boosting focus).<br><br>
-                    <img src="images/thrive-focus-selector.png" alt="" class="img-responsive image-asset" /></li>
-                    <li>Notification customization, so users could set how often and when Thrive would reach out (AM vs. PM nudges, weekly summaries, etc.).<br><br>
-                    <img src="images/thrive-custom-notification-settings.png" alt="" class="img-responsive image-asset" /></li>
-                    <li>Progressive disclosure, breaking onboarding into smaller, context-aware moments instead of overwhelming users with everything up front.<br><br>
-                    <img src="images/thrive-progressive-disclosure.png" alt="" class="img-responsive image-asset" /></li>
-                    <li>Personalized dashboard seeds that reflected chosen priorities right after onboarding, giving an immediate sense of relevance.<br><br>
-                    <img src="images/thrive-home-page.png" alt="" class="img-responsive image-asset" /></li>
-                <p>All of this was built with design system tokens and components, ensuring consistency and future adaptability for B2B partners.</p>
-            </div>
-        </div>
-    <!-- End Solution -->
-    <!-- Impact -->
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="topbar">
     <div class="container">
-        <div class="col-md-3">
-            <h1>Impact</h1>
-        </div>
-        <div class="col-md-9">
-            <p><b>Quantitative</b></p>
-            <ul>
-                <li>10% decrease in onboarding drop-off rates, improving overall activation</li>
-                <li>23% more users completed a first coaching activity within 7 days, indicating stronger early engagement.</li>
-                <li>Reduced support tickets related to onboarding confusion by 11%</li>
-            </ul>
-            <p><b>Qualitative</b></p>
-            <ul>
-                <li>User feedback highlighted the value of customization:<br><i>“I love that Thrive asked what I care about most right away. It feels less generic.”</i></li>
-                <li>HR clients reported increased confidence in rolling out Thrive to more teams, citing a <i>“more approachable start.”</i></li>
-            </ul>
-        </div>
+      <header class="header" role="banner">
+        <a aria-label="Home" class="brand" href="./index.html">
+          <img alt="" aria-hidden="true" class="avatar" decoding="async" loading="eager"
+            src="./assets/william-avatar.jpg" />
+          <span class="brand-name">William Huynh</span>
+        </a>
+        <nav aria-label="Primary" class="nav">
+          <button aria-controls="primary-nav" aria-expanded="false" class="iconbtn mobile-toggle" data-mobile-toggle=""
+            type="button">
+            <span aria-hidden="true" class="hamburger"><span></span><span></span><span></span></span>
+            <span class="sr-only">Menu</span>
+          </button>
+          <div class="pillnav" data-pillnav="" id="primary-nav">
+            <span aria-hidden="true" class="pillnav-indicator"></span>
+            <a href="./index.html">Case Studies</a>
+            <a href="./design-process.html">Design Process</a>
+            <a href="./design-ai.html">Design &amp; AI</a>
+            <a href="./design-pillars.html">Design Pillars</a>
+            <a href="./about.html">About Me</a>
+          </div>
+          <button aria-pressed="false" class="iconbtn theme-toggle" data-theme-toggle="" type="button">
+            <span aria-hidden="true" class="theme-icon" data-theme-icon=""></span>
+            <span class="theme-label" data-theme-label="">Theme</span>
+          </button>
+        </nav>
+      </header>
     </div>
-    <!-- End Impact -->
-    <!-- Belief -->
-        <div class="container">
-            <div class="col-md-3">
-                <h1>Belief</h1>
-            </div>
-                <div class="col-md-9">
-                    <p><b>🧠 Why do we believe it will work?</b></p>
-                    <p>Behavior change is deeply personal. By giving users more control up front, helping them prioritize what’s meaningful and set healthy boundaries around engagement, we designed an onboarding experience that feels respectful, relevant, and supportive, not prescriptive.</p>
-                    <p>From early signals and user interviews, we believe this approach not only reduces friction but builds trust. It paves the way for deeper adoption of Thrive’s behavior change tools long term.</p>
-                    <div id="home">
-                    <img src="images/thrive-new-onboarding-flow.png" class="img-responsive image-asset">
-                    <img src="images/thrive-old-onboarding-flow.png" class="img-responsive image-asset">
-                </div>
-            </div>
+  </div>
+  <div aria-hidden="true" class="nav-overlay" data-nav-overlay=""></div>
+  <main id="main" role="main">
+    <!-- HERO (William template-inspired) -->
+    <header class="cs-hero">
+      <div class="container cs-hero-inner">
+        <a class="backlink" href="./index.html">
+          <svg aria-hidden="true" viewbox="0 0 24 24">
+            <path
+              d="M15.7 5.3a1 1 0 0 1 0 1.4L10.4 12l5.3 5.3a1 1 0 1 1-1.4 1.4l-6-6a1 1 0 0 1 0-1.4l6-6a1 1 0 0 1 1.4 0Z"
+              fill="currentColor"></path>
+          </svg>
+          Back to Projects
+        </a>
+        <h1 class="cs-title">Personalizing Thrive’s Onboarding to Drive 23% More First-Week
+          Engagement</h1>
+        <p class="cs-subtitle">Streamlined a noisy, one-size-fits-all onboarding flow into a focused, personalized
+          experience that increased early engagement and reduced support friction.</p>
+        <div class="cs-meta">
+          <span class="chip">Onboarding</span>
+          <span class="chip">Personalization</span>
+          <span class="chip">Enterprise SaaS</span>
+          <span class="chip">Scale</span>
         </div>
-    <!-- End Belief -->
-    </section>
+        <div aria-label="Key results" class="kpis">
+          <div class="kpi"><strong>23%</strong><span>More first-week coaching actions</span></div>
+          <div class="kpi"><strong>12%</strong><span>Decrease in onboarding drop-off</span></div>
+          <div class="kpi"><strong>11%</strong><span>Decrease in support tickets</span></div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="cs-layout">
+        <!-- Sticky TOC (Nat Calderon-inspired) -->
+        <aside aria-label="Content" class="toc" data-toc="">
+          <h2>Content</h2>
+          <nav aria-label="Case study sections">
+            <a data-toc-link="" href="#context"><span>Context</span><span class="pill">01</span></a>
+            <a data-toc-link="" href="#problem"><span>Problem</span><span class="pill">02</span></a>
+            <a data-toc-link="" href="#evidence"><span>Evidence</span><span class="pill">03</span></a>
+            <a data-toc-link="" href="#role"><span>My Role</span><span class="pill">04</span></a>
+            <a data-toc-link="" href="#solution"><span>Solution</span><span class="pill">05</span></a>
+            <a data-toc-link="" href="#impact"><span>Impact</span><span class="pill">06</span></a>
+            <a data-toc-link="" href="#belief"><span>Belief</span><span class="pill">07</span></a>
+          </nav>
+        </aside>
+        <article aria-label="Case study" class="cs-article">
+          <!-- Context -->
+          <section class="cs-section" id="context">
+            <h2>Context</h2>
+            <div class="cs-q"><span aria-hidden="true" class="dot"></span><span>Why are we here?</span></div>
+            <p>
+              Thrive Global is a B2B SaaS platform designed to help organizations support employee well-being through
+              personalized behavior-change programs.
+              As the enterprise product matured, we noticed early onboarding was doing too much: it front-loaded
+              information and asked users to understand the system before
+              they’d experienced value.
+            </p>
+            <figure>
+              <div class="figure">
+                <img alt="Thrive Global hero image" src="./assets/thriveglobal/thrive-onboarding-hero.png" />
+                <figcaption>Example: existing UI surfaces multiple paths at once, increasing cognitive load.
+                </figcaption>
+              </div>
+            </figure>
+          </section>
+          <!-- Problem -->
+          <section class="cs-section" id="problem">
+            <h2>Problem</h2>
+            <div class="cs-q"><span aria-hidden="true" class="dot"></span><span>What are we trying to solve?</span>
+            </div>
+            <p>The onboarding flow was overloaded with information and lacked personalization, causing users to:</p>
+            <ul>
+              <li>Struggle to tailor Thrive Global to their personal needs (too many options presented too early).</li>
+              <li>Take fewer meaningful actions, leading to minimal engagement with the core tool.</li>
+              <li>Feel overwhelmed after onboarding with unclear guidance on what to do first.</li>
+            </ul>
+            <p>This led to slower habit-building and made it harder for users to discover the full value of Thrive.</p>
+          </section>
+          <!-- Evidence -->
+          <section class="cs-section" id="evidence">
+            <h2>Evidence</h2>
+            <div class="cs-q"><span aria-hidden="true" class="dot"></span><span>How do we know it’s a problem?</span>
+            </div>
+            <p>Through a combination of product analytics, user research, and customer feedback, we uncovered:</p>
+            <ul>
+              <li>Drop-off during onboarding before users reached their first “value moment.”</li>
+              <li>Session recordings showing confusion and decision fatigue as users navigated too many choices.</li>
+              <li>User interviews revealing employees wanted to set clear boundaries (e.g., reminders/check-ins) and
+                focus on a single priority first.</li>
+            </ul>
+            <p>We also heard from HR leaders that onboarding often felt like “another cognitive load,” not a supportive
+              experience.</p>
+          </section>
+          <!-- My Role -->
+          <section class="cs-section" id="role">
+            <h2>My Role</h2>
+            <p>
+              As the lead designer for Thrive’s onboarding initiative, I focused on building a scalable foundation for
+              structured collaboration across teams,
+              improving efficiency in delivery, and delivering a best-in-class onboarding experience for enterprise
+              clients.
+            </p>
+            <p style="margin-top:12px;color:var(--muted);font-size:12px;">Key responsibilities included:</p>
+            <ul>
+              <li><strong>🔄 Ran end-to-end design</strong> - from discovery and ideation through high-fidelity design
+                and developer handoff.</li>
+              <li><strong>🧠 Facilitated workshops</strong> - with PM, engineering, and stakeholders to define key
+                moments of personalization.</li>
+              <li><strong>🧱 Scaling with the design system</strong> - creating modular onboarding components that could
+                be adapted across enterprise setups.</li>
+              <li><strong>🧪 Conducted moderated usability tests</strong> - validating flows, messaging, and
+                recommendation patterns.</li>
+              <li><strong>🤝 Partner with Customer Success</strong> - ensuring the experience aligned with enterprise
+                rollout needs and communication styles.</li>
+            </ul>
+            <div aria-label="At a glance" class="split">
+              <div class="panel">
+                <h3>Team</h3>
+                <p>1 PD (me), 1 PM, 1 Engineer, 1 Data Analyst, Customer Success partners</p>
+              </div>
+              <div class="panel">
+                <h3>Timeline</h3>
+                <p>~5 months (discovery → shipped experiments → iteration)</p>
+              </div>
+            </div>
+          </section>
+          <!-- Solution -->
+          <section class="cs-section" id="solution">
+            <h2>Solution</h2>
+            <div class="cs-q"><span aria-hidden="true" class="dot"></span><span>What’s the suggested solution?</span>
+            </div>
+            <p>We streamlined and personalized the onboarding experience by introducing:</p>
+            <ul>
+              <li><strong>A “personal selector” upfront</strong> so users can choose a primary intent (focus), reducing
+                noise and speeding up time-to-value.</li>
+              <li><strong>Preferences &amp; reminders</strong> that let users set boundaries (when/how they want to be
+                nudged).</li>
+              <li><strong>A tailored starting dashboard</strong> that reflects chosen priorities immediately after
+                onboarding.</li>
+            </ul>
+            <figure>
+              <div class="figure">
+                <img alt="Onboarding intent selector" src="./assets/thriveglobal/thrive-focus-selector.png" />
+                <figcaption>Intent selection: reduce decision fatigue by asking one clear question first.
+                </figcaption>
+              </div>
+            </figure>
+            <figure>
+              <div class="figure">
+                <img alt="Preferences and reminders"
+                  src="./assets/thriveglobal/thrive-custom-notification-settings.png" />
+                <figcaption>Preference controls: empower users to set boundaries and opt into reminders.
+                </figcaption>
+              </div>
+            </figure>
+            <figure>
+              <div class="figure">
+                <img alt="Preferences and reminders" src="./assets/thriveglobal/thrive-progressive-disclosure.png" />
+                <figcaption>Progressive disclosure: breaking onboarding into smaller, context-aware moments instead of
+                  overwhelming users with everything up front.
+                </figcaption>
+              </div>
+            </figure>
+            <figure>
+              <div class="figure">
+                <img alt="Dynamic dashboard" src="./assets/thriveglobal/thrive-home-page.png" />
+                <figcaption>Personalized dashboard: the seeds that reflected chosen priorities right after onboarding,
+                  giving an immediate sense of relevance.
+                </figcaption>
+              </div>
+            </figure>
+            <div class="callout" role="note">
+              <strong>Design principle</strong>
+              <p>Ask one meaningful question early, then progressively disclose options as the user gains confidence.
+              </p>
+            </div>
+          </section>
+          <!-- Impact -->
+          <section class="cs-section" id="impact">
+            <h2>Impact</h2>
+            <div aria-label="Impact summary" class="split">
+              <div class="panel">
+                <h3>Quantitative</h3>
+                <p></p>
+                <ul>
+                  <li>12% decrease in onboarding drop-off rates, improving overall activation.</li>
+                  <li>23% more users completed a first coaching activity within 7 days, indicating higher early
+                    engagement.</li>
+                  <li>Reduced support tickets related to onboarding experience by 11%.</li>
+                </ul>
+              </div>
+              <div class="panel">
+                <h3>Qualitative</h3>
+                <p></p>
+                <ul>
+                  <li>User feedback highlighted the value of customization.</li>
+                  <li>Customers reported onboarding felt “less noisy” and helped employees focus on what mattered first.
+                  </li>
+                  <li>HR partners felt more confident rolling out Thrive to new hires due to clearer guidance and a more
+                    supportive start.</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <!-- Belief -->
+          <section class="cs-section" id="belief">
+            <h2>Belief</h2>
+            <div class="cs-q"><span aria-hidden="true" class="dot"></span><span>Why do we believe it will work?</span>
+            </div>
+            <p>
+              Behavior-change products work best when they reduce friction and make the “first right step” obvious. By
+              guiding users toward a single priority,
+              letting them set boundaries, and showing immediate relevance, we improved clarity without removing choice,
+              we simply sequenced it.
+            </p>
+            <figure>
+              <div class="figure">
+                <img alt="New onboarding flow" src="./assets/thriveglobal/thrive-new-onboarding-flow.png" />
+                <figcaption>New onboarding flow.</figcaption>
+              </div>
+            </figure>
+            <figure>
+              <div class="figure">
+                <img alt="Old onboarding flow" src="./assets/thriveglobal/thrive-old-onboarding-flow.png" />
+                <figcaption>Old onboarding flow.</figcaption>
+              </div>
+            </figure>
 
-    <footer class="copyright">
-        <div class="up" id="up">
-            <i class="fas fa-chevron-up"></i>
+          </section>
+          <div class="cs-end"><a class="btn" href="./index.html">Back to projects</a><a class="btn btn-secondary"
+              href="./thrive-design-system.html">Next: Thrive Design System</a>
+          </div>
+        </article>
+      </div>
+    </div>
+    <section aria-labelledby="cta-title" class="cta" id="contact">
+      <div class="container">
+        <h2 id="cta-title">Let’s build something great.</h2>
+        <p>Always open to connecting about roles, systems work, and solving messy problems.</p>
+        <div class="btnrow">
+          <a aria-label="Email me" class="btn primary" href="mailto:williamnhuynh@gmail.com">
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+              <path
+                d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2Zm0 4-8 5L4 8V6l8 5 8-5v2Z"
+                fill="currentColor"></path>
+            </svg>
+            Contact me
+          </a>
+          <a aria-label="Connect on LinkedIn" class="btn" href="https://www.linkedin.com/in/williamnhuynh/"
+            rel="noreferrer noopener" target="_blank">
+            <svg aria-hidden="true" viewbox="0 0 24 24">
+              <path
+                d="M20.4 20.4h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.3V9h3.4v1.6h.1c.5-.9 1.8-1.8 3.7-1.8 4 0 4.7 2.6 4.7 6v5.6ZM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2ZM7.1 20.4H3.6V9h3.5v11.4Z"
+                fill="currentColor"></path>
+            </svg>
+            Connect on LinkedIn
+          </a>
         </div>
-        <p>&copy; 2025 William Huynh</p>
+      </div>
+    </section>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <h3>William Huynh</h3>
+            <p>Product growth, Design systems, and AI-assisted UX. 8+ years shipping B2B/B2C products.</p>
+            <div style="margin-top:12px;display:inline-flex;gap:10px;align-items:center;">
+              <span class="chip">Senior Product Designer</span>
+            </div>
+            <div style="margin-top:12px;display:inline-flex;gap:10px;align-items:center;">
+              <span class="chip">PM-minded, code-literate</span>
+            </div>
+            <small>© <span id="year"></span> William Huynh • All rights reserved</small>
+          </div>
+          <div>
+            <h3>Explore</h3>
+            <ul>
+              <li><a href="./index.html">Case Studies</a></li>
+              <li><a href="./design-process.html">Design Process</a></li>
+              <li><a href="./design-ai.html">Design &amp; AI</a></li>
+              <li><a href="./design-pillars.html">Design Pillars</a></li>
+              <li><a href="./about.html">About Me</a></li>
+              <li><a href="assets/William_Huynh_SeniorProductDesigner_Resume.pdf" target="_blank">Resume</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>Connect</h3>
+            <ul>
+              <li><a href="https://www.linkedin.com/in/williamnhuynh/" target="_blank">LinkedIn</a></li>
+              <li><a href="mailto: williamnhuynh@gmail.com">Email</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </footer>
 
+    <script defer="" src="./js/main.js"></script>
     <script>
-        // When the user scrolls the page, execute myFunction 
-        window.onscroll = function() {myFunction()};
-        
-        function myFunction() {
-          var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-          var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-          var scrolled = (winScroll / height) * 100;
-          document.getElementById("myBar").style.width = scrolled + "%";
-        }
+      // tiny footer year helper
+      document.getElementById('year').textContent = new Date().getFullYear();
     </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="main.js"></script>
-    
-    <script> src="https://code.jquery.com/jquery-2.1.1.min.js"</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.event.move.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mhayes-twentytwenty/1.0.0/js/jquery.twentytwenty.js"></script>
-
-    
-    <script>
-        $(function(){
-            $("#home").twentytwenty();
-        });
-    </script>
+    <style>
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+      }
+    </style>
 
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXHLV7P"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WXHLV7P" height="0" width="0"
+        style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
 </body>
 

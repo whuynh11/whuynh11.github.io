@@ -1,0 +1,548 @@
+/* ---- Design Process page ---- */
+.process-hero{
+  /* Match global page hero spacing */
+  padding: 46px 0 14px;
+  text-align: center;
+}
+.process-hero h1{
+  margin: 0;
+  font-size: clamp(34px, 4vw, 52px);
+  letter-spacing: -0.03em;
+}
+.process-hero p{
+  margin: 10px auto 0 auto;
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.section{
+  padding: 24px 0;
+}
+
+.section h2{
+  font-size: 18px;
+  letter-spacing: -0.01em;
+  margin-bottom: 6px;
+}
+.section .sub{
+  color: var(--muted);
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.tenets{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 10px;
+  /* Align with the timeline card content (centered + offset for the rail) */
+  max-width: 760px;
+  margin: 0 auto;
+  padding-top: 6px;
+  padding-left: 46px;
+}
+
+/* Match the “Design Tenets” alignment for the “How I Design” section heading block */
+.process-how-head{
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: left;
+}
+.tenets .chips{
+  justify-content:flex-start;
+  width: 100%;
+}
+
+.tenet-chip{
+  cursor: pointer;
+  display:inline-flex;
+  align-items:center;
+  gap: 8px;
+}
+.tenet-chip::before{
+  content:"";
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--brand);
+  box-shadow: 0 0 0 3px color-mix(in oklab, var(--brand) 14%, transparent);
+}
+
+.timeline{
+  position: relative;
+  margin: 18px auto 0 auto;
+  max-width: 760px;
+  padding-left: 46px;
+}
+
+/*
+  Interactive rail inspired by a variety of portfolios
+  - Dotted track shows the full journey
+  - Solid "progress" segment fills up to a draggable-style thumb
+  - The thumb position follows scroll within the process timeline
+*/
+.tline{
+  position:absolute;
+  /* left/top/height are measured + set by JS for pixel-perfect alignment */
+  left: 18px;
+  top: 8px;
+  height: calc(100% - 16px);
+  width: 2px;
+  border-radius: 2px;
+  pointer-events: none;
+}
+.tline-track,
+.tline-progress{
+  position:absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+.tline-track{
+  /* dotted track */
+  background-image: repeating-linear-gradient(
+    to bottom,
+    color-mix(in oklab, var(--border) 85%, transparent) 0 7px,
+    transparent 7px 14px
+  );
+  /* allow masking the "future" dotted segment after the thumb */
+  overflow: hidden;
+}
+
+/*
+  When the thumb is on the final stage, hide the remaining dotted track below it
+  (so Stage 6 doesn't imply there are more stages).
+*/
+.tline.hide-after-thumb .tline-track{
+  /* the actual masking is done via ::after so it's reliable across browsers */
+}
+
+/*
+  Hide the dotted track below the thumb once we reach Stage 6.
+  (Uses top/bottom positioning instead of mask-image for maximum compatibility.)
+*/
+.tline-track::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  top: calc(var(--tline-progress, 0px) + 10px);
+  bottom:0;
+  background: var(--bg);
+  opacity: 0;
+  transition: opacity .14s ease;
+}
+.tline.hide-after-thumb .tline-track::after{ opacity: 1; }
+.tline-progress{
+  height: var(--tline-progress, 0px);
+  background: var(--brand);
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--brand) 18%, transparent);
+}
+.tline-thumb{
+  position:absolute;
+  left: 50%;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  transform: translate(-50%, calc(var(--tline-progress, 0px) - 9px));
+  background: color-mix(in oklab, var(--surface) 70%, var(--brand));
+  border: 1px solid color-mix(in oklab, var(--brand) 30%, var(--border));
+  box-shadow:
+    0 0 0 10px color-mix(in oklab, var(--brand) 14%, transparent),
+    0 10px 30px rgba(0,0,0,.10);
+  opacity: 0;
+  transition: opacity .18s ease;
+}
+.tline.is-inrange .tline-thumb{ opacity: 1; }
+.tline.is-snap .tline-thumb{
+  box-shadow:
+    0 0 0 14px color-mix(in oklab, var(--brand) 20%, transparent),
+    0 0 36px 14px color-mix(in oklab, var(--brand) 22%, transparent),
+    0 14px 42px rgba(0,0,0,.12);
+}
+.tline.is-snap .tline-thumb::after{
+  filter: drop-shadow(0 0 10px color-mix(in oklab, var(--brand) 35%, transparent));
+}
+.tline-thumb::after{
+  content:"";
+  position:absolute;
+  inset: 50% auto auto 50%;
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--brand);
+  transform: translate(-50%, -50%);
+}
+
+.stage{
+  position: relative;
+  padding: 18px 0;
+}
+
+.stage-dot{
+  position:absolute;
+  left: -38px;
+  top: 26px;
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--brand) 55%, var(--surface));
+  border: 1px solid color-mix(in oklab, var(--brand) 26%, var(--border));
+  box-shadow: 0 0 0 6px color-mix(in oklab, var(--brand) 10%, transparent);
+  opacity: .55;
+  transition: transform .22s ease, opacity .22s ease, box-shadow .22s ease, background-color .22s ease;
+}
+
+/*
+  Avoid a "double-dot" at the very start of the timeline.
+  The rail already provides the primary glowing thumb, so we keep the Stage 1 marker hidden
+  (but still measurable for JS alignment).
+*/
+.timeline .stage:first-of-type .stage-dot{
+  opacity: 0;
+  box-shadow: none;
+}
+.timeline .stage:first-of-type.is-active .stage-dot,
+.timeline .stage:first-of-type.is-past .stage-dot{
+  opacity: 0;
+  box-shadow: none;
+}
+
+/* Active/visited states for the stage markers (set by JS) */
+.stage.is-active .stage-dot{
+  opacity: 1;
+  transform: scale(1.10);
+  background: var(--brand);
+  /* Stronger glow when the scroll-thumb aligns with a stage */
+  box-shadow:
+    0 0 0 14px color-mix(in oklab, var(--brand) 18%, transparent),
+    0 0 22px 6px color-mix(in oklab, var(--brand) 28%, transparent),
+    0 0 44px 14px color-mix(in oklab, var(--brand) 18%, transparent);
+}
+.stage.is-past .stage-dot{
+  opacity: .9;
+  background: color-mix(in oklab, var(--brand) 78%, var(--surface));
+}
+
+.stage-card{
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  background: var(--surface);
+  padding: 16px 16px 14px 16px;
+  box-shadow: 0 6px 20px rgba(0,0,0,.06);
+}
+
+.stage-meta{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 12px;
+  margin-bottom: 6px;
+}
+.stage-meta .label{
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.stage-title{
+  display:flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+}
+.stage-title h3{
+  margin: 0;
+  font-size: 15px;
+  letter-spacing: -0.01em;
+}
+.stage-title button{
+  font-size: 12px;
+}
+
+.stage-desc{
+  margin-top: 8px;
+  color: color-mix(in oklab, var(--text) 85%, var(--muted));
+  line-height: 1.7;
+  font-size: 13px;
+}
+
+.stage-list{
+  margin-top: 10px;
+  padding-left: 16px;
+  color: color-mix(in oklab, var(--text) 85%, var(--muted));
+  line-height: 1.7;
+  font-size: 13px;
+}
+
+.ai-row{
+  margin-top: 10px;
+  display:flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items:center;
+}
+.ai-row .hint{
+  font-size: 12px;
+  color: var(--muted);
+  margin-right: 2px;
+}
+
+.ai-chip{
+  cursor:pointer;
+}
+
+.whyworks{
+  max-width: 760px;
+  margin: 24px auto 0 auto;
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+.whyworks ul{
+  padding-left: 18px;
+  color: color-mix(in oklab, var(--text) 86%, var(--muted));
+  line-height: 1.8;
+  font-size: 14px;
+}
+
+@media (max-width: 720px){
+  .timeline{
+    padding-left: 28px;
+  }
+  .tline{ left: 10px; }
+  .stage-dot{ left: -46px; }
+  .stage-card{ border-radius: 16px; }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .drawer{ transition: none; }
+  .stage-dot{ transition: none; }
+  .tline-thumb{ transition: none; }
+}
+
+
+/* Align the "Design Tenets" chips and the timeline cards to the same left edge */
+.tenets{ padding-left: 96px; }
+.timeline{ padding-left: 96px; }
+
+/* Keep the “How I Design” heading aligned with the same rail/card inset */
+.process-how-head{ padding-left: 96px; }
+
+@media (max-width: 720px){
+  /* On smaller screens, reduce the rail inset so headings/chips don’t “float” centered */
+  .tenets{ padding-left: 28px; }
+  .timeline{ padding-left: 28px; }
+  .process-how-head{ padding-left: 28px; }
+
+  /* Keep the stage icon markers visible while preserving the left rail feel */
+  .timeline .stage-dot{ left: -52px; width: 40px; height: 40px; }
+  .timeline .stage-dot svg{ width: 16px; height: 16px; }
+}
+
+/* Stage markers become icon-circles (no more tiny dots) */
+.stage-dot{
+  left: -78px;
+  top: 20px;
+  width: 44px;
+  height: 44px;
+  opacity: 1;
+  background: var(--bg);
+  border: 1px solid color-mix(in oklab, var(--border) 92%, transparent);
+  box-shadow: 0 10px 26px rgba(0,0,0,.08);
+  display: grid;
+  place-items: center;
+  color: var(--brand);
+  transition: transform .20s ease, box-shadow .20s ease, background-color .20s ease, color .20s ease, border-color .20s ease;
+}
+.stage-dot svg{ width: 18px; height: 18px; }
+
+/* Undo the older "hide stage 1" behavior */
+.timeline .stage:first-of-type .stage-dot{ opacity: 1; box-shadow: 0 10px 26px rgba(0,0,0,.08); }
+
+/* Past stages stay subtle */
+.stage.is-past .stage-dot{
+  opacity: .55;
+  transform: scale(.92);
+  color: color-mix(in oklab, var(--brand) 55%, var(--muted));
+}
+
+/* Active stage = strong filled marker + halo */
+.stage.is-active .stage-dot{
+  opacity: 1;
+  transform: scale(1);
+  background: var(--brand);
+  color: #fff;
+  border-color: transparent;
+  box-shadow:
+    0 0 0 16px color-mix(in oklab, var(--brand) 16%, transparent),
+    0 0 54px 16px color-mix(in oklab, var(--brand) 18%, transparent),
+    0 16px 40px rgba(0,0,0,.12);
+}
+
+/* Extra soft bloom behind the active marker */
+.stage.is-active .stage-dot::before{
+  content:"";
+  position:absolute;
+  inset: -26px;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--brand) 16%, transparent);
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+/* The moving progress "thumb" is a small dot at the boundary between solid + dotted */
+.tline-thumb{
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: var(--brand);
+  border: none;
+  transform: translate(-50%, calc(var(--tline-progress, 0px) - 5px));
+  box-shadow:
+    0 0 0 3px var(--bg),
+    0 0 0 10px color-mix(in oklab, var(--brand) 10%, transparent);
+  transition: opacity .18s ease, transform .08s linear;
+}
+.tline-thumb::after{ content: none; }
+
+/* Ensure Stage 1 marker is visible (override legacy rules) */
+.timeline .stage:first-of-type.is-active .stage-dot,
+.timeline .stage:first-of-type.is-past .stage-dot{ opacity: 1; box-shadow: 0 10px 26px rgba(0,0,0,.08); }
+/* Hide dotted track immediately after the small progress dot */
+.tline-track::after{ top: calc(var(--tline-progress, 0px) + 6px); }
+
+
+/* --------------------------------------------------------------------------
+   AI Drawer UI (Design Process page)
+   The Design Process page reuses some drawer content from the Design & AI page.
+   That content expects a few AI-specific styles (pills + example placeholder).
+   We scope these styles to the drawer body to avoid affecting the rest of the
+   page.
+---------------------------------------------------------------------------- */
+
+.drawer-body .ai-related-pills{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.drawer-body .ai-outline-pill{
+  cursor: pointer;
+  display:inline-flex;
+  align-items:center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  font-size: 13px;
+  font-weight: 400; /* lighter than AI page (requested) */
+  line-height: 1;
+  user-select: none;
+  text-decoration: none;
+  transition: background .18s ease, border-color .18s ease, box-shadow .18s ease, transform .18s ease, color .18s ease;
+}
+
+.drawer-body .ai-outline-pill__icon{
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  display:grid;
+  place-items:center;
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--surface-2) 75%, var(--surface));
+  flex: 0 0 auto;
+}
+
+.drawer-body .ai-outline-pill__icon svg{
+  width: 14px;
+  height: 14px;
+}
+
+.drawer-body .ai-outline-pill--weakness .ai-outline-pill__icon{
+  border-color: color-mix(in oklab, #f04438 28%, var(--border));
+  background: color-mix(in oklab, #f04438 10%, var(--surface));
+  color: #f04438;
+}
+
+.drawer-body .ai-outline-pill--strength .ai-outline-pill__icon{
+  border-color: color-mix(in oklab, #12b76a 28%, var(--border));
+  background: color-mix(in oklab, #12b76a 10%, var(--surface));
+  color: #12b76a;
+}
+
+.drawer-body .ai-outline-pill:hover,
+.drawer-body .ai-outline-pill:focus-visible{
+  background: color-mix(in oklab, var(--brand) 12%, var(--surface));
+  border-color: color-mix(in oklab, var(--brand) 34%, var(--border));
+  box-shadow: 0 12px 28px rgba(2, 6, 23, 0.10);
+  transform: translateY(-1px);
+}
+
+html[data-theme="dark"] .drawer-body .ai-outline-pill:hover,
+html[data-theme="dark"] .drawer-body .ai-outline-pill:focus-visible{
+  box-shadow: 0 16px 34px rgba(0,0,0,.42);
+}
+
+/* Real-life example placeholder (matches the intended "mint frame" look) */
+.drawer-body .ai-example-card{
+  border: 1px solid color-mix(in oklab, var(--brand) 28%, var(--border));
+  border-radius: 16px;
+  padding: 10px;
+  background: color-mix(in oklab, var(--brand) 10%, var(--surface));
+}
+
+.drawer-body .ai-example-media{
+  position: relative;
+  border-radius: 14px;
+  border: 1px solid color-mix(in oklab, var(--border) 70%, var(--surface));
+  background: color-mix(in oklab, var(--surface-2) 86%, var(--surface));
+  overflow:hidden;
+}
+
+/* 16:9 aspect ratio */
+.drawer-body .ai-example-media::before{
+  content:"";
+  display:block;
+  padding-top: 56.25%;
+}
+
+.drawer-body .ai-example-placeholder{
+  position:absolute;
+  inset:0;
+  display:grid;
+  place-items:center;
+  color: color-mix(in oklab, var(--text) 60%, var(--muted));
+}
+
+.drawer-body .ai-example-placeholder svg{
+  width: 44px;
+  height: 44px;
+  opacity: .42;
+}
+
+/* Drawer typography consistency (Design Process page only) */
+.drawer-body h3{
+  font-size: 18px;
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+  margin: 18px 0 8px;
+}
+
+/* Keep section labels close to their content for better grouping */
+.drawer-body h4{
+  margin: 18px 0 8px;
+}
+
+.drawer-body h4 + p,
+.drawer-body h4 + ul,
+.drawer-body h4 + .drawer-list{
+  margin-top: 0;
+}

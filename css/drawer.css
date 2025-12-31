@@ -1,0 +1,298 @@
+/* ---- Drawer (right tray modal) ---- */
+.drawer-overlay[hidden],
+.drawer[hidden] { display: none !important; }
+
+.drawer-overlay{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.42);
+  backdrop-filter: blur(2px);
+  z-index: 80;
+}
+
+.drawer{
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100dvh;
+  width: min(460px, 92vw);
+  background: var(--surface);
+  border-left: 1px solid var(--border);
+  box-shadow: -20px 0 60px rgba(0,0,0,.18);
+  z-index: 81;
+  transform: translateX(110%);
+  transition: transform 220ms ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.drawer.is-open{ transform: translateX(0); }
+
+.drawer-header{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 18px 10px 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.drawer-title{
+  font-size: 24px;
+  font-weight: 650;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+/* Drawer title + GIF treatment (used by Design Pillars + Design Process drawers)
+   GIF sits above the <h3> for a cleaner, fully-aligned drawer layout. */
+.drawer.drawer--with-gif{
+  --drawer-gif-size: 72px;
+  --drawer-gif-gap: 10px;
+  --drawer-gif-offset: calc(var(--drawer-gif-size) + var(--drawer-gif-gap));
+}
+
+.drawer-headline{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--drawer-gif-gap);
+  min-width: 0;
+}
+
+.drawer-headline__texts{
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.drawer-headline__texts .drawer-title{
+  margin: 0;
+}
+
+.drawer-headline__texts .drawer-subtitle{
+  margin: 0;
+}
+
+.drawer-title-gifwrap{
+  width: var(--drawer-gif-size);
+  height: var(--drawer-gif-size);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 16px;
+  border: 1px solid var(--border);
+  background: color-mix(in oklab, var(--surface-2) 78%, var(--surface));
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
+  flex: none;
+}
+
+.drawer-title-gif{
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Improve contrast for the GIF badge in dark mode (the artwork uses deep navy strokes). */
+html[data-theme="dark"] .drawer-title-gifwrap{
+  background: color-mix(in oklab, var(--text) 46%, var(--surface));
+  border-color: color-mix(in oklab, var(--text) 34%, var(--border));
+  box-shadow: 0 12px 30px rgba(0,0,0,.35);
+}
+
+@media (prefers-color-scheme: dark){
+  html:not([data-theme]) .drawer-title-gifwrap{
+    background: color-mix(in oklab, var(--text) 46%, var(--surface));
+    border-color: color-mix(in oklab, var(--text) 34%, var(--border));
+    box-shadow: 0 12px 30px rgba(0,0,0,.35);
+  }
+}
+
+.drawer-subtitle{
+  margin: 6px 0 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
+}
+
+.drawer-close{
+  flex: none;
+}
+
+.drawer-body{
+  padding: 14px 18px 18px 18px;
+  overflow: auto;
+}
+
+/* Align drawer body with the GIF badge edge (reduce left indentation) */
+.drawer--with-gif .drawer-body{
+  padding-left: 18px;
+}
+
+.drawer-body :is(p,li){
+  color: color-mix(in oklab, var(--text) 88%, var(--muted));
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.drawer-body h4{
+  margin: 32px 0 8px 0;
+  font-size: 13px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.drawer-kv{
+  display: grid;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.drawer-kv .kv{
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 10px 12px;
+  background: color-mix(in oklab, var(--surface-2) 85%, var(--surface));
+}
+
+.drawer-kv .kv b{
+  display:block;
+  font-size: 13px;
+}
+.drawer-kv .kv span{
+  display:block;
+  margin-top:4px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* Example block used in some drawers (e.g., Design Tenets) */
+.drawer-example{
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: var(--surface);
+  padding: 12px;
+}
+
+.drawer-example__head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.drawer-example__meta{
+  display: grid;
+  gap: 2px;
+}
+
+.drawer-example__label{
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.drawer-example__title{
+  font-size: 14px;
+  font-weight: 620;
+}
+
+.drawer-example__actions{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.drawer-example__refresh{
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 8px 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.drawer-example__refresh:hover{
+  background: color-mix(in oklab, var(--surface-2) 75%, var(--surface));
+}
+
+.drawer-example__table{
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.drawer-example__row{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 12px;
+  background: color-mix(in oklab, var(--surface-2) 86%, var(--surface));
+}
+
+.drawer-example__row + .drawer-example__row{
+  border-top: 1px solid var(--border);
+}
+
+.drawer-example__name{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.drawer-example__badge{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 7px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.drawer-example__by{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.drawer-example__avatar{
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: color-mix(in oklab, var(--surface) 70%, var(--muted));
+  border: 1px solid var(--border);
+}
+
+.drawer-caption{
+  margin: 10px 0 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+@media (max-width: 720px){
+  .drawer{
+    width: 100vw;
+    border-left: none;
+  }
+  .drawer-header{
+    padding-top: 16px;
+  }
+}
+
+
+/* Hide subtitle line when empty */
+.drawer-subtitle:empty{display:none;}

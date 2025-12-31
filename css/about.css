@@ -1,0 +1,418 @@
+/* About page */
+
+.about-hero {
+  display: grid;
+  grid-template-columns: minmax(280px, 520px) 1fr;
+  gap: 44px;
+  align-items: center;
+  /* Keep the container's horizontal padding.
+     Use longhand so we don't override .container { padding: 0 24px; } */
+  padding-top: 42px;
+  padding-bottom: 10px;
+}
+
+.about-hero__media {
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 12px 24px rgba(0,0,0,.08);
+  border: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.about-hero__media img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.about-hero__content {
+  position: relative;
+  max-width: 620px;
+}
+
+.about-hero__badge {
+  position: absolute;
+  top: -18px;
+  left: 210px;
+}
+
+.about-hero__title {
+  font-size: clamp(34px, 3.2vw, 52px);
+  letter-spacing: -0.03em;
+  margin: 0 0 10px;
+}
+
+/* HTML uses .about-hero__lede (keep both selectors for safety) */
+.about-hero__lede,
+.about-hero__lead {
+  color: var(--muted);
+  line-height: 1.6;
+  margin: 0 0 14px;
+}
+
+.about-hero__bullets {
+  margin: 0 0 18px;
+  padding-left: 18px;
+  color: var(--muted);
+}
+
+.about-hero__bullets li {
+  margin: 10px 0;
+}
+
+.about-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 22px;
+}
+
+/* About stats cards (matches reference screenshot)
+   Markup uses .stat / .stat__value / .stat__label */
+.stat{
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 14px;
+  padding: 22px 22px 18px;
+  text-align: center;
+  box-shadow: 0 12px 32px rgba(2, 6, 23, 0.06);
+}
+
+html[data-theme="dark"] .stat{
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.25);
+}
+
+.stat__value{
+  font-weight: 820;
+  font-size: clamp(34px, 3.2vw, 46px);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin: 0 0 10px;
+}
+
+.stat__label{
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.35;
+  margin: 0;
+}
+
+.stat-card {
+  border: 1px solid var(--border);
+  background: var(--surface);
+  border-radius: 14px;
+  padding: 16px 16px 14px;
+  text-align: center;
+}
+
+.stat-card__value {
+  font-weight: 700;
+  font-size: 22px;
+  letter-spacing: -0.02em;
+  margin-bottom: 6px;
+}
+
+.stat-card__label {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.beyond {
+  text-align: center;
+  padding-top: 22px;
+}
+
+.beyond__title {
+  font-size: clamp(28px, 2.6vw, 42px);
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.beyond__sub {
+  margin: 10px auto 20px;
+  color: var(--muted);
+  max-width: 520px;
+}
+
+/* Match the reference: soft gray tiles in light mode, subtle translucent tiles in dark mode */
+html[data-theme="light"]{
+  --hobby-card-bg: #f6f7f9;
+  --hobby-card-border: rgba(0,0,0,.06);
+}
+
+html[data-theme="dark"]{
+  --hobby-card-bg: rgba(255,255,255,.06);
+  --hobby-card-border: rgba(255,255,255,.08);
+}
+
+.hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(160px, 1fr));
+  gap: 18px;
+  width: 100%;
+  margin: 0;
+}
+
+.hobby-card {
+  border: 1px solid var(--hobby-card-border, var(--border));
+  background: var(--hobby-card-bg, var(--surface-2));
+  border-radius: 14px;
+  padding: 18px 16px;
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  min-height: 84px;
+  box-shadow: 0 10px 26px rgba(2, 6, 23, 0.05);
+}
+
+.hobby-card svg {
+  width: 26px;
+  height: 26px;
+  color: var(--brand);
+}
+
+.hobby-card span {
+  font-size: 14px;
+  color: var(--text);
+}
+
+@media (max-width: 980px) {
+  .about-hero {
+    grid-template-columns: 1fr;
+    /* Tighter + more readable spacing when the layout stacks */
+    gap: 26px;
+    padding-top: 30px;
+    padding-bottom: 6px;
+  }
+
+  /* Prevent the hero image from dominating the viewport on smaller screens */
+  .about-hero__media {
+    aspect-ratio: 16 / 10;
+  }
+
+  .about-hero__media img {
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .about-hero__badge {
+    position: static;
+    margin-bottom: 12px;
+    display: inline-flex;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hobby-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .about-hero {
+    gap: 18px;
+    padding-top: 24px;
+    padding-bottom: 4px;
+  }
+
+  .about-hero__title { margin-bottom: 8px; }
+  .about-hero__lede,
+  .about-hero__lead { margin-bottom: 12px; }
+  .about-hero__bullets { margin-bottom: 14px; }
+  .about-hero__bullets li { margin: 8px 0; }
+
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =========================
+   Testimonials (Anton-style grid)
+   ========================= */
+.testimonials--anton{
+  padding-top: 48px;
+  padding-bottom: 16px;
+}
+
+.testimonials--anton .testimonials__intro{
+  text-align: center;
+  max-width: 860px;
+  margin: 0 auto 26px;
+}
+
+.testimonials--anton .testimonials__title{
+  margin: 0 auto 14px;
+  font-size: clamp(30px, 3.2vw, 46px);
+  font-weight: 820;
+  letter-spacing: -0.04em;
+  line-height: 1.06;
+}
+
+.testimonials--anton .testimonials__lede{
+  margin: 0 auto;
+  max-width: 640px;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.65;
+}
+.testimonials--anton .testimonials__lede p{ margin: 0 0 10px; }
+.testimonials--anton .testimonials__lede p:last-child{ margin-bottom: 0; }
+
+.testimonials--anton .testimonials__grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  align-items: stretch;
+  margin-top: 22px;
+}
+
+@media (max-width: 980px){
+  .testimonials--anton .testimonials__grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 640px){
+  .testimonials--anton .testimonials__grid{
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* Card */
+.tbox{
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: color-mix(in oklab, var(--brand) 4%, var(--surface));
+  padding: 18px 18px 14px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 260px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: none;
+  transition: transform .18s cubic-bezier(.2,.7,.2,1),
+              box-shadow .18s cubic-bezier(.2,.7,.2,1),
+              border-color .18s cubic-bezier(.2,.7,.2,1),
+              background-color .18s cubic-bezier(.2,.7,.2,1);
+}
+
+html[data-theme="dark"] .tbox{
+  background: color-mix(in oklab, var(--brand) 10%, var(--surface));
+}
+
+/* Subtle hover outline like your site */
+.tbox::before{
+  content:"";
+  position:absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 16px;
+  background: linear-gradient(135deg,
+    color-mix(in oklab, var(--brand) 70%, #fff 30%),
+    color-mix(in oklab, var(--brand) 45%, #22c55e 22%),
+    color-mix(in oklab, var(--brand) 70%, #000 30%)
+  );
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity .18s cubic-bezier(.2,.7,.2,1);
+  pointer-events:none;
+}
+
+.tbox:hover::before,
+.tbox:focus-visible::before{ opacity: 1; }
+
+.tbox:hover,
+.tbox:focus-visible{
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+  border-color: color-mix(in oklab, var(--border) 60%, var(--brand) 20%);
+}
+
+/* Typography */
+.tbox__title{
+  margin: 0 0 10px;
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+}
+
+.tbox__body{
+  color: color-mix(in oklab, var(--text) 88%, var(--muted));
+  font-size: 14px;
+  line-height: 1.7;
+}
+.tbox__body p{ margin: 0 0 10px; }
+.tbox__body p:last-child{ margin-bottom: 0; }
+
+/* Footer person row */
+.tbox__person{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-top: 14px;
+  margin-top: 14px;
+  border-top: 1px solid color-mix(in oklab, var(--border) 70%, transparent);
+}
+
+.tbox__avatar{
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid color-mix(in oklab, var(--border) 70%, var(--brand) 18%);
+  background: color-mix(in oklab, var(--surface-2) 70%, var(--surface));
+}
+.tbox__avatar img{ width:100%; height:100%; display:block; }
+
+.tbox__name{
+  font-size: 13px;
+  font-weight: 780;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+.tbox__role{
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.1;
+  margin-top: 2px;
+}
+
+/* ---------------------------------------------
+   Testimonials stagger reveal (Band & Wire style)
+   Left → right, then next row (DOM order).
+   Triggered via JS by toggling .is-in on [data-stagger]
+---------------------------------------------- */
+
+html.js [data-stagger] .tbox{
+  opacity: 0;
+  transform: translateY(18px);
+}
+
+html.js [data-stagger].is-in .tbox{
+  animation: tboxIn 640ms cubic-bezier(.2,.7,.2,1) forwards;
+  animation-delay: var(--d, 0ms);
+  will-change: transform, opacity;
+}
+
+@keyframes tboxIn{
+  from{ opacity: 0; transform: translateY(18px); }
+  to{ opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce){
+  html.js [data-stagger] .tbox{
+    opacity: 1;
+    transform: none;
+    animation: none !important;
+  }
+}
