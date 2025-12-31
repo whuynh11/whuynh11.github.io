@@ -30,7 +30,7 @@ python -m http.server 5173
 ## Next page
 
 Tell me which page you want next:
-- A case study detail page (Accord / Datafox / Mixmax / Copper)
+- A case study detail page (Thrive Gamification / Thrive Onboarding / Thrive Design System / Wpromote Design System / TF Intl Coaching Platform)
 - Design Process
 - Design & AI
 - Design Tenets
