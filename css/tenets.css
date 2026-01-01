@@ -128,7 +128,7 @@
   align-items: center;
   gap: 6px;
   font-size: 13px;
-  font-weight: 650;
+  font-weight: 500;
   color: color-mix(in oklab, var(--text) 88%, var(--muted));
   position: relative;
   width: fit-content;
