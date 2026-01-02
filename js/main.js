@@ -477,19 +477,19 @@ const toggles = Array.from(document.querySelectorAll("[data-theme-toggle], .them
 
   // Drawer title → GIF mapping (used on Design Pillars + Design Process tenet drawers)
   const drawerTitleGifMap = {
-    'clarity-through-systems': './assets/clarity-through-systems-wired-outline-186-puzzle-hover-detach.gif',
-    'pixels-serve-a-purpose': './assets/pxiels-serve-a-purpose-wired-outline-762-paint-brush-hover-pinch.gif',
-    'dont-reinvent-the-wheel': './assets/dont-reinvent-the-wheel-wired-outline-852-wheel-hover-pinch.gif',
-    'start-with-a-sketch': './assets/start-with-a-sketch-wired-outline-35-edit-hover-circle.gif',
-    'fake-content-fake-designs': './assets/fake-content-fake-designs-wired-outline-1140-error-hover-enlarge.gif',
-    'anticipate-extremes': './assets/anticipate-extremes-wired-outline-812-wind-hover-pinch.gif',
+    'clarity-through-systems': '',
+    'pixels-serve-a-purpose': '',
+    'dont-reinvent-the-wheel': '',
+    'start-with-a-sketch': '',
+    'fake-content-fake-designs': '',
+    'anticipate-extremes': '',
 
-    'tenet.clarity': './assets/clarity-through-systems-wired-outline-186-puzzle-hover-detach.gif',
-    'tenet.pixels': './assets/pxiels-serve-a-purpose-wired-outline-762-paint-brush-hover-pinch.gif',
-    'tenet.wheel': './assets/dont-reinvent-the-wheel-wired-outline-852-wheel-hover-pinch.gif',
-    'tenet.sketch': './assets/start-with-a-sketch-wired-outline-35-edit-hover-circle.gif',
-    'tenet.fake': './assets/fake-content-fake-designs-wired-outline-1140-error-hover-enlarge.gif',
-    'tenet.extremes': './assets/anticipate-extremes-wired-outline-812-wind-hover-pinch.gif'
+    'tenet.clarity': '',
+    'tenet.pixels': '',
+    'tenet.wheel': '',
+    'tenet.sketch': '',
+    'tenet.fake': '',
+    'tenet.extremes': ''
   };
 
   function escapeHtml(str) {
